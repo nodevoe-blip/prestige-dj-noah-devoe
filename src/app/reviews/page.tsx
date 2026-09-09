@@ -64,13 +64,13 @@ export default function ReviewsPage() {
         <LayerBadge layer="prestige" tone="onInk" />
 
         <div className="mt-10 max-w-2xl">
-          <Eyebrow tone="brass">Real couples, real weddings</Eyebrow>
+          <Eyebrow tone="navy">Real couples, real weddings</Eyebrow>
           <h1 className="mt-4 font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
             Reviews
           </h1>
           <p className="mt-5 text-lg text-smoke">
             This page covers Prestige as a company. Reviews attributed specifically to Noah live on{" "}
-            <a href="/noah-devoe" className="text-wine-bright underline decoration-dotted underline-offset-2">
+            <a href="/noah-devoe" className="text-espresso-bright underline decoration-dotted underline-offset-2">
               his own page
             </a>{" "}
             too.
@@ -82,7 +82,7 @@ export default function ReviewsPage() {
             <a
               key={d.name}
               href={d.href}
-              className="rounded-sm border border-ink-line bg-ink-soft p-6 text-center transition-colors hover:border-brass"
+              className="rounded-sm border border-ink-line bg-ink-soft p-6 text-center transition-colors hover:border-navy"
             >
               <p className="font-display text-lg font-semibold text-paper">{d.name}</p>
               <p className="mt-2 font-mono text-[11px] uppercase tracking-wider text-smoke">

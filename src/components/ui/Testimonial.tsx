@@ -26,11 +26,11 @@ export function Testimonial({
   return (
     <figure className={`rounded-sm border ${border} p-6`}>
       {placeholder && (
-        <p className="mb-3 font-mono text-[10px] uppercase tracking-wider text-wine-bright">
+        <p className="mb-3 font-mono text-[10px] uppercase tracking-wider text-espresso-bright">
           Sample — replace with a real review
         </p>
       )}
-      <blockquote className={`font-display text-lg leading-snug ${text}`}>
+      <blockquote className={`font-accent text-xl italic leading-snug ${text}`}>
         &ldquo;{quote}&rdquo;
       </blockquote>
       <figcaption className={`mt-4 font-mono text-xs uppercase tracking-wider ${muted}`}>

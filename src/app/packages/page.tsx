@@ -38,7 +38,7 @@ export default function PackagesPage() {
         <LayerBadge layer="prestige" tone="onInk" />
 
         <div className="mt-10 max-w-2xl">
-          <Eyebrow tone="brass">Bundle &amp; save</Eyebrow>
+          <Eyebrow tone="navy">Bundle &amp; save</Eyebrow>
           <h1 className="mt-4 font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
             Packages &amp; Bundles
           </h1>
@@ -46,7 +46,7 @@ export default function PackagesPage() {
             Every service below can be booked on its own — bundling two or more with Prestige
             means one shared timeline, one point of contact, and a lower combined rate than
             booking each vendor separately. DJ service alone starts at{" "}
-            <span className="text-brass">{stats.teamDjStartingPrice}</span>; bundles run higher
+            <span className="text-navy">{stats.teamDjStartingPrice}</span>; bundles run higher
             depending on what you add.
           </p>
         </div>
@@ -78,7 +78,7 @@ export default function PackagesPage() {
               <a
                 key={s.slug}
                 href={s.path}
-                className="rounded-sm border border-ink-line px-4 py-2 font-mono text-xs uppercase tracking-wider text-smoke hover:border-brass hover:text-brass"
+                className="rounded-sm border border-ink-line px-4 py-2 font-mono text-xs uppercase tracking-wider text-smoke hover:border-navy hover:text-navy"
               >
                 {s.shortName}
               </a>
@@ -87,7 +87,7 @@ export default function PackagesPage() {
         </div>
 
         <div className="mt-12">
-          <CTAButton href={`tel:${prestige.telephone}`} variant="brass">
+          <CTAButton href={`tel:${prestige.telephone}`} variant="navy">
             Build a custom bundle
           </CTAButton>
         </div>

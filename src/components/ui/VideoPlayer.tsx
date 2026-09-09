@@ -20,10 +20,10 @@ export type VideoClip = {
  * lazy, never-autoplaying approach. Once clicked, autoplay on the embed is
  * fine since it's a direct result of that click, not a page-load autoplay.
  */
-export function VideoPlayer({ clip, tone = "wine" }: { clip: VideoClip; tone?: "wine" | "brass" }) {
+export function VideoPlayer({ clip, tone = "espresso" }: { clip: VideoClip; tone?: "espresso" | "navy" }) {
   const [playing, setPlaying] = useState(false);
-  const accent = tone === "wine" ? "border-wine-bright" : "border-brass";
-  const accentBg = tone === "wine" ? "bg-wine hover:bg-wine-bright" : "bg-brass hover:bg-brass-bright";
+  const accent = tone === "espresso" ? "border-espresso-bright" : "border-navy";
+  const accentBg = tone === "espresso" ? "bg-espresso hover:bg-espresso-bright" : "bg-navy hover:bg-navy-bright";
 
   const hasSource = Boolean(clip.vimeoId || clip.src);
 
@@ -67,7 +67,7 @@ export function VideoPlayer({ clip, tone = "wine" }: { clip: VideoClip; tone?: "
                 className="object-cover opacity-80 transition-opacity group-hover:opacity-60"
               />
             )}
-            <span className={`relative z-10 flex h-14 w-14 items-center justify-center rounded-full text-ink ${accentBg}`}>
+            <span className={`relative z-10 flex h-14 w-14 items-center justify-center rounded-full text-paper ${accentBg}`}>
               <svg width="16" height="16" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true">
                 <path d="M0 0 14 7 0 14Z" />
               </svg>

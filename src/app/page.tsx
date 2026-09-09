@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { pageMetadata } from "@/lib/metadata";
 import { serviceAreas, services, team, stats } from "@/lib/site-config";
-import { Waveform } from "@/components/ui/Waveform";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { CTAButton } from "@/components/ui/CTAButton";
 
@@ -21,8 +20,8 @@ export default function HomePage() {
           <Eyebrow index="SIDE A / SIDE B">Two ways onto the dance floor</Eyebrow>
           <h1 className="mt-5 max-w-4xl font-display text-[2.5rem] font-bold leading-[1.05] tracking-tight sm:text-6xl md:text-7xl">
             One Michigan wedding team.{" "}
-            <span className="text-brass">Book the whole crew</span>, or{" "}
-            <span className="text-wine-bright">book Noah</span> himself.
+            <span className="text-navy">Book the whole crew</span>, or{" "}
+            <span className="text-espresso-bright">book Noah</span> himself.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-smoke">
             Prestige Weddings &amp; Events is a full Michigan wedding team — DJs, photographers,
@@ -34,10 +33,9 @@ export default function HomePage() {
           <div className="mt-12 grid gap-5 md:grid-cols-2">
             <Link
               href="/wedding-dj"
-              className="group relative overflow-hidden rounded-sm border border-ink-line bg-ink-soft p-8 transition-colors hover:border-brass"
+              className="group relative overflow-hidden rounded-sm border border-ink-line bg-ink-soft p-8 transition-colors hover:border-navy"
             >
-              <Waveform seed={21} bars={32} tone="brass" className="mb-8 h-8 opacity-80" />
-              <p className="font-mono text-[11px] uppercase tracking-wider text-brass">
+              <p className="font-mono text-[11px] uppercase tracking-wider text-navy">
                 The Prestige team
               </p>
               <h2 className="mt-2 font-display text-2xl font-bold sm:text-3xl">
@@ -48,17 +46,16 @@ export default function HomePage() {
                 Best if you want one team handling more than just the DJ booth — or Noah&rsquo;s
                 date is already booked.
               </p>
-              <span className="mt-6 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-brass group-hover:text-brass-bright">
+              <span className="mt-6 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-navy group-hover:text-navy-bright">
                 See the DJ team &rarr;
               </span>
             </Link>
 
             <Link
               href="/noah-devoe"
-              className="group relative overflow-hidden rounded-sm border border-ink-line bg-ink-soft p-8 transition-colors hover:border-wine-bright"
+              className="group relative overflow-hidden rounded-sm border border-ink-line bg-ink-soft p-8 transition-colors hover:border-espresso-bright"
             >
-              <Waveform seed={22} bars={32} tone="wine" className="mb-8 h-8 opacity-80" />
-              <p className="font-mono text-[11px] uppercase tracking-wider text-wine-bright">
+              <p className="font-mono text-[11px] uppercase tracking-wider text-espresso-bright">
                 Noah, personally
               </p>
               <h2 className="mt-2 font-display text-2xl font-bold sm:text-3xl">
@@ -68,7 +65,7 @@ export default function HomePage() {
                 Noah&rsquo;s own mixes, his own portfolio of weddings, and his own booking calendar.
                 Best if you specifically want Noah behind the booth — availability is limited.
               </p>
-              <span className="mt-6 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-wine-bright group-hover:text-wine">
+              <span className="mt-6 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-espresso-bright group-hover:text-espresso">
                 Hear his mixes &rarr;
               </span>
             </Link>
@@ -134,7 +131,7 @@ export default function HomePage() {
               <Link
                 key={a.slug}
                 href={`/service-area/${a.slug}`}
-                className="rounded-sm border border-paper-line bg-paper px-4 py-2 font-mono text-xs uppercase tracking-wider text-ink transition-colors hover:border-brass hover:text-brass"
+                className="rounded-sm border border-paper-line bg-paper px-4 py-2 font-mono text-xs uppercase tracking-wider text-ink transition-colors hover:border-navy hover:text-navy"
               >
                 {a.name}
               </Link>
@@ -146,14 +143,14 @@ export default function HomePage() {
       {/* Final CTA */}
       <section className="bg-ink text-paper">
         <div className="mx-auto max-w-[1400px] px-5 py-20 text-center sm:px-8">
-          <h2 className="font-display text-3xl font-bold sm:text-4xl">
+          <h2 className="font-accent text-4xl italic sm:text-5xl">
             Tell us your date. We&rsquo;ll tell you who&rsquo;s free.
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-smoke">
             Whether that&rsquo;s the full Prestige team or Noah himself.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <CTAButton href="/wedding-dj#check-availability" variant="brass">
+            <CTAButton href="/wedding-dj#check-availability" variant="navy">
               Check team availability
             </CTAButton>
             <CTAButton href="/noah-devoe/pricing" variant="outline-ink">

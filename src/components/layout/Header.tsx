@@ -1,28 +1,27 @@
 import Link from "next/link";
+import Image from "next/image";
 import { primaryNav } from "@/lib/site-config";
 import { MobileMenu } from "./MobileMenu";
-import { Waveform } from "@/components/ui/Waveform";
 
 export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-ink-line bg-ink">
       <a
         href="#main"
-        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-sm focus:bg-brass focus:px-4 focus:py-2 focus:font-mono focus:text-xs focus:uppercase focus:text-ink"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-sm focus:bg-navy focus:px-4 focus:py-2 focus:font-mono focus:text-xs focus:uppercase focus:text-paper"
       >
         Skip to content
       </a>
       <div className="mx-auto flex h-16 max-w-[1400px] items-center justify-between px-5 sm:px-8">
-        <Link href="/" className="flex items-center gap-3">
-          <Waveform seed={3} bars={5} className="h-5" tone="brass" />
-          <span className="flex flex-col leading-none">
-            <span className="font-display text-lg font-bold tracking-tight text-paper">
-              PRESTIGE
-            </span>
-            <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-smoke">
-              Weddings &amp; Events
-            </span>
-          </span>
+        <Link href="/" className="flex items-center" aria-label="Prestige Weddings & Events — home">
+          <Image
+            src="/images/brand/logo-white.png"
+            alt="Prestige Weddings & Events"
+            width={2640}
+            height={1397}
+            className="h-11 w-auto"
+            priority
+          />
         </Link>
 
         <nav aria-label="Primary" className="hidden md:block">
@@ -33,8 +32,8 @@ export function Header() {
                   href={section.href}
                   className={`font-mono text-[11px] uppercase tracking-wider transition-colors ${
                     section.label === "Noah DeVoe"
-                      ? "text-wine-bright hover:text-brass"
-                      : "text-paper/85 hover:text-brass"
+                      ? "text-espresso-bright hover:text-navy"
+                      : "text-paper/85 hover:text-navy"
                   }`}
                 >
                   {section.label}
@@ -59,7 +58,7 @@ export function Header() {
         <div className="flex items-center gap-4">
           <Link
             href="/wedding-dj#check-availability"
-            className="hidden rounded-sm bg-brass px-4 py-2 font-mono text-[11px] uppercase tracking-wider text-ink transition-colors hover:bg-brass-bright sm:inline-block"
+            className="hidden rounded-sm bg-navy px-4 py-2 font-mono text-[11px] uppercase tracking-wider text-paper transition-colors hover:bg-navy-bright sm:inline-block"
           >
             Check Availability
           </Link>

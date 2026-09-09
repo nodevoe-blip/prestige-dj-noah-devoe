@@ -26,7 +26,7 @@ export default function NoahPricingPage() {
         <LayerBadge layer="noah" tone="onInk" />
 
         <div className="mt-10 max-w-2xl">
-          <Eyebrow tone="wine">Booking me directly</Eyebrow>
+          <Eyebrow tone="espresso">Booking me directly</Eyebrow>
           <h1 className="mt-4 font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
             Book Noah — Pricing &amp; Availability
           </h1>
@@ -39,7 +39,7 @@ export default function NoahPricingPage() {
 
         <div className="mt-12 max-w-md rounded-sm border border-ink-line bg-ink-soft p-8">
           <p className="font-mono text-[11px] uppercase tracking-wider text-smoke">Starting at</p>
-          <p className="mt-2 font-display text-5xl font-bold text-wine-bright">{stats.noahStartingPrice}</p>
+          <p className="mt-2 font-display text-5xl font-bold text-espresso-bright">{stats.noahStartingPrice}</p>
           <p className="mt-4 text-sm text-smoke">
             Final pricing depends on hours of coverage, ceremony vs. reception-only, and any
             add-ons (uplighting, extra hours, rehearsal-dinner sets). Tell me your date and venue
@@ -59,7 +59,7 @@ export default function NoahPricingPage() {
         </div>
 
         <div className="mt-10 flex flex-wrap gap-4">
-          <CTAButton href={`tel:${prestige.telephone}`} variant="wine">
+          <CTAButton href={`tel:${prestige.telephone}`} variant="espresso">
             Set up a call
           </CTAButton>
           <CTAButton href="/wedding-dj" variant="outline-ink">
@@ -68,7 +68,7 @@ export default function NoahPricingPage() {
         </div>
         <p className="mt-4 font-mono text-[11px] uppercase tracking-wider text-smoke">
           Prefer email? Send your contact info and I&rsquo;ll reach out —{" "}
-          <a href={`mailto:${prestige.email}`} className="text-wine-bright underline decoration-dotted underline-offset-2">
+          <a href={`mailto:${prestige.email}`} className="text-espresso-bright underline decoration-dotted underline-offset-2">
             {prestige.email}
           </a>
         </p>

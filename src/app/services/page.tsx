@@ -20,7 +20,7 @@ export default function ServicesIndexPage() {
         <LayerBadge layer="prestige" tone="onInk" />
 
         <div className="mt-10 max-w-2xl">
-          <Eyebrow tone="brass">Everything in-house</Eyebrow>
+          <Eyebrow tone="navy">Everything in-house</Eyebrow>
           <h1 className="mt-4 font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
             Wedding Services
           </h1>
@@ -34,7 +34,7 @@ export default function ServicesIndexPage() {
             <a
               key={s.slug}
               href={s.path}
-              className="rounded-sm border border-ink-line bg-ink-soft p-6 transition-colors hover:border-brass"
+              className="rounded-sm border border-ink-line bg-ink-soft p-6 transition-colors hover:border-navy"
             >
               <h2 className="font-display text-xl font-semibold text-paper">{s.name}</h2>
               <p className="mt-2 text-sm text-smoke">{s.blurb}</p>
@@ -43,7 +43,7 @@ export default function ServicesIndexPage() {
         </div>
 
         <div className="mt-10">
-          <CTAButton href="/packages" variant="brass">
+          <CTAButton href="/packages" variant="navy">
             See bundled packages
           </CTAButton>
         </div>

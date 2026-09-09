@@ -66,7 +66,7 @@ export default function FaqPage() {
           <LayerBadge layer="prestige" tone="onInk" />
 
           <div className="mt-10 max-w-2xl">
-            <Eyebrow tone="brass">Questions couples actually ask</Eyebrow>
+            <Eyebrow tone="navy">Questions couples actually ask</Eyebrow>
             <h1 className="mt-4 font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
               FAQ
             </h1>
@@ -82,7 +82,7 @@ export default function FaqPage() {
           </div>
 
           <div className="mt-10 flex flex-wrap gap-4">
-            <CTAButton href="/wedding-dj#check-availability" variant="brass">
+            <CTAButton href="/wedding-dj#check-availability" variant="navy">
               Check team availability
             </CTAButton>
             <CTAButton href="/noah-devoe/pricing" variant="outline-ink">

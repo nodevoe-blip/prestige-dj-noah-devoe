@@ -59,7 +59,7 @@ export default function OaklandCountyPage() {
 
           <div className="mt-10 grid gap-12 md:grid-cols-[1.1fr_0.9fr] md:items-end">
             <div>
-              <Eyebrow index="HOME TURF" tone="brass">
+              <Eyebrow index="HOME TURF" tone="navy">
                 Metro Detroit / Northern Woodward Corridor
               </Eyebrow>
               <h1 className="mt-5 font-display text-5xl font-bold leading-[1.02] tracking-tight sm:text-6xl">
@@ -71,7 +71,7 @@ export default function OaklandCountyPage() {
                 share of local dates himself.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
-                <CTAButton href="/wedding-dj#check-availability" variant="brass">
+                <CTAButton href="/wedding-dj#check-availability" variant="navy">
                   Check availability
                 </CTAButton>
                 <CTAButton href="/noah-devoe" variant="outline-ink">
@@ -82,7 +82,7 @@ export default function OaklandCountyPage() {
             <PhotoPlaceholder
               caption="Reception dance floor, Oakland County estate venue"
               aspect="aspect-[4/5]"
-              tone="brass"
+              tone="navy"
             />
           </div>
         </div>
@@ -90,7 +90,7 @@ export default function OaklandCountyPage() {
 
       {/* Local specifics */}
       <section className="mx-auto max-w-[1400px] px-5 py-20 sm:px-8">
-        <Eyebrow index="01" tone="brass">
+        <Eyebrow index="01" tone="navy">
           Where we actually work
         </Eyebrow>
         <h2 className="mt-3 max-w-2xl font-display text-3xl font-bold sm:text-4xl">
@@ -134,7 +134,7 @@ export default function OaklandCountyPage() {
       {/* Logistics */}
       <section className="border-t border-paper-line bg-paper-soft">
         <div className="mx-auto max-w-[1400px] px-5 py-20 sm:px-8">
-          <Eyebrow index="02" tone="brass">
+          <Eyebrow index="02" tone="navy">
             Planning notes specific to this county
           </Eyebrow>
           <h2 className="mt-3 max-w-2xl font-display text-3xl font-bold sm:text-4xl">
@@ -179,7 +179,7 @@ export default function OaklandCountyPage() {
 
       {/* Testimonials */}
       <section className="mx-auto max-w-[1400px] px-5 py-20 sm:px-8">
-        <Eyebrow index="03" tone="brass">
+        <Eyebrow index="03" tone="navy">
           Local couples
         </Eyebrow>
         <h2 className="mt-3 max-w-2xl font-display text-3xl font-bold sm:text-4xl">
@@ -194,7 +194,7 @@ export default function OaklandCountyPage() {
         </div>
         <p className="mt-4 max-w-2xl text-xs text-ash">
           More Oakland County reviews are on the way — see{" "}
-          <a href="/noah-devoe" className="text-wine-bright underline decoration-dotted underline-offset-2">
+          <a href="/noah-devoe" className="text-espresso-bright underline decoration-dotted underline-offset-2">
             Noah&rsquo;s full review list
           </a>{" "}
           for weddings across Michigan.
@@ -204,7 +204,7 @@ export default function OaklandCountyPage() {
       {/* FAQ */}
       <section className="border-t border-paper-line bg-paper-soft">
         <div className="mx-auto max-w-[1400px] px-5 py-20 sm:px-8">
-          <Eyebrow index="04" tone="brass">
+          <Eyebrow index="04" tone="navy">
             Oakland County FAQ
           </Eyebrow>
           <h2 className="mt-3 max-w-2xl font-display text-3xl font-bold sm:text-4xl">
@@ -226,7 +226,7 @@ export default function OaklandCountyPage() {
         <div className="mx-auto max-w-[1400px] px-5 py-20 sm:px-8">
           <div className="grid gap-10 md:grid-cols-2">
             <div>
-              <Eyebrow index="05" tone="brass">
+              <Eyebrow index="05" tone="navy">
                 Next step
               </Eyebrow>
               <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl">
@@ -237,7 +237,7 @@ export default function OaklandCountyPage() {
                 whether Noah himself can take it.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
-                <CTAButton href="/wedding-dj#check-availability" variant="brass">
+                <CTAButton href="/wedding-dj#check-availability" variant="navy">
                   Check team availability
                 </CTAButton>
                 <CTAButton href="/noah-devoe/pricing" variant="outline-ink">
@@ -250,12 +250,12 @@ export default function OaklandCountyPage() {
                 Reach the team directly
               </p>
               <p className="mt-4 font-display text-2xl font-semibold">
-                <a href={`tel:${prestige.telephone}`} className="hover:text-brass">
+                <a href={`tel:${prestige.telephone}`} className="hover:text-navy">
                   {prestige.telephone}
                 </a>
               </p>
               <p className="mt-1">
-                <a href={`mailto:${prestige.email}`} className="text-smoke hover:text-brass">
+                <a href={`mailto:${prestige.email}`} className="text-smoke hover:text-navy">
                   {prestige.email}
                 </a>
               </p>

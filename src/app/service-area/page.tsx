@@ -19,7 +19,7 @@ export default function ServiceAreaIndexPage() {
         <LayerBadge layer="prestige" tone="onInk" />
 
         <div className="mt-10 max-w-2xl">
-          <Eyebrow tone="brass">Where we work</Eyebrow>
+          <Eyebrow tone="navy">Where we work</Eyebrow>
           <h1 className="mt-4 font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
             Service Areas
           </h1>
@@ -34,9 +34,9 @@ export default function ServiceAreaIndexPage() {
             <a
               key={a.slug}
               href={`/service-area/${a.slug}`}
-              className="rounded-sm border border-ink-line bg-ink-soft p-6 transition-colors hover:border-brass"
+              className="rounded-sm border border-ink-line bg-ink-soft p-6 transition-colors hover:border-navy"
             >
-              <p className="font-mono text-[11px] uppercase tracking-wider text-brass">{a.region}</p>
+              <p className="font-mono text-[11px] uppercase tracking-wider text-navy">{a.region}</p>
               <h2 className="mt-1 font-display text-xl font-semibold text-paper">{a.name}</h2>
               <p className="mt-2 text-sm text-smoke">{a.blurb}</p>
               {!a.live && (

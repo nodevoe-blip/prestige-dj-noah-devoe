@@ -38,7 +38,7 @@ export default function GrandRapidsPage() {
           <LayerBadge layer="prestige" tone="onInk" />
 
           <div className="mt-10 max-w-2xl">
-            <Eyebrow tone="brass">West Michigan</Eyebrow>
+            <Eyebrow tone="navy">West Michigan</Eyebrow>
             <h1 className="mt-4 font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
               Grand Rapids Wedding DJ
             </h1>
@@ -48,7 +48,7 @@ export default function GrandRapidsPage() {
               also DJs Central Michigan University&rsquo;s football and basketball games.
             </p>
             <div className="mt-8">
-              <CTAButton href="/wedding-dj#check-availability" variant="brass">
+              <CTAButton href="/wedding-dj#check-availability" variant="navy">
                 Check availability
               </CTAButton>
             </div>
@@ -57,7 +57,7 @@ export default function GrandRapidsPage() {
       </section>
 
       <section className="mx-auto max-w-[1400px] px-5 py-20 sm:px-8">
-        <Eyebrow tone="brass">The Grand Rapids team</Eyebrow>
+        <Eyebrow tone="navy">The Grand Rapids team</Eyebrow>
         <h2 className="mt-3 max-w-2xl font-display text-3xl font-bold sm:text-4xl">
           Meet your local DJs
         </h2>
@@ -83,11 +83,11 @@ export default function GrandRapidsPage() {
 
       <section className="border-t border-paper-line bg-paper-soft">
         <div className="mx-auto max-w-[1400px] px-5 py-20 sm:px-8">
-          <Eyebrow tone="brass">Coming soon to this page</Eyebrow>
+          <Eyebrow tone="navy">Coming soon to this page</Eyebrow>
           <p className="max-w-2xl text-ash">
             A full local guide — real Grand Rapids and Grand River valley venues, load-in
             logistics, and neighborhood-by-neighborhood detail, in the same style as our{" "}
-            <a href="/service-area/oakland-county" className="text-brass underline decoration-dotted underline-offset-2">
+            <a href="/service-area/oakland-county" className="text-navy underline decoration-dotted underline-offset-2">
               Oakland County page
             </a>
             . The team above is already booking West Michigan weddings today.

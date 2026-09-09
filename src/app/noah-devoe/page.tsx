@@ -75,7 +75,7 @@ export default async function NoahDeVoePage() {
 
           <div className="mt-10 grid gap-12 md:grid-cols-[1.1fr_0.9fr] md:items-end">
             <div>
-              <Eyebrow index="DJING WEDDINGS SINCE AGE 17" tone="wine">
+              <Eyebrow index="DJING WEDDINGS SINCE AGE 17" tone="espresso">
                 Michigan Wedding DJ &amp; MC
               </Eyebrow>
               <h1 className="mt-5 font-display text-5xl font-bold leading-[1.02] tracking-tight sm:text-7xl">
@@ -88,7 +88,7 @@ export default async function NoahDeVoePage() {
                 DJs covers the rest. This page is mine — my mixes, my portfolio, my calendar.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
-                <CTAButton href="/noah-devoe/pricing" variant="wine">
+                <CTAButton href="/noah-devoe/pricing" variant="espresso">
                   Check my availability
                 </CTAButton>
                 <CTAButton href="#mixes" variant="outline-ink">
@@ -96,7 +96,7 @@ export default async function NoahDeVoePage() {
                 </CTAButton>
               </div>
               <div className="mt-10 flex items-baseline gap-3 border-t border-ink-line pt-6">
-                <p className="font-display text-4xl font-bold text-wine-bright">
+                <p className="font-display text-4xl font-bold text-espresso-bright">
                   {stats.weddingsDjdByNoah}
                 </p>
                 <p className="font-mono text-xs uppercase tracking-wider text-smoke">
@@ -104,7 +104,7 @@ export default async function NoahDeVoePage() {
                 </p>
               </div>
             </div>
-            <div className="relative aspect-[4/5] overflow-hidden rounded-sm border border-wine-bright">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-sm border border-espresso-bright">
               <Image
                 src="/images/noah/noah-portrait.jpg"
                 alt="Noah DeVoe at a Michigan wedding reception"
@@ -122,7 +122,7 @@ export default async function NoahDeVoePage() {
       <section className="mx-auto max-w-[1400px] px-5 py-20 sm:px-8">
         <div className="grid gap-12 md:grid-cols-[0.9fr_1.1fr]">
           <div>
-            <Eyebrow index="00:00" tone="wine">
+            <Eyebrow index="00:00" tone="espresso">
               The story
             </Eyebrow>
             <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl">
@@ -150,7 +150,7 @@ export default async function NoahDeVoePage() {
               mentoring aspiring DJs has been one of the most rewarding parts of it. That same
               amazing-care approach is why I still personally DJ a limited number of weddings a
               year — the rest of Michigan gets covered by the{" "}
-              <a href="/prestige/team" className="text-wine-bright underline decoration-dotted underline-offset-2">
+              <a href="/prestige/team" className="text-espresso-bright underline decoration-dotted underline-offset-2">
                 rest of the Prestige team
               </a>
               , who I trained and trust with my own name on the invoice.
@@ -158,14 +158,14 @@ export default async function NoahDeVoePage() {
           </div>
         </div>
 
-        <blockquote className="mt-16 border-l-2 border-wine-bright pl-6 sm:pl-8">
-          <p className="font-display text-2xl leading-snug text-ink sm:text-3xl">
+        <blockquote className="mt-16 border-l-2 border-espresso-bright pl-6 sm:pl-8">
+          <p className="font-accent text-2xl italic leading-snug text-ink sm:text-3xl">
             &ldquo;That &lsquo;take amazing care&rsquo; approach is exactly how I&rsquo;m going to
             approach your wedding. I&rsquo;m going to take amazing care of you, listen to your
             vision and vibe, give tasteful advice when asked, and make your wedding epic.
             That&rsquo;s a promise.&rdquo;
           </p>
-          <p className="mt-3 font-mono text-xs uppercase tracking-wider text-wine-bright">
+          <p className="mt-3 font-mono text-xs uppercase tracking-wider text-espresso-bright">
             — Noah DeVoe
           </p>
         </blockquote>
@@ -178,7 +178,7 @@ export default async function NoahDeVoePage() {
             <div>
               <div className="flex flex-wrap items-end justify-between gap-4">
                 <div>
-                  <Eyebrow index="00:01" tone="wine">
+                  <Eyebrow index="00:01" tone="espresso">
                     Actually hear it
                   </Eyebrow>
                   <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl">
@@ -197,12 +197,12 @@ export default async function NoahDeVoePage() {
               </div>
               <a
                 href="/noah-devoe/mixes"
-                className="mt-6 inline-block font-mono text-xs uppercase tracking-wider text-wine-bright hover:text-wine"
+                className="mt-6 inline-block font-mono text-xs uppercase tracking-wider text-espresso-bright hover:text-espresso"
               >
                 All mixes &rarr;
               </a>
             </div>
-            <div className="relative aspect-[4/5] overflow-hidden rounded-sm border border-wine-bright">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-sm border border-espresso-bright">
               <Image
                 src="/images/noah/noah-booth-energy.jpg"
                 alt="Noah DeVoe mixing at a wedding reception booth"
@@ -217,7 +217,7 @@ export default async function NoahDeVoePage() {
 
       {/* Video */}
       <section className="mx-auto max-w-[1400px] px-5 py-20 sm:px-8">
-        <Eyebrow index="00:01.5" tone="wine">
+        <Eyebrow index="00:01.5" tone="espresso">
           Watch it, too
         </Eyebrow>
         <h2 className="mt-3 max-w-2xl font-display text-3xl font-bold sm:text-4xl">
@@ -229,12 +229,12 @@ export default async function NoahDeVoePage() {
 
         <div className="mt-10 grid gap-5 sm:grid-cols-2">
           {reels.map((v) => (
-            <VideoPlayer key={v.title} clip={v} tone="wine" />
+            <VideoPlayer key={v.title} clip={v} tone="espresso" />
           ))}
         </div>
 
         <div className="mt-14">
-          <p className="font-mono text-xs uppercase tracking-wider text-wine-bright">
+          <p className="font-mono text-xs uppercase tracking-wider text-espresso-bright">
             Pick your grand entrance energy
           </p>
           <p className="mt-2 max-w-2xl text-sm text-ash">
@@ -243,18 +243,18 @@ export default async function NoahDeVoePage() {
           </p>
           <div className="mt-6 grid gap-5 sm:grid-cols-2">
             {entrances.map((v) => (
-              <VideoPlayer key={v.title} clip={v} tone="wine" />
+              <VideoPlayer key={v.title} clip={v} tone="espresso" />
             ))}
           </div>
         </div>
 
         <div className="mt-14 max-w-md">
-          <p className="font-mono text-xs uppercase tracking-wider text-wine-bright">
+          <p className="font-mono text-xs uppercase tracking-wider text-espresso-bright">
             Formal moments
           </p>
           <div className="mt-6">
             {dances.map((v) => (
-              <VideoPlayer key={v.title} clip={v} tone="wine" />
+              <VideoPlayer key={v.title} clip={v} tone="espresso" />
             ))}
           </div>
         </div>
@@ -264,14 +264,14 @@ export default async function NoahDeVoePage() {
       <section className="mx-auto max-w-[1400px] px-5 py-20 sm:px-8">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
-            <Eyebrow index="00:02" tone="wine">
+            <Eyebrow index="00:02" tone="espresso">
               Weddings I&rsquo;ve personally DJ&rsquo;d
             </Eyebrow>
             <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl">A working portfolio</h2>
           </div>
           <a
             href="/noah-devoe/weddings"
-            className="font-mono text-xs uppercase tracking-wider text-wine-bright hover:text-wine"
+            className="font-mono text-xs uppercase tracking-wider text-espresso-bright hover:text-espresso"
           >
             Full portfolio &rarr;
           </a>
@@ -301,7 +301,7 @@ export default async function NoahDeVoePage() {
       {/* Testimonials */}
       <section className="border-t border-paper-line bg-paper-soft">
         <div className="mx-auto max-w-[1400px] px-5 py-20 sm:px-8">
-          <Eyebrow index="00:03" tone="wine">
+          <Eyebrow index="00:03" tone="espresso">
             From couples I&rsquo;ve worked with
           </Eyebrow>
           <h2 className="mt-3 max-w-2xl font-display text-3xl font-bold sm:text-4xl">
@@ -338,7 +338,7 @@ export default async function NoahDeVoePage() {
         <div className="mx-auto max-w-[1400px] px-5 py-20 sm:px-8">
           <div className="grid gap-10 md:grid-cols-2">
             <div>
-              <Eyebrow index="00:04" tone="wine">
+              <Eyebrow index="00:04" tone="espresso">
                 Booking
               </Eyebrow>
               <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl">
@@ -351,7 +351,7 @@ export default async function NoahDeVoePage() {
                 Prestige DJ I&rsquo;d personally recommend for your venue and vibe.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
-                <CTAButton href="/noah-devoe/pricing" variant="wine">
+                <CTAButton href="/noah-devoe/pricing" variant="espresso">
                   See pricing — starts at {stats.noahStartingPrice}
                 </CTAButton>
                 <CTAButton href="/wedding-dj" variant="outline-ink">

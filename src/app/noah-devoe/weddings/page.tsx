@@ -70,7 +70,7 @@ export default function WeddingsPage() {
         <LayerBadge layer="noah" tone="onInk" />
 
         <div className="mt-10 max-w-2xl">
-          <Eyebrow tone="wine">A working portfolio</Eyebrow>
+          <Eyebrow tone="espresso">A working portfolio</Eyebrow>
           <h1 className="mt-4 font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
             Weddings I&rsquo;ve DJ&rsquo;d
           </h1>
@@ -83,13 +83,13 @@ export default function WeddingsPage() {
 
         {featured.map((f) => (
           <div key={f.couple} className="mt-14">
-            <p className="font-mono text-xs uppercase tracking-wider text-wine-bright">
+            <p className="font-mono text-xs uppercase tracking-wider text-espresso-bright">
               {f.couple}
               {f.venue && <span className="text-smoke"> — {f.venue}</span>}
             </p>
             <div className="mt-5 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
               {f.photos.map((slug) => (
-                <div key={slug} className="relative aspect-[4/5] overflow-hidden rounded-sm border border-wine-bright">
+                <div key={slug} className="relative aspect-[4/5] overflow-hidden rounded-sm border border-espresso-bright">
                   <Image
                     src={`/images/portfolio/${slug}.jpg`}
                     alt={`${f.couple}'s wedding${f.venue ? ` at ${f.venue}` : ""}`}
@@ -104,7 +104,7 @@ export default function WeddingsPage() {
         ))}
 
         <div className="mt-16">
-          <p className="font-mono text-xs uppercase tracking-wider text-wine-bright">
+          <p className="font-mono text-xs uppercase tracking-wider text-espresso-bright">
             More real receptions
           </p>
           <div className="mt-5 grid gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
@@ -126,7 +126,7 @@ export default function WeddingsPage() {
           <CTAButton href="/noah-devoe/mixes" variant="outline-ink">
             Hear what these sounded like
           </CTAButton>
-          <CTAButton href="/noah-devoe/pricing" variant="wine">
+          <CTAButton href="/noah-devoe/pricing" variant="espresso">
             Check my availability
           </CTAButton>
         </div>

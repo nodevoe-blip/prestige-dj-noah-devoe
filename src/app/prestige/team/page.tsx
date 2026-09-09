@@ -36,7 +36,7 @@ function TeamCard({ member }: { member: TeamMember }) {
       {isInternal && (
         <Link
           href={member.profileUrl!}
-          className="mt-2 inline-block font-mono text-[11px] uppercase tracking-wider text-wine-bright hover:text-wine"
+          className="mt-2 inline-block font-mono text-[11px] uppercase tracking-wider text-espresso-bright hover:text-espresso"
         >
           Full profile &rarr;
         </Link>
@@ -59,14 +59,14 @@ export default function TeamPage() {
         <LayerBadge layer="prestige" tone="onInk" />
 
         <div className="mt-10 max-w-2xl">
-          <Eyebrow tone="brass">The full bench — {team.length} DJs</Eyebrow>
+          <Eyebrow tone="navy">The full bench — {team.length} DJs</Eyebrow>
           <h1 className="mt-4 font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
             Meet the team
           </h1>
           <p className="mt-5 text-lg text-smoke">
             Prestige runs {detroitTeam.length} DJs in Metro Detroit and {grTeam.length} in Grand
             Rapids, founded by {founder.name} and co-owned locally by {" "}
-            <Link href="/noah-devoe" className="text-wine-bright underline decoration-dotted underline-offset-2">
+            <Link href="/noah-devoe" className="text-espresso-bright underline decoration-dotted underline-offset-2">
               Noah DeVoe
             </Link>{" "}
             in Detroit. Every DJ on this page trained under the same standard — you&rsquo;re never
@@ -75,7 +75,7 @@ export default function TeamPage() {
         </div>
 
         <div className="mt-16">
-          <Eyebrow tone="brass">Metro Detroit — {detroitTeam.length} DJs</Eyebrow>
+          <Eyebrow tone="navy">Metro Detroit — {detroitTeam.length} DJs</Eyebrow>
           <div className="mt-8 grid gap-x-6 gap-y-10 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
             {detroitTeam.map((m) => (
               <TeamCard key={m.slug} member={m} />
@@ -84,7 +84,7 @@ export default function TeamPage() {
         </div>
 
         <div className="mt-20">
-          <Eyebrow tone="brass">Grand Rapids — {grTeam.length} DJs</Eyebrow>
+          <Eyebrow tone="navy">Grand Rapids — {grTeam.length} DJs</Eyebrow>
           <div className="mt-8 grid gap-x-6 gap-y-10 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
             {grTeam.map((m) => (
               <TeamCard key={m.slug} member={m} />
@@ -93,7 +93,7 @@ export default function TeamPage() {
         </div>
 
         <div className="mt-16">
-          <CTAButton href="/wedding-dj#check-availability" variant="brass">
+          <CTAButton href="/wedding-dj#check-availability" variant="navy">
             Check who&rsquo;s free for your date
           </CTAButton>
         </div>

@@ -1,6 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
 import { prestige, serviceAreas, services } from "@/lib/site-config";
-import { Waveform } from "@/components/ui/Waveform";
 
 export function Footer() {
   return (
@@ -8,10 +8,13 @@ export function Footer() {
       <div className="mx-auto max-w-[1400px] px-5 py-16 sm:px-8">
         <div className="grid grid-cols-2 gap-10 sm:grid-cols-3 md:grid-cols-5">
           <div className="col-span-2 sm:col-span-3 md:col-span-2">
-            <div className="flex items-center gap-3">
-              <Waveform seed={11} bars={5} className="h-5" tone="brass" />
-              <span className="font-display text-xl font-bold text-paper">PRESTIGE</span>
-            </div>
+            <Image
+              src="/images/brand/logo-white.png"
+              alt="Prestige Weddings & Events"
+              width={2640}
+              height={1397}
+              className="h-14 w-auto"
+            />
             <p className="mt-4 max-w-sm text-sm text-smoke">{prestige.description}</p>
 
             <address className="mt-6 space-y-1 font-mono text-xs not-italic uppercase tracking-wider text-smoke">
@@ -34,7 +37,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h2 className="font-mono text-[11px] uppercase tracking-wider text-brass">Services</h2>
+            <h2 className="font-mono text-[11px] uppercase tracking-wider text-navy">Services</h2>
             <ul className="mt-4 space-y-2">
               {services.map((s) => (
                 <li key={s.slug}>
@@ -47,7 +50,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h2 className="font-mono text-[11px] uppercase tracking-wider text-brass">Service Areas</h2>
+            <h2 className="font-mono text-[11px] uppercase tracking-wider text-navy">Service Areas</h2>
             <ul className="mt-4 space-y-2">
               {serviceAreas.map((a) => (
                 <li key={a.slug}>
@@ -60,7 +63,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h2 className="font-mono text-[11px] uppercase tracking-wider text-wine-bright">Noah DeVoe</h2>
+            <h2 className="font-mono text-[11px] uppercase tracking-wider text-espresso-bright">Noah DeVoe</h2>
             <ul className="mt-4 space-y-2">
               <li>
                 <Link href="/noah-devoe" className="text-sm text-smoke hover:text-paper">

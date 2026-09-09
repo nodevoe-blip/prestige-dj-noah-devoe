@@ -66,7 +66,7 @@ export default function WeddingDjPage() {
 
           <div className="mt-10 grid gap-12 md:grid-cols-[1.1fr_0.9fr] md:items-end">
             <div>
-              <Eyebrow index={`TEAM OF ${team.length}`} tone="brass">
+              <Eyebrow index={`TEAM OF ${team.length}`} tone="navy">
                 Michigan Wedding DJ Team
               </Eyebrow>
               <h1 className="mt-5 font-display text-5xl font-bold leading-[1.02] tracking-tight sm:text-6xl">
@@ -78,7 +78,7 @@ export default function WeddingDjPage() {
                 trained to the same standard.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
-                <CTAButton href="#check-availability" variant="brass">
+                <CTAButton href="#check-availability" variant="navy">
                   Check availability
                 </CTAButton>
                 <CTAButton href="/packages" variant="outline-ink">
@@ -89,7 +89,7 @@ export default function WeddingDjPage() {
             <PhotoPlaceholder
               caption="The Prestige DJ team, group shot at a recent reception"
               aspect="aspect-[4/5]"
-              tone="brass"
+              tone="navy"
             />
           </div>
         </div>
@@ -118,20 +118,20 @@ export default function WeddingDjPage() {
       <section className="mx-auto max-w-[1400px] px-5 py-20 sm:px-8">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
-            <Eyebrow index="01" tone="brass">
+            <Eyebrow index="01" tone="navy">
               Not a one-person shop
             </Eyebrow>
             <h2 className="mt-3 max-w-2xl font-display text-3xl font-bold sm:text-4xl">
               Meet the DJs behind the booth
             </h2>
           </div>
-          <a href="/prestige/team" className="font-mono text-xs uppercase tracking-wider text-brass hover:text-brass-bright">
+          <a href="/prestige/team" className="font-mono text-xs uppercase tracking-wider text-navy hover:text-navy-bright">
             Full team &rarr;
           </a>
         </div>
         <p className="mt-4 max-w-2xl text-ash">
           Founded by {founder.name}, with{" "}
-          <a href="/noah-devoe" className="text-wine-bright underline decoration-dotted underline-offset-2">
+          <a href="/noah-devoe" className="text-espresso-bright underline decoration-dotted underline-offset-2">
             Noah DeVoe
           </a>{" "}
           co-owning the Detroit market and Brandon co-owning Grand Rapids — every DJ on the team
@@ -160,7 +160,7 @@ export default function WeddingDjPage() {
       {/* What's included */}
       <section className="border-t border-paper-line bg-paper-soft">
         <div className="mx-auto max-w-[1400px] px-5 py-20 sm:px-8">
-          <Eyebrow index="02" tone="brass">
+          <Eyebrow index="02" tone="navy">
             What&rsquo;s included
           </Eyebrow>
           <h2 className="mt-3 max-w-2xl font-display text-3xl font-bold sm:text-4xl">
@@ -186,7 +186,7 @@ export default function WeddingDjPage() {
 
       {/* Service areas */}
       <section className="mx-auto max-w-[1400px] px-5 py-20 sm:px-8">
-        <Eyebrow index="03" tone="brass">
+        <Eyebrow index="03" tone="navy">
           Where the team travels
         </Eyebrow>
         <h2 className="mt-3 max-w-2xl font-display text-3xl font-bold sm:text-4xl">
@@ -197,9 +197,9 @@ export default function WeddingDjPage() {
             <a
               key={a.slug}
               href={`/service-area/${a.slug}`}
-              className="rounded-sm border border-paper-line p-5 transition-colors hover:border-brass"
+              className="rounded-sm border border-paper-line p-5 transition-colors hover:border-navy"
             >
-              <p className="font-mono text-[11px] uppercase tracking-wider text-brass">{a.region}</p>
+              <p className="font-mono text-[11px] uppercase tracking-wider text-navy">{a.region}</p>
               <h3 className="mt-1 font-display text-xl font-semibold text-ink">{a.name}</h3>
               <p className="mt-2 text-sm text-ash">{a.blurb}</p>
             </a>
@@ -212,14 +212,14 @@ export default function WeddingDjPage() {
         <div className="mx-auto max-w-[1400px] px-5 py-20 sm:px-8">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
-              <Eyebrow index="04" tone="brass">
+              <Eyebrow index="04" tone="navy">
                 What couples say
               </Eyebrow>
               <h2 className="mt-3 max-w-2xl font-display text-3xl font-bold sm:text-4xl">
                 What couples say about booking the team
               </h2>
             </div>
-            <a href="/reviews" className="font-mono text-xs uppercase tracking-wider text-brass hover:text-brass-bright">
+            <a href="/reviews" className="font-mono text-xs uppercase tracking-wider text-navy hover:text-navy-bright">
               All reviews &rarr;
             </a>
           </div>
@@ -245,7 +245,7 @@ export default function WeddingDjPage() {
 
       {/* FAQ */}
       <section className="mx-auto max-w-[1400px] px-5 py-20 sm:px-8">
-        <Eyebrow index="05" tone="brass">
+        <Eyebrow index="05" tone="navy">
           Questions couples actually ask
         </Eyebrow>
         <h2 className="mt-3 max-w-2xl font-display text-3xl font-bold sm:text-4xl">FAQ</h2>
@@ -269,7 +269,7 @@ export default function WeddingDjPage() {
         <div className="mx-auto max-w-[1400px] px-5 py-20 sm:px-8">
           <div className="grid gap-10 md:grid-cols-2">
             <div>
-              <Eyebrow index="06" tone="brass">
+              <Eyebrow index="06" tone="navy">
                 Get in touch
               </Eyebrow>
               <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl">
@@ -285,18 +285,18 @@ export default function WeddingDjPage() {
                 Reach the team directly
               </p>
               <p className="mt-4 font-display text-2xl font-semibold">
-                <a href={`tel:${prestige.telephone}`} className="hover:text-brass">
+                <a href={`tel:${prestige.telephone}`} className="hover:text-navy">
                   {prestige.telephone}
                 </a>
               </p>
               <p className="mt-1">
-                <a href={`mailto:${prestige.email}`} className="text-smoke hover:text-brass">
+                <a href={`mailto:${prestige.email}`} className="text-smoke hover:text-navy">
                   {prestige.email}
                 </a>
               </p>
               <p className="mt-6 text-xs text-smoke">
                 Want Noah specifically instead?{" "}
-                <a href="/noah-devoe/pricing" className="text-wine-bright underline decoration-dotted underline-offset-2">
+                <a href="/noah-devoe/pricing" className="text-espresso-bright underline decoration-dotted underline-offset-2">
                   Check his calendar
                 </a>
                 .

@@ -1,5 +1,5 @@
 /**
- * The site's signature motif: a waveform rendered as a row of bars.
+ * A row of bars for visualizing an audio track (used inside AudioPlayer).
  * Deterministic per `seed` (no Math.random) so server and client markup match.
  * Pure CSS animation — safe to render on the server, no "use client" needed.
  */
@@ -22,24 +22,17 @@ export function Waveform({
   seed = 7,
   bars = 48,
   animated = false,
-  tone = "brass",
+  tone = "navy",
   className = "",
 }: {
   seed?: number;
   bars?: number;
   animated?: boolean;
-  tone?: "brass" | "wine" | "paper" | "lake";
+  tone?: "navy" | "espresso" | "paper";
   className?: string;
 }) {
   const heights = heightsFor(seed, bars);
-  const color =
-    tone === "brass"
-      ? "bg-brass"
-      : tone === "wine"
-        ? "bg-wine"
-        : tone === "lake"
-          ? "bg-lake"
-          : "bg-paper";
+  const color = tone === "navy" ? "bg-navy" : tone === "espresso" ? "bg-espresso" : "bg-paper";
 
   return (
     <div

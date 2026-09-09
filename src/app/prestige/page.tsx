@@ -23,7 +23,7 @@ export default function PrestigeAboutPage() {
 
           <div className="mt-10 grid gap-12 md:grid-cols-[1.1fr_0.9fr] md:items-end">
             <div>
-              <Eyebrow tone="brass">Our story</Eyebrow>
+              <Eyebrow tone="navy">Our story</Eyebrow>
               <h1 className="mt-4 font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
                 From one DJ to a {team.length}-DJ Michigan wedding team
               </h1>
@@ -35,7 +35,7 @@ export default function PrestigeAboutPage() {
                 videography, coordination, photo booth, and lighting.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
-                <CTAButton href="/prestige/team" variant="brass">
+                <CTAButton href="/prestige/team" variant="navy">
                   Meet the team
                 </CTAButton>
                 <CTAButton href="/noah-devoe" variant="outline-ink">
@@ -43,7 +43,7 @@ export default function PrestigeAboutPage() {
                 </CTAButton>
               </div>
             </div>
-            <div className="relative aspect-[4/5] overflow-hidden rounded-sm border border-brass">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-sm border border-navy">
               <Image
                 src="/images/team/mike.webp"
                 alt={`${founder.name}, ${founder.jobTitle}`}
@@ -60,7 +60,7 @@ export default function PrestigeAboutPage() {
       </section>
 
       <section className="mx-auto max-w-[1400px] px-5 py-20 sm:px-8">
-        <Eyebrow tone="brass">What we run</Eyebrow>
+        <Eyebrow tone="navy">What we run</Eyebrow>
         <h2 className="mt-3 max-w-2xl font-display text-3xl font-bold sm:text-4xl">
           One team, six services
         </h2>

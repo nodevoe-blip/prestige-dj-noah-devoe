@@ -38,7 +38,7 @@ export default function MixesPage() {
         <LayerBadge layer="noah" tone="onInk" />
 
         <div className="mt-10 max-w-2xl">
-          <Eyebrow tone="wine">The full library</Eyebrow>
+          <Eyebrow tone="espresso">The full library</Eyebrow>
           <h1 className="mt-4 font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
             Mixes &amp; Live Sets
           </h1>
@@ -48,7 +48,7 @@ export default function MixesPage() {
           </p>
         </div>
 
-        <Waveform seed={40} bars={72} tone="wine" className="mt-12 h-8 opacity-40" />
+        <Waveform seed={40} bars={72} tone="espresso" className="mt-12 h-8 opacity-40" />
 
         <div className="mt-10 space-y-3">
           {tracks.map((t) => (
@@ -60,7 +60,7 @@ export default function MixesPage() {
           <CTAButton href="/noah-devoe/weddings" variant="outline-ink">
             See the weddings behind these sets
           </CTAButton>
-          <CTAButton href="/noah-devoe/pricing" variant="wine">
+          <CTAButton href="/noah-devoe/pricing" variant="espresso">
             Check my availability
           </CTAButton>
         </div>

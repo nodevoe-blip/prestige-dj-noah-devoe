@@ -30,7 +30,7 @@ export function StubPage({
   ctaLabel: string;
   children?: React.ReactNode;
 }) {
-  const accentTone = layer === "noah" ? "wine" : "brass";
+  const accentTone = layer === "noah" ? "espresso" : "navy";
   return (
     <section className="bg-ink text-paper">
       <div className="mx-auto max-w-[1400px] px-5 pb-20 pt-12 sm:px-8 sm:pt-16">
@@ -44,7 +44,7 @@ export function StubPage({
           </h1>
           <p className="mt-5 text-lg text-smoke">{intro}</p>
           <div className="mt-8">
-            <CTAButton href={ctaHref} variant={layer === "noah" ? "wine" : "brass"}>
+            <CTAButton href={ctaHref} variant={layer === "noah" ? "espresso" : "navy"}>
               {ctaLabel}
             </CTAButton>
           </div>
