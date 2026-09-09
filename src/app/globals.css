@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+/*
+  Design system tokens.
+  Two shared grounds — ink (dark, experiential) and paper (light, informational) —
+  used deliberately by section purpose, not as a light/dark mode toggle.
+  Two accent voices share the same grid/type: brass = Prestige (the company),
+  wine = Noah personally. Lake is a tertiary accent tied to Michigan geography.
+*/
+@theme {
+  --color-ink: #14171f;
+  --color-ink-soft: #1c2030;
+  --color-ink-line: #2b3040;
+
+  --color-paper: #f3eee3;
+  --color-paper-soft: #eae1cc;
+  --color-paper-line: #ddd2b8;
+
+  --color-brass: #c6952f;
+  --color-brass-bright: #e3bc63;
+  --color-wine: #7a2436;
+  --color-wine-bright: #9c3347;
+  --color-lake: #2e5266;
+  --color-lake-bright: #3e6b85;
+
+  --color-ash: #6b6555;
+  --color-smoke: #9aa0ae;
+
+  --font-display: var(--font-bricolage), "Arial Black", sans-serif;
+  --font-sans: var(--font-instrument), system-ui, sans-serif;
+  --font-mono: var(--font-space-mono), ui-monospace, monospace;
+
+  --animate-waveform: waveform 1.4s ease-in-out infinite;
+}
+
+@keyframes waveform {
+  0%, 100% { transform: scaleY(0.35); }
+  50% { transform: scaleY(1); }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: var(--color-brass);
+  color: var(--color-ink);
+}
+
+/* Visible keyboard focus everywhere, regardless of accent context */
+:focus-visible {
+  outline: 2px solid var(--color-brass);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.ink :focus-visible,
+.on-ink :focus-visible {
+  outline-color: var(--color-brass-bright);
+}
