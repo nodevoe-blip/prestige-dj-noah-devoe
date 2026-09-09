@@ -5,7 +5,7 @@
  * numbers.
  */
 
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.djnoahdevoe.com";
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://djnoahdevoe.com";
 
 export const prestige = {
   name: "Prestige Weddings & Events",
