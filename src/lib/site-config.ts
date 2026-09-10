@@ -205,10 +205,68 @@ export const services: Service[] = [
   },
 ];
 
-// Empty for now — venue-partnership pages (e.g. Cushing Field House) are on
-// hold until that content is ready. Add entries here once it's time to build
-// them back out; /venues/[slug] routes and the sitemap pick this up automatically.
-export const venues: { slug: string; name: string; blurb: string }[] = [];
+export type Venue = {
+  slug: string;
+  name: string;
+  city: string;
+  /** service-area slug this venue belongs to, for cross-linking */
+  regionSlug: string;
+  blurb: string;
+  // Everything below is optional on purpose — render only what's actually
+  // known. A venue page with three filled-in fields and the rest omitted is
+  // honest; a venue page with every field forced full of guesses isn't.
+  weddingsWorked?: string;
+  ceremonySetup?: string;
+  receptionSetup?: string;
+  djPlacement?: string;
+  audioNotes?: string;
+  loadIn?: string;
+  parking?: string;
+  noiseRestrictions?: string;
+  danceFloorNotes?: string;
+  photos?: string[]; // filenames under /public/images/portfolio, no extension
+};
+
+// Empty for now — venue pages (e.g. Cushing Field House) are on hold until
+// there's enough real, firsthand detail per venue to avoid publishing a thin
+// page. Add entries here once that content exists; /venues/[slug] and the
+// sitemap pick them up automatically. See the Venue type above for the shape.
+export const venues: Venue[] = [];
+
+export type RealWedding = {
+  slug: string;
+  couple: string;
+  venueName?: string;
+  /** Set only if that venue has its own page in `venues` above */
+  venueSlug?: string;
+  regionSlug?: string;
+  date?: string;
+  guestCount?: string;
+  musicStyle?: string;
+  notableMoments?: string;
+  danceFloorNotes?: string;
+  testimonial?: { quote: string; attribution: string };
+  /** Filenames under /public/images/portfolio, no extension. Always required
+   * — this is the one thing confirmed real for every entry here. */
+  photos: string[];
+};
+
+// Only weddings with a real, confirmed couple name and real photos go here —
+// this feeds individual crawlable case-study pages. Fields left undefined
+// render as "ask Noah" gaps, not guesses.
+export const realWeddings: RealWedding[] = [
+  {
+    slug: "casey-michael",
+    couple: "Casey & Michael",
+    photos: ["casey-michael-01", "casey-michael-02", "casey-michael-03", "casey-michael-04", "casey-michael-05"],
+  },
+  {
+    slug: "the-beckers-danceasaur-brewery",
+    couple: "The Beckers",
+    venueName: "Danceasaur Brewery",
+    photos: ["becker-danceasaur-brewery"],
+  },
+];
 
 export const primaryNav = [
   {

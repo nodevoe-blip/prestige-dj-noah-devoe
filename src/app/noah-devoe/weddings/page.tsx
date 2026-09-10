@@ -1,9 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
 import { pageMetadata } from "@/lib/metadata";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { LayerBadge } from "@/components/ui/LayerBadge";
 import { CTAButton } from "@/components/ui/CTAButton";
+import { realWeddings } from "@/lib/site-config";
 
 export const metadata = pageMetadata({
   title: "Weddings I've DJ'd — Noah DeVoe",
@@ -11,18 +13,6 @@ export const metadata = pageMetadata({
     "A portfolio of Michigan weddings Noah DeVoe has personally DJ'd — real couples, real venues, shared with permission.",
   path: "/noah-devoe/weddings",
 });
-
-const featured = [
-  {
-    couple: "Casey & Michael",
-    photos: ["casey-michael-01", "casey-michael-02", "casey-michael-03", "casey-michael-04", "casey-michael-05"],
-  },
-  {
-    couple: "The Beckers",
-    venue: "Danceasaur Brewery",
-    photos: ["becker-danceasaur-brewery"],
-  },
-];
 
 const gallery = [
   "reception-01",
@@ -81,23 +71,31 @@ export default function WeddingsPage() {
           </p>
         </div>
 
-        {featured.map((f) => (
-          <div key={f.couple} className="mt-14">
-            <p className="font-mono text-xs uppercase tracking-wider text-espresso-bright">
-              {f.couple}
-              {f.venue && <span className="text-smoke"> — {f.venue}</span>}
-            </p>
+        {realWeddings.map((w) => (
+          <div key={w.slug} className="mt-14">
+            <Link
+              href={`/noah-devoe/weddings/${w.slug}`}
+              className="inline-flex items-baseline gap-2 font-mono text-xs uppercase tracking-wider text-espresso-bright hover:text-espresso"
+            >
+              <span>{w.couple}</span>
+              {w.venueName && <span className="text-smoke">— {w.venueName}</span>}
+              <span aria-hidden="true">&rarr;</span>
+            </Link>
             <div className="mt-5 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
-              {f.photos.map((slug) => (
-                <div key={slug} className="relative aspect-[4/5] overflow-hidden rounded-sm border border-espresso-bright">
+              {w.photos.map((slug) => (
+                <Link
+                  key={slug}
+                  href={`/noah-devoe/weddings/${w.slug}`}
+                  className="relative aspect-[4/5] overflow-hidden rounded-sm border border-espresso-bright"
+                >
                   <Image
                     src={`/images/portfolio/${slug}.jpg`}
-                    alt={`${f.couple}'s wedding${f.venue ? ` at ${f.venue}` : ""}`}
+                    alt={`${w.couple}'s wedding${w.venueName ? ` at ${w.venueName}` : ""}`}
                     fill
                     sizes="(min-width: 1024px) 18vw, (min-width: 640px) 30vw, 45vw"
                     className="object-cover"
                   />
-                </div>
+                </Link>
               ))}
             </div>
           </div>

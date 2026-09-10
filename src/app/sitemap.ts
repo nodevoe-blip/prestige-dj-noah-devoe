@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { SITE_URL, serviceAreas, services, venues } from "@/lib/site-config";
+import { SITE_URL, serviceAreas, services, venues, realWeddings } from "@/lib/site-config";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
@@ -26,7 +26,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // are reachable in nav but marked noindex until populated (avoids the
     // thin/templated doorway-page pattern Google penalizes).
     ...serviceAreas.filter((a) => a.live).map((a) => `/service-area/${a.slug}`),
+    // /venues (hub) is noindexed and omitted while empty — see src/app/venues/page.tsx
+    ...(venues.length > 0 ? ["/venues"] : []),
     ...venues.map((v) => `/venues/${v.slug}`),
+    ...realWeddings.map((w) => `/noah-devoe/weddings/${w.slug}`),
   ];
 
   return [...staticRoutes, ...dynamicRoutes].map((path) => ({
