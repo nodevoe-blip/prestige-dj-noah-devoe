@@ -36,7 +36,7 @@ export function pageMetadata({ title, description, path, image, noindex }: PageM
       title,
       description,
       url,
-      siteName: "Prestige Weddings & Events",
+      siteName: "Noah DeVoe | Prestige Weddings & Events",
       images: [{ url: ogImage }],
       locale: "en_US",
       type: "website",

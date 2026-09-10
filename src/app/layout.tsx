@@ -4,7 +4,8 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { LocalBusinessSchema } from "@/components/schema/LocalBusinessSchema";
-import { SITE_URL, prestige } from "@/lib/site-config";
+import { PersonSchema } from "@/components/schema/PersonSchema";
+import { SITE_URL, noah } from "@/lib/site-config";
 
 const jost = Jost({
   variable: "--font-jost",
@@ -27,11 +28,14 @@ const instrument = Instrument_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: {
-    default: "Prestige Weddings & Events — Michigan Wedding DJ, Photo & Video",
-    template: "%s — Prestige Weddings & Events",
-  },
-  description: prestige.description,
+  // Plain string, not a { default, template } object — every route's
+  // pageMetadata() call already returns its complete, final title, and a
+  // template here would silently double-append a suffix on top of it (that
+  // bug shipped for a while before it was caught). This string is a pure
+  // fallback for the (currently nonexistent) case of a route that forgets
+  // to set its own metadata.
+  title: "Noah DeVoe | Michigan Wedding DJ & MC | Prestige Weddings",
+  description: noah.bio,
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -42,6 +46,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="flex min-h-full flex-col bg-paper text-ink antialiased">
         <LocalBusinessSchema />
+        {/* Sitewide, not just on /noah-devoe — Noah is the domain's primary entity */}
+        <PersonSchema />
         <Header />
         <main id="main" className="flex-1">
           {children}

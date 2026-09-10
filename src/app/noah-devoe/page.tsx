@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { pageMetadata } from "@/lib/metadata";
-import { PersonSchema } from "@/components/schema/PersonSchema";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { AudioPlayer, type Track } from "@/components/ui/AudioPlayer";
 import { VideoPlayer, type VideoClip } from "@/components/ui/VideoPlayer";
@@ -65,7 +64,7 @@ export default async function NoahDeVoePage() {
 
   return (
     <>
-      <PersonSchema />
+      {/* PersonSchema is mounted sitewide in the root layout now, not per-page */}
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-ink text-paper">
