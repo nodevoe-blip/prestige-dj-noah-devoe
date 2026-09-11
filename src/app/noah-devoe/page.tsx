@@ -310,7 +310,7 @@ export default async function NoahDeVoePage() {
             <Testimonial
               placeholder={false}
               quote="DJ Noah was without a doubt the standout vendor. His mixing and DJ skills shined hard, even mixing between English and Brazilian turned out so good. He was great at reading the vibe of the room and just kept the energy up and moving the whole time."
-              attribution="Larissa & Connor — Packard Proving Grounds"
+              attribution="Larissa & Connor — Fenton Winery & Brewery"
             />
             <Testimonial
               placeholder={false}

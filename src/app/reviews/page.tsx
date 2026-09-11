@@ -24,7 +24,7 @@ const reviews = [
   {
     quote:
       "DJ Noah was without a doubt the standout vendor. His mixing and DJ skills shined hard, even mixing between English and Brazilian turned out so good. He was great at reading the vibe of the room and just kept the energy up and moving the whole time. We even had a storm roll through and knock out the power for a few minutes and he kept it alive while things got set up again.",
-    attribution: "Larissa & Connor — Packard Proving Grounds",
+    attribution: "Larissa & Connor — Fenton Winery & Brewery",
   },
   {
     quote:

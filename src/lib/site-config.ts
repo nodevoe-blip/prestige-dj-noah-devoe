@@ -323,6 +323,15 @@ export const venues: Venue[] = [
     blurb: "A historic late-1800s building in downtown Brighton, with an event space spanning two upper floors connected by wrought-iron stairs.",
     about: "Hickory wood floors and tall arched windows define the event space. The venue requires guests to be 21+.",
   },
+  {
+    slug: "fenton-winery-brewery",
+    name: "Fenton Winery & Brewery",
+    city: "Fenton, MI",
+    regionSlug: "metro-detroit",
+    blurb: "A rustic reception space with an indoor waterfall feature, an acre of outdoor gardens, and an on-site brewery taproom.",
+    about: "The reception area seats up to 280 and features a dance floor, an indoor waterfall, and a bar built from oak barrels and repurposed pallet wood. Ceremonies can be held indoors or outdoors among an acre of gardens. A separate in-brewery taproom hosts smaller events like rehearsal dinners, up to about 30 guests.",
+    spaces: "The venue is booked exclusively for the day, with a private bridal suite, groom's fitting rooms, and an outdoor patio with a brick fireplace.",
+  },
 ];
 
 export type RealWedding = {
@@ -363,8 +372,8 @@ export const realWeddings: RealWedding[] = [
   {
     slug: "larissa-connor",
     couple: "Larissa & Connor",
-    venueName: "Packard Proving Grounds",
-    venueSlug: "packard-proving-grounds",
+    venueName: "Fenton Winery & Brewery",
+    venueSlug: "fenton-winery-brewery",
     regionSlug: "metro-detroit",
     testimonial: {
       quote:
