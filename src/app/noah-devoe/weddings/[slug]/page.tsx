@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     : `${wedding.couple}'s Wedding — Noah DeVoe`;
   return pageMetadata({
     title,
-    description: `A real Michigan wedding Noah DeVoe personally DJ'd${wedding.venueName ? ` at ${wedding.venueName}` : ""} — photos and notes from the day.`,
+    description: `A real Michigan wedding Noah DeVoe personally DJ'd${wedding.venueName ? ` at ${wedding.venueName}` : ""}.`,
     path: `/noah-devoe/weddings/${wedding.slug}`,
   });
 }
@@ -77,19 +77,21 @@ export default async function RealWeddingPage({ params }: { params: Promise<{ sl
           </div>
         )}
 
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-          {wedding.photos.map((p) => (
-            <div key={p} className="relative aspect-[4/5] overflow-hidden rounded-sm border border-espresso-bright">
-              <Image
-                src={`/images/portfolio/${p}.jpg`}
-                alt={`${wedding.couple}'s wedding${wedding.venueName ? ` at ${wedding.venueName}` : ""}`}
-                fill
-                sizes="(min-width: 768px) 30vw, 45vw"
-                className="object-cover"
-              />
-            </div>
-          ))}
-        </div>
+        {wedding.photos && wedding.photos.length > 0 && (
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+            {wedding.photos.map((p) => (
+              <div key={p} className="relative aspect-[4/5] overflow-hidden rounded-sm border border-espresso-bright">
+                <Image
+                  src={`/images/portfolio/${p}.jpg`}
+                  alt={`${wedding.couple}'s wedding${wedding.venueName ? ` at ${wedding.venueName}` : ""}`}
+                  fill
+                  sizes="(min-width: 768px) 30vw, 45vw"
+                  className="object-cover"
+                />
+              </div>
+            ))}
+          </div>
+        )}
 
         {wedding.testimonial && (
           <div className="mt-12 max-w-xl">

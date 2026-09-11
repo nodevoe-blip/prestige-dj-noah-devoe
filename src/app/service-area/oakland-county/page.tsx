@@ -189,11 +189,19 @@ export default function OaklandCountyPage() {
           <Testimonial
             placeholder={false}
             quote="Noah was a phenomenal DJ at our wedding!! He goes above and beyond to understand your vision for the day — he met with us for over an hour to go over every detail and understand our music taste. He's an awesome MC, all the events of the day went so smoothly and the dancing part of the evening was perfect!!"
-            attribution="Lana & Brian — Addison Oaks, Oxford Township"
+            attribution="Lana & Brian — Addison Oaks, Leonard"
           />
         </div>
         <p className="mt-4 max-w-2xl text-xs text-ash">
-          More Oakland County reviews are on the way — see{" "}
+          More on{" "}
+          <a href="/venues/addison-oaks" className="text-espresso-bright underline decoration-dotted underline-offset-2">
+            Addison Oaks
+          </a>{" "}
+          in the{" "}
+          <a href="/venues" className="text-espresso-bright underline decoration-dotted underline-offset-2">
+            venue guide
+          </a>
+          , or see{" "}
           <a href="/noah-devoe" className="text-espresso-bright underline decoration-dotted underline-offset-2">
             Noah&rsquo;s full review list
           </a>{" "}

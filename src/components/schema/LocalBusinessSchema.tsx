@@ -50,6 +50,15 @@ export function LocalBusinessSchema() {
           name: founder.name,
           jobTitle: founder.jobTitle,
         },
+        // Real number sourced from WeddingWire's own listing — see the
+        // comment on prestige.aggregateRating in site-config.ts before ever
+        // changing this.
+        aggregateRating: {
+          "@type": "AggregateRating",
+          ratingValue: prestige.aggregateRating.ratingValue,
+          reviewCount: prestige.aggregateRating.reviewCount,
+          bestRating: 5,
+        },
       }}
     />
   );

@@ -5,6 +5,8 @@ import { LayerBadge } from "@/components/ui/LayerBadge";
 import { Testimonial } from "@/components/ui/Testimonial";
 import { prestige } from "@/lib/site-config";
 
+const rating = prestige.aggregateRating;
+
 export const metadata = pageMetadata({
   title: "Reviews — Prestige Weddings & Events",
   description:
@@ -75,6 +77,19 @@ export default function ReviewsPage() {
             </a>{" "}
             too.
           </p>
+          <div className="mt-6 flex items-baseline gap-3">
+            <p className="font-display text-4xl font-bold text-navy-bright">{rating.ratingValue.toFixed(1)}</p>
+            <p className="font-mono text-xs uppercase tracking-wider text-smoke">
+              average, {rating.reviewCount}+ reviews on {rating.source}
+            </p>
+          </div>
+          <ul className="mt-4 space-y-1">
+            {prestige.awards.map((a) => (
+              <li key={a} className="font-mono text-[11px] uppercase tracking-wider text-navy-bright">
+                &mdash; {a}
+              </li>
+            ))}
+          </ul>
         </div>
 
         <div className="mt-12 grid gap-5 sm:grid-cols-3">
@@ -99,10 +114,8 @@ export default function ReviewsPage() {
         </div>
 
         <p className="mt-10 max-w-2xl text-xs text-smoke">
-          [This page intentionally doesn&rsquo;t display an aggregate star-rating number —
-          fabricated ratings violate Google&rsquo;s review-snippet guidelines. Once a real,
-          current aggregate rating is pulled from WeddingWire or Google Business Profile, wire it
-          into AggregateRating schema with the real number.]
+          Rating and review count sourced directly from WeddingWire&rsquo;s own listing — never
+          estimated or invented. Worth a periodic recheck as the count grows.
         </p>
       </div>
     </section>

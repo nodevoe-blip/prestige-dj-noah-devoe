@@ -5,7 +5,11 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { LayerBadge } from "@/components/ui/LayerBadge";
 import { CTAButton } from "@/components/ui/CTAButton";
+import { Testimonial } from "@/components/ui/Testimonial";
 import { realWeddings } from "@/lib/site-config";
+
+const withPhotos = realWeddings.filter((w) => w.photos && w.photos.length > 0);
+const withTestimonialOnly = realWeddings.filter((w) => !w.photos?.length && w.testimonial);
 
 export const metadata = pageMetadata({
   title: "Weddings I've DJ'd — Noah DeVoe",
@@ -71,7 +75,7 @@ export default function WeddingsPage() {
           </p>
         </div>
 
-        {realWeddings.map((w) => (
+        {withPhotos.map((w) => (
           <div key={w.slug} className="mt-14">
             <Link
               href={`/noah-devoe/weddings/${w.slug}`}
@@ -82,7 +86,7 @@ export default function WeddingsPage() {
               <span aria-hidden="true">&rarr;</span>
             </Link>
             <div className="mt-5 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
-              {w.photos.map((slug) => (
+              {(w.photos ?? []).map((slug) => (
                 <Link
                   key={slug}
                   href={`/noah-devoe/weddings/${w.slug}`}
@@ -100,6 +104,26 @@ export default function WeddingsPage() {
             </div>
           </div>
         ))}
+
+        {withTestimonialOnly.length > 0 && (
+          <div className="mt-16">
+            <p className="font-mono text-xs uppercase tracking-wider text-espresso-bright">
+              More real weddings, in their own words
+            </p>
+            <div className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {withTestimonialOnly.map((w) => (
+                <Link key={w.slug} href={`/noah-devoe/weddings/${w.slug}`} className="block">
+                  <Testimonial
+                    placeholder={false}
+                    quote={w.testimonial!.quote}
+                    attribution={`${w.couple}${w.venueName ? ` — ${w.venueName}` : ""}`}
+                    tone="onInk"
+                  />
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
 
         <div className="mt-16">
           <p className="font-mono text-xs uppercase tracking-wider text-espresso-bright">

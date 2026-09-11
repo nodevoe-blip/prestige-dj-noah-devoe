@@ -76,6 +76,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/venues" className="text-sm text-smoke hover:text-paper">
+                  Venue Guide
+                </Link>
+              </li>
+              <li>
                 <Link href="/noah-devoe/pricing" className="text-sm text-smoke hover:text-paper">
                   Book Noah
                 </Link>

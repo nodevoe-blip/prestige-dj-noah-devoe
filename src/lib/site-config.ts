@@ -38,6 +38,20 @@ export const prestige = {
     "https://www.facebook.com/prestigewedding/",
     "https://www.trustindex.io/reviews/www.prestigeweddings.com",
   ],
+  // Sourced from WeddingWire's own listing (checked 2026-09). Review counts
+  // grow — re-check the live number periodically rather than treating this
+  // as permanent. This is the only rating data in the codebase actually
+  // wired into AggregateRating schema; never add another without a real,
+  // checkable source like this one.
+  aggregateRating: {
+    ratingValue: 5.0,
+    reviewCount: 233,
+    source: "WeddingWire",
+  },
+  awards: [
+    "WeddingWire Couples' Choice Award — 11 years (2013, 2014, 2018–2026)",
+    "The Knot Best of Weddings — 4+ years",
+  ],
 } as const;
 
 export const noah = {
@@ -125,8 +139,8 @@ export const serviceAreas: ServiceArea[] = [
     slug: "metro-detroit",
     name: "Metro Detroit",
     region: "Southeast Michigan",
-    blurb: "Detroit, Dearborn, Grosse Pointe & the riverfront and loft-venue scene.",
-    live: false,
+    blurb: "Shelby Township, downtown Detroit, Eastern Market, Fenton & Brighton.",
+    live: true,
   },
   {
     slug: "grand-rapids",
@@ -212,9 +226,21 @@ export type Venue = {
   /** service-area slug this venue belongs to, for cross-linking */
   regionSlug: string;
   blurb: string;
-  // Everything below is optional on purpose — render only what's actually
-  // known. A venue page with three filled-in fields and the rest omitted is
-  // honest; a venue page with every field forced full of guesses isn't.
+
+  // Researched public facts — venue history/character/capacity, sourced from
+  // public listings and the venue's own material. NOT Noah's personal
+  // account, and must never be phrased as if it were.
+  about?: string;
+  spaces?: string;
+  publicParkingNotes?: string;
+  /** A policy the venue itself publishes (e.g. a stated curfew) — safe to
+   * state as fact since it's the venue's own published rule, not hearsay. */
+  publishedPolicies?: string;
+
+  // Noah's own firsthand account. Leave undefined until he's actually
+  // confirmed it — a venue page with every field forced full of guesses
+  // isn't honest, and a real venue's own reception doesn't need doorway-page
+  // padding to be worth a page.
   weddingsWorked?: string;
   ceremonySetup?: string;
   receptionSetup?: string;
@@ -227,11 +253,77 @@ export type Venue = {
   photos?: string[]; // filenames under /public/images/portfolio, no extension
 };
 
-// Empty for now — venue pages (e.g. Cushing Field House) are on hold until
-// there's enough real, firsthand detail per venue to avoid publishing a thin
-// page. Add entries here once that content exists; /venues/[slug] and the
-// sitemap pick them up automatically. See the Venue type above for the shape.
-export const venues: Venue[] = [];
+// Venues below all have confirmed real Prestige/Noah experience — either a
+// named couple's review at that address, or Prestige's own photo captions
+// naming the venue. General facts are researched/public; firsthand fields
+// stay empty until Noah confirms them directly (see the questionnaire).
+// Passed on for now (no confirmed experience found yet, so no page):
+// Shepherd's Hollow, Royal Park Hotel, Roostertail. Pine Knob Mansion &
+// Carriage House also passed on — Prestige has photo evidence there, but not
+// specifically confirmed as Noah personally.
+export const venues: Venue[] = [
+  {
+    slug: "packard-proving-grounds",
+    name: "Packard Proving Grounds",
+    city: "Shelby Township, MI",
+    regionSlug: "metro-detroit",
+    blurb: "A 17-acre historic automotive proving ground turned event venue, anchored by the 6,400 sq. ft. Repair Garage.",
+    about: "Built in 1928 for the Packard Motor Car Company and designed by Albert Kahn, the property is listed on the National Register of Historic Places. Ceremonies are typically held in the Lodge Garage or along the tree-lined boulevard under its iron gate.",
+    spaces: "The Repair Garage seats up to roughly 296 for a reception. The Lodge Garage seats about 200 theater-style for an indoor ceremony. A courtyard between the two garages is commonly used for cocktail hour.",
+  },
+  {
+    slug: "addison-oaks",
+    name: "Addison Oaks",
+    city: "Leonard, MI",
+    regionSlug: "oakland-county",
+    blurb: "An Oakland County Parks estate built around the 1927–28 Buhl family manor, with a banquet room, outdoor deck, and dedicated wedding garden.",
+    about: "Addison Oaks is an Oakland County Parks property spanning roughly 750–1,000 acres, centered on the English Tudor-style Buhl Estate manor house.",
+    spaces: "The banquet room holds up to roughly 500 for cocktails and reception and opens onto an outdoor deck. A separate garden room suits smaller gatherings, and there's a dedicated outdoor wedding garden for ceremonies.",
+  },
+  {
+    slug: "the-gem-theatre",
+    name: "The Gem Theatre",
+    city: "Detroit, MI",
+    regionSlug: "metro-detroit",
+    blurb: "A 1927 Spanish Revival former movie house in downtown Detroit, on the National Register of Historic Places.",
+    about: "Reported capacity varies by configuration and source, generally cited from 150 up to 400+. Ceremonies can be held on the proscenium stage; the reception space includes a lower-level dining room and a landscaped outdoor patio.",
+    publicParkingNotes: "The venue has its own attached parking deck.",
+  },
+  {
+    slug: "the-whiskey-factory",
+    name: "The Whiskey Factory",
+    city: "Detroit, MI (Eastern Market)",
+    regionSlug: "metro-detroit",
+    blurb: "A second-floor event space above Detroit City Distillery in Eastern Market, lined with whiskey barrels around an original 1920s bar.",
+    about: "The historic event floor is roughly 5,000–7,000 sq. ft. with freight-elevator access, holding about 200 seated or 250 standing.",
+    publicParkingNotes: "Street parking near the venue is limited; Eastern Market's lots across the street are commonly used as overflow parking.",
+  },
+  {
+    slug: "vale-royal-barn",
+    name: "Vale Royal Barn",
+    city: "Fenton, MI",
+    regionSlug: "metro-detroit",
+    blurb: "A restored 1830s dairy barn on an 8-acre private estate, booked exclusively for the weekend.",
+    about: "The venue offers exclusive Friday–Sunday use, a 2,200 sq. ft. dining room with a chandelier and indoor bar, and four separate ceremony sites: a covered bridge, a riverside dock, a garden courtyard, and the woodlands. Capacity runs roughly 150–160 including vendors, with golf carts available to move around the grounds.",
+    publishedPolicies: "Per the venue's own published guidelines, music must end by 11:30pm and the event must be over by midnight.",
+  },
+  {
+    slug: "planterra-conservatory",
+    name: "Planterra Conservatory",
+    city: "West Bloomfield Township, MI",
+    regionSlug: "oakland-county",
+    blurb: "A Belgian-glass, three-greenhouse conservatory — roughly 23,000 sq. ft. — with wedding season running September through May.",
+    about: "Capacity runs up to about 200 for a reception, with some ceremony configurations seating up to 100. Prestige's own photo galleries include shots captioned “DJ Noah | Planterra,” confirming he's personally DJ'd here.",
+  },
+  {
+    slug: "brewery-becker",
+    name: "Brewery Becker",
+    city: "Brighton, MI",
+    regionSlug: "metro-detroit",
+    blurb: "A historic late-1800s building in downtown Brighton, with an event space spanning two upper floors connected by wrought-iron stairs.",
+    about: "Hickory wood floors and tall arched windows define the event space. The venue requires guests to be 21+.",
+  },
+];
 
 export type RealWedding = {
   slug: string;
@@ -246,14 +338,14 @@ export type RealWedding = {
   notableMoments?: string;
   danceFloorNotes?: string;
   testimonial?: { quote: string; attribution: string };
-  /** Filenames under /public/images/portfolio, no extension. Always required
-   * — this is the one thing confirmed real for every entry here. */
-  photos: string[];
+  /** Filenames under /public/images/portfolio, no extension. Optional — some
+   * entries below are confirmed real via a named review rather than a photo. */
+  photos?: string[];
 };
 
-// Only weddings with a real, confirmed couple name and real photos go here —
-// this feeds individual crawlable case-study pages. Fields left undefined
-// render as "ask Noah" gaps, not guesses.
+// Only weddings with a real, confirmed couple name go here — either real
+// photos, a real review, or both. Fields left undefined render as gaps, not
+// guesses.
 export const realWeddings: RealWedding[] = [
   {
     slug: "casey-michael",
@@ -261,10 +353,72 @@ export const realWeddings: RealWedding[] = [
     photos: ["casey-michael-01", "casey-michael-02", "casey-michael-03", "casey-michael-04", "casey-michael-05"],
   },
   {
-    slug: "the-beckers-danceasaur-brewery",
+    slug: "the-beckers",
     couple: "The Beckers",
-    venueName: "Danceasaur Brewery",
+    venueName: "Brewery Becker",
+    venueSlug: "brewery-becker",
+    regionSlug: "metro-detroit",
     photos: ["becker-danceasaur-brewery"],
+  },
+  {
+    slug: "larissa-connor",
+    couple: "Larissa & Connor",
+    venueName: "Packard Proving Grounds",
+    venueSlug: "packard-proving-grounds",
+    regionSlug: "metro-detroit",
+    testimonial: {
+      quote:
+        "DJ Noah was without a doubt the standout vendor. His mixing and DJ skills shined hard, even mixing between English and Brazilian turned out so good. He was great at reading the vibe of the room and just kept the energy up and moving the whole time. We even had a storm roll through and knock out the power for a few minutes and he kept it alive while things got set up again.",
+      attribution: "Larissa & Connor",
+    },
+  },
+  {
+    slug: "lana-brian",
+    couple: "Lana & Brian",
+    venueName: "Addison Oaks",
+    venueSlug: "addison-oaks",
+    regionSlug: "oakland-county",
+    testimonial: {
+      quote:
+        "He's an awesome MC, all the events of the day went so smoothly and the dancing part of the evening was perfect!! He chose all the right songs, read the crowd so well and created the perfect balance of a fun dance floor without feeling like a club, exactly what we wanted.",
+      attribution: "Lana & Brian",
+    },
+  },
+  {
+    slug: "aubrey-alex",
+    couple: "Aubrey & Alex",
+    venueName: "The Gem Theatre",
+    venueSlug: "the-gem-theatre",
+    regionSlug: "metro-detroit",
+    testimonial: {
+      quote:
+        "Noah made the wedding reception EPIC. Not only was he a great MC, but the dance floor was absolutely packed the entire night. We plan to refer Noah/Prestige to all our friends and family for their DJ'ing needs.",
+      attribution: "Aubrey & Alex",
+    },
+  },
+  {
+    slug: "abby-alexander",
+    couple: "Abby & Alexander",
+    venueName: "The Whiskey Factory",
+    venueSlug: "the-whiskey-factory",
+    regionSlug: "metro-detroit",
+    testimonial: {
+      quote:
+        "From the moment I decided to hire them for DJ, coordinator, and videography services, they made wedding planning as seamless and easy as possible. My wedding would not have been the fairytale it was without Prestige!",
+      attribution: "Abby & Alexander",
+    },
+  },
+  {
+    slug: "shannon-brandyn",
+    couple: "Shannon & Brandyn",
+    venueName: "Vale Royal Barn",
+    venueSlug: "vale-royal-barn",
+    regionSlug: "metro-detroit",
+    testimonial: {
+      quote:
+        "We hired Prestige for both DJ services and Day of Coordination. This was by far one of the best decisions made during the planning process. The dance floor was not empty once during the reception!",
+      attribution: "Shannon & Brandyn",
+    },
   },
 ];
 
@@ -276,6 +430,7 @@ export const primaryNav = [
       { label: "Bio & Portfolio", href: "/noah-devoe" },
       { label: "Mixes", href: "/noah-devoe/mixes" },
       { label: "Weddings I've DJ'd", href: "/noah-devoe/weddings" },
+      { label: "Venue Guide", href: "/venues" },
       { label: "Book Noah", href: "/noah-devoe/pricing" },
     ],
   },
