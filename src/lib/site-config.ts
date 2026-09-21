@@ -270,6 +270,7 @@ export const venues: Venue[] = [
     blurb: "A 17-acre historic automotive proving ground turned event venue, anchored by the 6,400 sq. ft. Repair Garage.",
     about: "Built in 1928 for the Packard Motor Car Company and designed by Albert Kahn, the property is listed on the National Register of Historic Places. Ceremonies are typically held in the Lodge Garage or along the tree-lined boulevard under its iron gate.",
     spaces: "The Repair Garage seats up to roughly 296 for a reception. The Lodge Garage seats about 200 theater-style for an indoor ceremony. A courtyard between the two garages is commonly used for cocktail hour.",
+    weddingsWorked: "2 weddings DJ'd here since 2023",
   },
   {
     slug: "addison-oaks",
@@ -279,6 +280,7 @@ export const venues: Venue[] = [
     blurb: "An Oakland County Parks estate built around the 1927–28 Buhl family manor, with a banquet room, outdoor deck, and dedicated wedding garden.",
     about: "Addison Oaks is an Oakland County Parks property spanning roughly 750–1,000 acres, centered on the English Tudor-style Buhl Estate manor house.",
     spaces: "The banquet room holds up to roughly 500 for cocktails and reception and opens onto an outdoor deck. A separate garden room suits smaller gatherings, and there's a dedicated outdoor wedding garden for ceremonies.",
+    weddingsWorked: "3 weddings DJ'd here since 2023",
   },
   {
     slug: "the-gem-theatre",
@@ -297,6 +299,7 @@ export const venues: Venue[] = [
     blurb: "A second-floor event space above Detroit City Distillery in Eastern Market, lined with whiskey barrels around an original 1920s bar.",
     about: "The historic event floor is roughly 5,000–7,000 sq. ft. with freight-elevator access, holding about 200 seated or 250 standing.",
     publicParkingNotes: "Street parking near the venue is limited; Eastern Market's lots across the street are commonly used as overflow parking.",
+    weddingsWorked: "1 wedding DJ'd here since 2023",
   },
   {
     slug: "vale-royal-barn",
@@ -306,6 +309,7 @@ export const venues: Venue[] = [
     blurb: "A restored 1830s dairy barn on an 8-acre private estate, booked exclusively for the weekend.",
     about: "The venue offers exclusive Friday–Sunday use, a 2,200 sq. ft. dining room with a chandelier and indoor bar, and four separate ceremony sites: a covered bridge, a riverside dock, a garden courtyard, and the woodlands. Capacity runs roughly 150–160 including vendors, with golf carts available to move around the grounds.",
     publishedPolicies: "Per the venue's own published guidelines, music must end by 11:30pm and the event must be over by midnight.",
+    weddingsWorked: "1 wedding DJ'd here since 2023",
   },
   {
     slug: "planterra-conservatory",
@@ -314,6 +318,7 @@ export const venues: Venue[] = [
     regionSlug: "oakland-county",
     blurb: "A Belgian-glass, three-greenhouse conservatory — roughly 23,000 sq. ft. — with wedding season running September through May.",
     about: "Capacity runs up to about 200 for a reception, with some ceremony configurations seating up to 100. Prestige's own photo galleries include shots captioned “DJ Noah | Planterra,” confirming he's personally DJ'd here.",
+    weddingsWorked: "2 weddings DJ'd here since 2023",
   },
   {
     slug: "brewery-becker",
@@ -322,6 +327,7 @@ export const venues: Venue[] = [
     regionSlug: "metro-detroit",
     blurb: "A historic late-1800s building in downtown Brighton, with an event space spanning two upper floors connected by wrought-iron stairs.",
     about: "Hickory wood floors and tall arched windows define the event space. The venue requires guests to be 21+.",
+    weddingsWorked: "1 wedding DJ'd here since 2023",
   },
   {
     slug: "fenton-winery-brewery",
@@ -331,6 +337,7 @@ export const venues: Venue[] = [
     blurb: "A rustic reception space with an indoor waterfall feature, an acre of outdoor gardens, and an on-site brewery taproom.",
     about: "The reception area seats up to 280 and features a dance floor, an indoor waterfall, and a bar built from oak barrels and repurposed pallet wood. Ceremonies can be held indoors or outdoors among an acre of gardens. A separate in-brewery taproom hosts smaller events like rehearsal dinners, up to about 30 guests.",
     spaces: "The venue is booked exclusively for the day, with a private bridal suite, groom's fitting rooms, and an outdoor patio with a brick fireplace.",
+    weddingsWorked: "7 weddings DJ'd here since 2023 — more than any other venue on this list",
   },
 ];
 
