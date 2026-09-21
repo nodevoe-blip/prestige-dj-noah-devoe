@@ -253,14 +253,11 @@ export type Venue = {
   photos?: string[]; // filenames under /public/images/portfolio, no extension
 };
 
-// Venues below all have confirmed real Prestige/Noah experience — either a
-// named couple's review at that address, or Prestige's own photo captions
-// naming the venue. General facts are researched/public; firsthand fields
-// stay empty until Noah confirms them directly (see the questionnaire).
-// Passed on for now (no confirmed experience found yet, so no page):
-// Shepherd's Hollow, Royal Park Hotel, Roostertail. Pine Knob Mansion &
-// Carriage House also passed on — Prestige has photo evidence there, but not
-// specifically confirmed as Noah personally.
+// Venues below all have confirmed real Noah/Prestige experience — either a
+// named couple's review at that address, dated wedding-video folders Noah
+// confirmed are his own, or Prestige's own photo captions naming the venue.
+// General facts are researched/public; firsthand fields stay empty until
+// Noah confirms them directly (see the questionnaire).
 export const venues: Venue[] = [
   {
     slug: "packard-proving-grounds",
@@ -271,6 +268,7 @@ export const venues: Venue[] = [
     about: "Built in 1928 for the Packard Motor Car Company and designed by Albert Kahn, the property is listed on the National Register of Historic Places. Ceremonies are typically held in the Lodge Garage or along the tree-lined boulevard under its iron gate.",
     spaces: "The Repair Garage seats up to roughly 296 for a reception. The Lodge Garage seats about 200 theater-style for an indoor ceremony. A courtyard between the two garages is commonly used for cocktail hour.",
     weddingsWorked: "2 weddings DJ'd here since 2023",
+    photos: ["packard-proving-grounds-01"],
   },
   {
     slug: "addison-oaks",
@@ -281,6 +279,7 @@ export const venues: Venue[] = [
     about: "Addison Oaks is an Oakland County Parks property spanning roughly 750–1,000 acres, centered on the English Tudor-style Buhl Estate manor house.",
     spaces: "The banquet room holds up to roughly 500 for cocktails and reception and opens onto an outdoor deck. A separate garden room suits smaller gatherings, and there's a dedicated outdoor wedding garden for ceremonies.",
     weddingsWorked: "3 weddings DJ'd here since 2023",
+    photos: ["addison-oaks-01"],
   },
   {
     slug: "the-gem-theatre",
@@ -300,6 +299,7 @@ export const venues: Venue[] = [
     about: "The historic event floor is roughly 5,000–7,000 sq. ft. with freight-elevator access, holding about 200 seated or 250 standing.",
     publicParkingNotes: "Street parking near the venue is limited; Eastern Market's lots across the street are commonly used as overflow parking.",
     weddingsWorked: "1 wedding DJ'd here since 2023",
+    photos: ["the-whiskey-factory-01"],
   },
   {
     slug: "vale-royal-barn",
@@ -310,6 +310,7 @@ export const venues: Venue[] = [
     about: "The venue offers exclusive Friday–Sunday use, a 2,200 sq. ft. dining room with a chandelier and indoor bar, and four separate ceremony sites: a covered bridge, a riverside dock, a garden courtyard, and the woodlands. Capacity runs roughly 150–160 including vendors, with golf carts available to move around the grounds.",
     publishedPolicies: "Per the venue's own published guidelines, music must end by 11:30pm and the event must be over by midnight.",
     weddingsWorked: "1 wedding DJ'd here since 2023",
+    photos: ["vale-royal-barn-01"],
   },
   {
     slug: "planterra-conservatory",
@@ -319,6 +320,7 @@ export const venues: Venue[] = [
     blurb: "A Belgian-glass, three-greenhouse conservatory — roughly 23,000 sq. ft. — with wedding season running September through May.",
     about: "Capacity runs up to about 200 for a reception, with some ceremony configurations seating up to 100. Prestige's own photo galleries include shots captioned “DJ Noah | Planterra,” confirming he's personally DJ'd here.",
     weddingsWorked: "2 weddings DJ'd here since 2023",
+    photos: ["planterra-conservatory-01"],
   },
   {
     slug: "brewery-becker",
@@ -328,6 +330,7 @@ export const venues: Venue[] = [
     blurb: "A historic late-1800s building in downtown Brighton, with an event space spanning two upper floors connected by wrought-iron stairs.",
     about: "Hickory wood floors and tall arched windows define the event space. The venue requires guests to be 21+.",
     weddingsWorked: "1 wedding DJ'd here since 2023",
+    photos: ["brewery-becker-01"],
   },
   {
     slug: "fenton-winery-brewery",
@@ -337,7 +340,181 @@ export const venues: Venue[] = [
     blurb: "A rustic reception space with an indoor waterfall feature, an acre of outdoor gardens, and an on-site brewery taproom.",
     about: "The reception area seats up to 280 and features a dance floor, an indoor waterfall, and a bar built from oak barrels and repurposed pallet wood. Ceremonies can be held indoors or outdoors among an acre of gardens. A separate in-brewery taproom hosts smaller events like rehearsal dinners, up to about 30 guests.",
     spaces: "The venue is booked exclusively for the day, with a private bridal suite, groom's fitting rooms, and an outdoor patio with a brick fireplace.",
-    weddingsWorked: "7 weddings DJ'd here since 2023 — more than any other venue on this list",
+    weddingsWorked: "7 weddings DJ'd here since 2023",
+    photos: ["fenton-winery-brewery-01"],
+  },
+  {
+    slug: "creekside-acres",
+    name: "Creekside Acres",
+    city: "Goodrich, MI",
+    regionSlug: "metro-detroit",
+    blurb: "A 4,200 sq. ft. monitor-style barn with a 25-foot-ceilinged Great Room and a 70-foot covered porch for sunset views.",
+    about: "The Great Room spans roughly 3,150 sq. ft. with 25-foot ceilings and includes a designated DJ area, dance floor, full bar, and ceremony space, all in one room. The barn is heated and cooled for year-round use.",
+    spaces: "The Great Room seats up to 200 guests. A 70-foot covered porch runs the length of the barn for cocktail hour or sunset photos.",
+    weddingsWorked: "9 weddings DJ'd here since 2023",
+    photos: ["creekside-acres-01"],
+  },
+  {
+    slug: "meadow-brook-hall",
+    name: "Meadow Brook Hall",
+    city: "Rochester, MI",
+    regionSlug: "oakland-county",
+    blurb: "A Tudor-revival mansion on Oakland University's campus, with a climate-controlled Garden Tent and the historic Christopher Wren Dining Room.",
+    about: "Built in the late 1920s as the Matilda Dodge Wilson estate, Meadow Brook Hall can host up to 300 guests. Ceremonies are held in one of two outdoor gardens or the indoor ballroom, which seats 100 facing the fireplace or 150 facing its stained-glass windows.",
+    spaces: "The climate-controlled Garden Tent (available April–October) holds up to 400 standing or around 300 seated. Indoor receptions in the Christopher Wren Dining Room seat 100.",
+    weddingsWorked: "5 weddings DJ'd here since 2023",
+    photos: ["meadow-brook-hall-01"],
+  },
+  {
+    slug: "grosse-pointe-war-memorial",
+    name: "Grosse Pointe War Memorial",
+    city: "Grosse Pointe Farms, MI",
+    regionSlug: "metro-detroit",
+    blurb: "A lakefront estate on Lake St. Clair with a modern ballroom, a historic mansion, and grounds for an outdoor ceremony.",
+    about: "The Crystal Ballroom in the venue's Fred M. Alger Center seats up to 250, or up to 450 combined with the adjoining Community Room. The historic Alger House offers three connected rooms for an intimate reception of around 70.",
+    spaces: "Outdoor ceremonies on the back lawn hold up to 500 seated; an indoor ceremony in the Community Room holds up to 300.",
+    weddingsWorked: "4 weddings DJ'd here since 2023",
+    photos: ["grosse-pointe-war-memorial-01"],
+  },
+  {
+    slug: "tandale-nature-barn",
+    name: "Tandale Nature Barn",
+    city: "Brighton, MI",
+    regionSlug: "metro-detroit",
+    blurb: "A certified wildlife-habitat barn on 25 acres in Livingston County, with multiple outdoor ceremony sites and a treehouse honeymoon suite.",
+    about: "The venue holds up to 220 guests across its barn, patio, and grounds. It's a certified wildlife habitat with several distinct outdoor ceremony locations spread across the property.",
+    weddingsWorked: "4 weddings DJ'd here since 2023",
+    photos: ["tandale-nature-barn-01"],
+  },
+  {
+    slug: "saint-johns-resort",
+    name: "Saint John's Resort",
+    city: "Plymouth, MI",
+    regionSlug: "metro-detroit",
+    blurb: "A resort with several ballrooms, from the intimate Provincial Room to the 1,500-guest Monarch Ballroom that opened in 2025.",
+    about: "Event spaces range widely: the Monarch Ballroom holds up to 1,500, the Garden Pavilion up to 500, the glass-ceilinged Atrium up to 300, and the Mosaic and Provincial Ballrooms 300–320 each.",
+    weddingsWorked: "4 weddings DJ'd here since 2023",
+    photos: ["saint-johns-resort-01"],
+  },
+  {
+    slug: "cherry-creek-golf-club",
+    name: "Cherry Creek Golf Club",
+    city: "Shelby Township, MI",
+    regionSlug: "metro-detroit",
+    blurb: "A golf-club banquet center with a divisible Lakeview Ballroom and a terrace overlooking the course.",
+    about: "The Lakeview Ballroom splits into two 100-guest rooms or opens into one 230-guest space. The Terrace and Conservatory area seats up to 165, and the full clubhouse can handle up to 700 for a seated meal.",
+    weddingsWorked: "4 weddings DJ'd here since 2023",
+    photos: ["cherry-creek-golf-club-01"],
+  },
+  {
+    slug: "pine-knob-mansion-carriage-house",
+    name: "Pine Knob Mansion & Carriage House",
+    city: "Clarkston, MI",
+    regionSlug: "oakland-county",
+    blurb: "Two wedding venues on one 850-acre Clarkston estate — the intimate Mansion and the larger Carriage House with its own outdoor pavilion.",
+    about: "The Mansion holds up to 150 guests. The Carriage House is the larger of the two, holding up to 280, with a covered outdoor pavilion for ceremonies, cocktail hour, or outdoor dancing.",
+    weddingsWorked: "4 weddings DJ'd here since 2023",
+    photos: ["pine-knob-mansion-carriage-house-01"],
+  },
+  {
+    slug: "shepherds-hollow-golf-club",
+    name: "Shepherd's Hollow Golf Club",
+    city: "Clarkston, MI",
+    regionSlug: "oakland-county",
+    blurb: "A 350-acre golf course estate anchored by the Station — a glass-walled event hall styled after a 19th-century European train station.",
+    about: "The Station is a 6,000 sq. ft. event hall that holds up to 325 guests, with glass walls overlooking a lake and pine forest. The clubhouse also has a wraparound veranda over the golf course.",
+    weddingsWorked: "3 weddings DJ'd here since 2023",
+    photos: ["shepherds-hollow-golf-club-01"],
+  },
+  {
+    slug: "royal-park-hotel",
+    name: "Royal Park Hotel",
+    city: "Rochester, MI",
+    regionSlug: "oakland-county",
+    blurb: "A downtown Rochester hotel with a Grand Ballroom, a Belgian-glass conservatory, and an outdoor Park Pavilion.",
+    about: "The Royal Grand Ballroom spans roughly 10,440 sq. ft. and can seat up to 700 for dinner or hold up to 1,000 for a reception, with Murano crystal chandeliers and an Italian marble gallery. Smaller weddings can use the Belgian Glass Conservatory or the outdoor Park Pavilion instead.",
+    weddingsWorked: "2 weddings DJ'd here since 2023",
+    photos: ["royal-park-hotel-01"],
+  },
+  {
+    slug: "roostertail",
+    name: "Roostertail",
+    city: "Detroit, MI",
+    regionSlug: "metro-detroit",
+    blurb: "A Detroit River waterfront venue since 1958, with floor-to-ceiling windows over the marina and the city skyline.",
+    about: "Three event spaces scale from the 15–90 guest Club Room to the 100–250 guest Marine Room to the 125–800 guest Palm River Room. Two outdoor ceremony spaces sit along the water, with private entrances to patios and balconies.",
+    weddingsWorked: "1 wedding DJ'd here since 2023",
+    photos: ["roostertail-01"],
+  },
+  {
+    slug: "colony-club",
+    name: "Colony Club",
+    city: "Detroit, MI",
+    regionSlug: "metro-detroit",
+    blurb: "A 1927 Georgian-style landmark in Detroit's Entertainment District, with a gold-leaf Grand Ballroom and a smaller Petite Ballroom.",
+    about: "The Grand Ballroom on the third floor holds up to 350 guests, with crystal chandeliers and Louis XVI-style décor evoking Versailles. The fourth-floor Petite Ballroom suits smaller weddings of 100–120 guests.",
+    weddingsWorked: "3 weddings DJ'd here since 2023",
+    photos: ["colony-club-01"],
+  },
+  {
+    slug: "shinola-hotel",
+    name: "Shinola Hotel",
+    city: "Detroit, MI",
+    regionSlug: "metro-detroit",
+    blurb: "A boutique hotel in Midtown Detroit with a white-tile ballroom, a marble fireplace, and several smaller event rooms.",
+    about: "Bixby Hall, the largest space, seats up to 170 for dinner with dancing. The Birdy Room holds up to 70 seated or 150 standing. Overall the hotel can host anywhere from 10 to 350 guests across its spaces.",
+    weddingsWorked: "3 weddings DJ'd here since 2023",
+    photos: ["shinola-hotel-01"],
+  },
+  {
+    slug: "the-treasury",
+    name: "The Treasury",
+    city: "Pontiac, MI",
+    regionSlug: "oakland-county",
+    blurb: "A 1921 former bank in downtown Pontiac, with Art Deco detailing and a bank vault that's become a favorite photo spot.",
+    about: "The Main Floor holds up to 280 guests without a dance floor; the Mezzanine Level holds 175–250 depending on ceremony placement. The building features a coffered gold-leaf ceiling, marble elements, and Palladian windows, and gives couples exclusive use of the whole venue.",
+    weddingsWorked: "3 weddings DJ'd here since 2023",
+    photos: ["the-treasury-01"],
+  },
+  {
+    slug: "masonic-temple-detroit",
+    name: "Masonic Temple - Detroit",
+    city: "Detroit, MI",
+    regionSlug: "metro-detroit",
+    blurb: "A massive Detroit landmark with three ballrooms, a chapel, and over 1,000 rooms across the building.",
+    about: "The Crystal Ballroom holds up to 350 for a reception with a dance floor, the Fountain Ballroom up to 550, and the Chapel up to 400. The Crystal Ballroom alone spans over 10,500 sq. ft. of Italian-decor event space.",
+    weddingsWorked: "3 weddings DJ'd here since 2023",
+    photos: ["masonic-temple-detroit-01"],
+  },
+  {
+    slug: "mirage",
+    name: "Mirage",
+    city: "Clinton Township, MI",
+    regionSlug: "metro-detroit",
+    blurb: "An Italian-catering banquet center in Clinton Township, with a full-service bar and large windows overlooking green space.",
+    about: "The venue accommodates parties from 50 up to 1,000 seated (1,200 standing) in its largest room, with multiple smaller event spaces available for more intimate weddings.",
+    weddingsWorked: "3 weddings DJ'd here since 2023",
+    photos: ["mirage-01"],
+  },
+  {
+    slug: "the-book-tower-detroit",
+    name: "The Book Tower Detroit",
+    city: "Detroit, MI",
+    regionSlug: "metro-detroit",
+    blurb: "A restored 1920s Detroit skyscraper, with ceremonies in the Linden Room and receptions in the sky-lit Conservatory Ballroom.",
+    about: "The Conservatory Ballroom on the 13th floor holds up to 175 seated or 275 for a strolling reception, under a glass skylight with city views. The Linden Room, used for ceremonies, seats up to 140.",
+    weddingsWorked: "3 weddings DJ'd here since 2023",
+    photos: ["the-book-tower-detroit-01"],
+  },
+  {
+    slug: "cushing-field-house",
+    name: "Cushing Field House",
+    city: "Holly, MI",
+    regionSlug: "metro-detroit",
+    blurb: "A rustic 30-acre venue in Holly with reclaimed barn wood walls, string lights, and Edison-bulb chandeliers, hosting one wedding per weekend.",
+    about: "The main venue space holds up to 200 guests indoors, on a property spanning private farm fields and hardwood forest. Two get-ready suites are available for the wedding party, and the venue books only one event per weekend.",
+    weddingsWorked: "6 weddings DJ'd here since 2023",
+    photos: ["cushing-field-house-01"],
   },
 ];
 
