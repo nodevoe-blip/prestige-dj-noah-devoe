@@ -3,7 +3,6 @@ import { notFound } from "next/navigation";
 import { pageMetadata } from "@/lib/metadata";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
-import { LayerBadge } from "@/components/ui/LayerBadge";
 import { CTAButton } from "@/components/ui/CTAButton";
 import { Testimonial } from "@/components/ui/Testimonial";
 import { realWeddings, venues, serviceAreas } from "@/lib/site-config";
@@ -56,7 +55,6 @@ export default async function RealWeddingPage({ params }: { params: Promise<{ sl
           ]}
           tone="ink"
         />
-        <LayerBadge layer="noah" tone="onInk" />
 
         <div className="mt-10 max-w-2xl">
           <Eyebrow tone="espresso">A real wedding I DJ&rsquo;d</Eyebrow>

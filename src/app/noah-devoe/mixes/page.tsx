@@ -1,7 +1,6 @@
 import { pageMetadata } from "@/lib/metadata";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
-import { LayerBadge } from "@/components/ui/LayerBadge";
 import { AudioPlayer, type Track } from "@/components/ui/AudioPlayer";
 import { Waveform } from "@/components/ui/Waveform";
 import { CTAButton } from "@/components/ui/CTAButton";
@@ -35,7 +34,6 @@ export default function MixesPage() {
           ]}
           tone="ink"
         />
-        <LayerBadge layer="noah" tone="onInk" />
 
         <div className="mt-10 max-w-2xl">
           <Eyebrow tone="espresso">The full library</Eyebrow>

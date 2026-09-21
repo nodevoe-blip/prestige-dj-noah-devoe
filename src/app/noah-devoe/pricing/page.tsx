@@ -1,7 +1,6 @@
 import { pageMetadata } from "@/lib/metadata";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
-import { LayerBadge } from "@/components/ui/LayerBadge";
 import { CTAButton } from "@/components/ui/CTAButton";
 import { prestige, stats } from "@/lib/site-config";
 
@@ -23,7 +22,6 @@ export default function NoahPricingPage() {
           ]}
           tone="ink"
         />
-        <LayerBadge layer="noah" tone="onInk" />
 
         <div className="mt-10 max-w-2xl">
           <Eyebrow tone="espresso">Booking me directly</Eyebrow>

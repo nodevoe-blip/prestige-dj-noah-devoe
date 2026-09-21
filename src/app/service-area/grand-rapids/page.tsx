@@ -3,7 +3,6 @@ import { pageMetadata } from "@/lib/metadata";
 import { ServiceSchema } from "@/components/schema/ServiceSchema";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
-import { LayerBadge } from "@/components/ui/LayerBadge";
 import { CTAButton } from "@/components/ui/CTAButton";
 import { team } from "@/lib/site-config";
 
@@ -35,7 +34,6 @@ export default function GrandRapidsPage() {
             ]}
             tone="ink"
           />
-          <LayerBadge layer="prestige" tone="onInk" />
 
           <div className="mt-10 max-w-2xl">
             <Eyebrow tone="navy">West Michigan</Eyebrow>

@@ -5,7 +5,6 @@ import { AudioPlayer, type Track } from "@/components/ui/AudioPlayer";
 import { VideoPlayer, type VideoClip } from "@/components/ui/VideoPlayer";
 import { getVimeoThumbnail } from "@/lib/vimeo";
 import { Testimonial } from "@/components/ui/Testimonial";
-import { LayerBadge } from "@/components/ui/LayerBadge";
 import { CTAButton } from "@/components/ui/CTAButton";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { stats } from "@/lib/site-config";
@@ -70,7 +69,6 @@ export default async function NoahDeVoePage() {
       <section className="relative overflow-hidden bg-ink text-paper">
         <div className="mx-auto max-w-[1400px] px-5 pb-16 pt-12 sm:px-8 sm:pt-16">
           <Breadcrumbs items={[{ label: "Noah DeVoe", path: "/noah-devoe" }]} tone="ink" />
-          <LayerBadge layer="noah" tone="onInk" />
 
           <div className="mt-10 grid gap-12 md:grid-cols-[1.1fr_0.9fr] md:items-end">
             <div>
@@ -304,7 +302,7 @@ export default async function NoahDeVoePage() {
             From couples I&rsquo;ve worked with
           </Eyebrow>
           <h2 className="mt-3 max-w-2xl font-display text-3xl font-bold sm:text-4xl">
-            Reviews attributed to me by name, not the company
+            What couples say after the fact
           </h2>
           <div className="mt-10 grid gap-5 md:grid-cols-3">
             <Testimonial

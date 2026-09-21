@@ -2,7 +2,6 @@ import Image from "next/image";
 import { pageMetadata } from "@/lib/metadata";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
-import { LayerBadge } from "@/components/ui/LayerBadge";
 import { CTAButton } from "@/components/ui/CTAButton";
 import { services, founder, team } from "@/lib/site-config";
 
@@ -19,7 +18,6 @@ export default function PrestigeAboutPage() {
       <section className="bg-ink text-paper">
         <div className="mx-auto max-w-[1400px] px-5 pb-16 pt-12 sm:px-8 sm:pt-16">
           <Breadcrumbs items={[{ label: "About Prestige", path: "/prestige" }]} tone="ink" />
-          <LayerBadge layer="prestige" tone="onInk" />
 
           <div className="mt-10 grid gap-12 md:grid-cols-[1.1fr_0.9fr] md:items-end">
             <div>

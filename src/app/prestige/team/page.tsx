@@ -3,7 +3,6 @@ import Link from "next/link";
 import { pageMetadata } from "@/lib/metadata";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
-import { LayerBadge } from "@/components/ui/LayerBadge";
 import { CTAButton } from "@/components/ui/CTAButton";
 import { team, founder, type TeamMember } from "@/lib/site-config";
 
@@ -56,7 +55,6 @@ export default function TeamPage() {
           ]}
           tone="ink"
         />
-        <LayerBadge layer="prestige" tone="onInk" />
 
         <div className="mt-10 max-w-2xl">
           <Eyebrow tone="navy">The full bench — {team.length} DJs</Eyebrow>

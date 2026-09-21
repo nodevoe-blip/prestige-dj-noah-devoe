@@ -3,7 +3,6 @@ import { ServiceSchema } from "@/components/schema/ServiceSchema";
 import { FaqSchema } from "@/components/schema/FaqSchema";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { PhotoPlaceholder } from "@/components/ui/PhotoPlaceholder";
-import { LayerBadge } from "@/components/ui/LayerBadge";
 import { CTAButton } from "@/components/ui/CTAButton";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { Testimonial } from "@/components/ui/Testimonial";
@@ -55,7 +54,6 @@ export default function OaklandCountyPage() {
             ]}
             tone="ink"
           />
-          <LayerBadge layer="prestige" tone="onInk" />
 
           <div className="mt-10 grid gap-12 md:grid-cols-[1.1fr_0.9fr] md:items-end">
             <div>

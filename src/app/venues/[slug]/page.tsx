@@ -4,7 +4,6 @@ import { pageMetadata } from "@/lib/metadata";
 import { ServiceSchema } from "@/components/schema/ServiceSchema";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
-import { LayerBadge } from "@/components/ui/LayerBadge";
 import { CTAButton } from "@/components/ui/CTAButton";
 import { Testimonial } from "@/components/ui/Testimonial";
 import { venues, serviceAreas, realWeddings } from "@/lib/site-config";
@@ -72,7 +71,6 @@ export default async function VenuePage({ params }: { params: Promise<{ slug: st
             ]}
             tone="ink"
           />
-          <LayerBadge layer="noah" tone="onInk" />
 
           <div className="mt-10 max-w-2xl">
             <Eyebrow tone="espresso">{venue.city}</Eyebrow>

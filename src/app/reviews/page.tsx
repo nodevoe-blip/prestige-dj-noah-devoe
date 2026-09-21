@@ -1,7 +1,6 @@
 import { pageMetadata } from "@/lib/metadata";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
-import { LayerBadge } from "@/components/ui/LayerBadge";
 import { Testimonial } from "@/components/ui/Testimonial";
 import { prestige } from "@/lib/site-config";
 
@@ -63,7 +62,6 @@ export default function ReviewsPage() {
     <section className="bg-ink text-paper">
       <div className="mx-auto max-w-[1400px] px-5 pb-20 pt-12 sm:px-8 sm:pt-16">
         <Breadcrumbs items={[{ label: "Reviews", path: "/reviews" }]} tone="ink" />
-        <LayerBadge layer="prestige" tone="onInk" />
 
         <div className="mt-10 max-w-2xl">
           <Eyebrow tone="navy">Real couples, real weddings</Eyebrow>
@@ -71,11 +69,11 @@ export default function ReviewsPage() {
             Reviews
           </h1>
           <p className="mt-5 text-lg text-smoke">
-            This page covers Prestige as a company. Reviews attributed specifically to Noah live on{" "}
+            Feedback from real couples across every Prestige wedding — including plenty who booked{" "}
             <a href="/noah-devoe" className="text-espresso-bright underline decoration-dotted underline-offset-2">
-              his own page
-            </a>{" "}
-            too.
+              Noah personally
+            </a>
+            .
           </p>
           <div className="mt-6 flex items-baseline gap-3">
             <p className="font-display text-4xl font-bold text-navy-bright">{rating.ratingValue.toFixed(1)}</p>

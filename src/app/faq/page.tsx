@@ -2,7 +2,6 @@ import { pageMetadata } from "@/lib/metadata";
 import { FaqSchema } from "@/components/schema/FaqSchema";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
-import { LayerBadge } from "@/components/ui/LayerBadge";
 import { CTAButton } from "@/components/ui/CTAButton";
 import { stats } from "@/lib/site-config";
 
@@ -63,7 +62,6 @@ export default function FaqPage() {
       <section className="bg-ink text-paper">
         <div className="mx-auto max-w-[1400px] px-5 pb-20 pt-12 sm:px-8 sm:pt-16">
           <Breadcrumbs items={[{ label: "FAQ", path: "/faq" }]} tone="ink" />
-          <LayerBadge layer="prestige" tone="onInk" />
 
           <div className="mt-10 max-w-2xl">
             <Eyebrow tone="navy">Questions couples actually ask</Eyebrow>

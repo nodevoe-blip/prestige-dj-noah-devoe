@@ -3,7 +3,6 @@ import { ServiceSchema } from "@/components/schema/ServiceSchema";
 import { FaqSchema } from "@/components/schema/FaqSchema";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
-import { LayerBadge } from "@/components/ui/LayerBadge";
 import { CTAButton } from "@/components/ui/CTAButton";
 import { Testimonial } from "@/components/ui/Testimonial";
 import { venues, realWeddings, prestige, stats } from "@/lib/site-config";
@@ -55,7 +54,6 @@ export default function MetroDetroitPage() {
             ]}
             tone="ink"
           />
-          <LayerBadge layer="prestige" tone="onInk" />
 
           <div className="mt-10 max-w-2xl">
             <Eyebrow tone="navy">Southeast Michigan</Eyebrow>

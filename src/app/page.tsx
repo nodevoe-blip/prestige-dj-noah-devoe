@@ -91,11 +91,10 @@ export default function HomePage() {
           See &amp; hear it yourself
         </Eyebrow>
         <h2 className="mt-3 max-w-2xl font-display text-3xl font-bold sm:text-4xl">
-          Real mixes, real weddings, not a sales pitch
+          Real mixes, real weddings
         </h2>
         <p className="mt-4 max-w-2xl text-ash">
-          Most Michigan wedding DJ sites ask you to take their word for it. Here&rsquo;s mine, on
-          record.
+          Unedited clips and real couples, on record.
         </p>
         <div className="mt-10 grid gap-px overflow-hidden rounded-sm border border-paper-line bg-paper-line sm:grid-cols-3">
           <Link href="/noah-devoe" className="group bg-paper p-6 transition-colors hover:bg-ink">

@@ -1,7 +1,6 @@
 import { pageMetadata } from "@/lib/metadata";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
-import { LayerBadge } from "@/components/ui/LayerBadge";
 import { serviceAreas } from "@/lib/site-config";
 
 export const metadata = pageMetadata({
@@ -16,7 +15,6 @@ export default function ServiceAreaIndexPage() {
     <section className="bg-ink text-paper">
       <div className="mx-auto max-w-[1400px] px-5 pb-20 pt-12 sm:px-8 sm:pt-16">
         <Breadcrumbs items={[{ label: "Service Areas", path: "/service-area" }]} tone="ink" />
-        <LayerBadge layer="prestige" tone="onInk" />
 
         <div className="mt-10 max-w-2xl">
           <Eyebrow tone="navy">Where we work</Eyebrow>

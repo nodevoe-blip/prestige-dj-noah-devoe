@@ -3,7 +3,6 @@ import Link from "next/link";
 import { pageMetadata } from "@/lib/metadata";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
-import { LayerBadge } from "@/components/ui/LayerBadge";
 import { CTAButton } from "@/components/ui/CTAButton";
 import { Testimonial } from "@/components/ui/Testimonial";
 import { realWeddings } from "@/lib/site-config";
@@ -61,7 +60,6 @@ export default function WeddingsPage() {
           ]}
           tone="ink"
         />
-        <LayerBadge layer="noah" tone="onInk" />
 
         <div className="mt-10 max-w-2xl">
           <Eyebrow tone="espresso">A working portfolio</Eyebrow>
@@ -70,8 +68,7 @@ export default function WeddingsPage() {
           </h1>
           <p className="mt-5 text-lg text-smoke">
             Every photo below is from a wedding I personally DJ&rsquo;d, shared with the
-            couple&rsquo;s permission — not stock photography. This is my own portfolio, distinct
-            from the wider Prestige team&rsquo;s work.
+            couple&rsquo;s permission — not stock photography.
           </p>
         </div>
 
