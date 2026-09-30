@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Image from "next/image";
 import { prestige, serviceAreas, services } from "@/lib/site-config";
+import { NDLockup } from "@/components/brand/NDMark";
 
 export function Footer() {
   return (
@@ -8,13 +8,7 @@ export function Footer() {
       <div className="mx-auto max-w-[1400px] px-5 py-16 sm:px-8">
         <div className="grid grid-cols-2 gap-10 sm:grid-cols-3 md:grid-cols-5">
           <div className="col-span-2 sm:col-span-3 md:col-span-2">
-            <Image
-              src="/images/brand/logo-white.png"
-              alt="Prestige Weddings & Events"
-              width={2640}
-              height={1397}
-              className="h-14 w-auto"
-            />
+            <NDLockup theme="dark" />
             <p className="mt-4 max-w-sm text-sm text-smoke">{prestige.description}</p>
 
             <address className="mt-6 space-y-1 font-mono text-xs not-italic uppercase tracking-wider text-smoke">

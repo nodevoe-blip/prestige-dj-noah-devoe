@@ -4,6 +4,7 @@ import { pageMetadata } from "@/lib/metadata";
 import { serviceAreas, services, team, stats } from "@/lib/site-config";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { CTAButton } from "@/components/ui/CTAButton";
+import { AccentRule } from "@/components/ui/AccentRule";
 
 export const metadata = pageMetadata({
   title: "Noah DeVoe | Michigan Wedding DJ & MC | Prestige Weddings",
@@ -17,7 +18,13 @@ export default function HomePage() {
     <>
       {/* Hero — Noah first. Prestige is introduced as who's behind him, not a co-equal fork. */}
       <section className="relative overflow-hidden bg-ink text-paper">
-        <div className="mx-auto max-w-[1400px] px-5 pb-16 pt-16 sm:px-8 sm:pt-24 md:pt-28">
+        <img
+          src="/images/brand/raptor/raptor-watermark-ivory.svg"
+          alt=""
+          aria-hidden="true"
+          className="pointer-events-none absolute -right-24 -top-16 h-[140%] w-auto max-w-none select-none sm:-right-10"
+        />
+        <div className="relative mx-auto max-w-[1400px] px-5 pb-16 pt-16 sm:px-8 sm:pt-24 md:pt-28">
           <div className="grid gap-12 md:grid-cols-[1.1fr_0.9fr] md:items-end">
             <div>
               <Eyebrow index={`${stats.yearsInBusiness} YEARS OF MICHIGAN WEDDINGS`} tone="espresso">
@@ -26,6 +33,15 @@ export default function HomePage() {
               <h1 className="mt-5 font-display text-5xl font-bold leading-[1.02] tracking-tight sm:text-7xl">
                 Noah DeVoe
               </h1>
+              <p className="mt-6 max-w-xl font-display text-xl leading-snug text-paper sm:text-2xl">
+                The music you love.
+                <br />
+                The moments that give you <span className="font-bold">chills</span>.
+                <br />
+                The wedding <span className="font-bold">your people</span> can&rsquo;t stop talking
+                about.
+              </p>
+              <AccentRule className="mt-5" />
               <p className="mt-6 max-w-lg text-lg text-smoke">
                 I&rsquo;ve personally DJ&rsquo;d {stats.weddingsDjdByNoah} Michigan weddings — ceremony
                 through last dance. I also co-own Prestige Weddings &amp; Events, so if my calendar
@@ -93,6 +109,7 @@ export default function HomePage() {
         <h2 className="mt-3 max-w-2xl font-display text-3xl font-bold sm:text-4xl">
           Real mixes, real weddings
         </h2>
+        <AccentRule className="mt-3" />
         <p className="mt-4 max-w-2xl text-ash">
           Unedited clips and real couples, on record.
         </p>
@@ -124,6 +141,15 @@ export default function HomePage() {
         </div>
       </section>
 
+      <div className="flex justify-center py-2">
+        <img
+          src="/images/brand/raptor/raptor-icon-clay.svg"
+          alt=""
+          aria-hidden="true"
+          className="h-6 w-auto opacity-80"
+        />
+      </div>
+
       {/* Prestige — secondary, framed as "the team behind me" */}
       <section className="border-t border-paper-line bg-paper-soft">
         <div className="mx-auto max-w-[1400px] px-5 py-20 sm:px-8">
@@ -133,6 +159,7 @@ export default function HomePage() {
           <h2 className="mt-3 max-w-2xl font-display text-3xl font-bold sm:text-4xl">
             Prestige Weddings &amp; Events covers everything else
           </h2>
+          <AccentRule className="mt-3" />
           <p className="mt-4 max-w-2xl text-ash">
             {team.length} wedding DJs, plus photography, videography, coordination, photo booth, and
             lighting — the company I co-own, for whenever you need more than just me.
@@ -170,6 +197,7 @@ export default function HomePage() {
         <h2 className="mt-3 max-w-2xl font-display text-3xl font-bold sm:text-4xl">
           Based in Oakland County, booked across Michigan.
         </h2>
+        <AccentRule className="mt-3" />
         <div className="mt-10 flex flex-wrap gap-3">
           {serviceAreas.map((a) => (
             <Link
@@ -186,7 +214,7 @@ export default function HomePage() {
       {/* Final CTA — Noah primary, team secondary */}
       <section className="bg-ink text-paper">
         <div className="mx-auto max-w-[1400px] px-5 py-20 text-center sm:px-8">
-          <h2 className="font-accent text-4xl italic sm:text-5xl">
+          <h2 className="font-display text-4xl font-bold sm:text-5xl">
             Tell me your date. I&rsquo;ll tell you who&rsquo;s free.
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-smoke">

@@ -1,38 +1,50 @@
 @import "tailwindcss";
 
 /*
-  Design system tokens — matched to the real Prestige Weddings & Events brand
-  (charcoal/navy/white, black-and-white photography, serif wordmark) rather
-  than an invented palette. Two shared grounds — ink (dark, experiential) and
-  paper (light, informational) — used deliberately by section purpose, not as
-  a light/dark mode toggle. Two accent voices share the same grid/type: navy =
-  Prestige (the company, their real brand navy), espresso = Noah personally
-  (a warmer near-black, distinct but from the same monochrome family).
+  Design system tokens — the Noah DeVoe ND/raptor brand system (2026-09-30
+  rebrand), replacing the earlier Prestige-matched palette. Token NAMES kept
+  from the prior system (ink/paper/navy/espresso/ash/smoke) so no component
+  needed touching — only the VALUES changed, remapped as follows:
+    ink/ink-soft/ink-line   -> charcoal  (#0F1114 family)
+    paper/paper-soft/-line  -> ivory     (#F8F5EF family)
+    navy + espresso         -> clay      (#D97746) — the brief's one core
+                                accent, now unified instead of two separate
+                                brand-layer colors. The base (non-bright)
+                                values are a deepened clay so text/buttons
+                                clear WCAG AA on both ivory and charcoal —
+                                pure #D97746 fails as small text on ivory
+                                (~3:1); the "bright" values are the true
+                                brand hex, for hover states, borders, and
+                                large-scale fills where that contrast math
+                                doesn't apply.
+    ash/smoke               -> slate     (#64748B family, per the brief)
+  --color-blue (#2563EB) is new — the brief's sparing secondary accent
+  (link/hover states, the reverse-mark ND variant), not used as chrome.
 */
 @theme {
-  --color-ink: #1e1e1e;
-  --color-ink-soft: #2a2a2a;
-  --color-ink-line: #3d3d3d;
+  --color-ink: #0f1114;
+  --color-ink-soft: #1a1d21;
+  --color-ink-line: #2e3238;
 
-  --color-paper: #fafaf8;
-  --color-paper-soft: #f0efec;
-  --color-paper-line: #dededa;
+  --color-paper: #f8f5ef;
+  --color-paper-soft: #efece4;
+  --color-paper-line: #ddd8cd;
 
-  --color-navy: #52678a;
-  --color-navy-bright: #7590b3;
-  --color-espresso: #7a5138;
-  --color-espresso-bright: #9c7355;
+  --color-navy: #a85a34;
+  --color-navy-bright: #d97746;
+  --color-espresso: #a85a34;
+  --color-espresso-bright: #d97746;
 
-  --color-ash: #5c5c58;
-  --color-smoke: #a3a39d;
+  --color-blue: #2563eb;
 
-  --font-display: var(--font-jost), system-ui, sans-serif;
-  --font-accent: var(--font-playfair), Georgia, serif;
-  --font-sans: var(--font-instrument), system-ui, sans-serif;
-  /* Mapped to the sans stack, not a monospace — small labels read as
-     letter-spaced caps (matching the real site's nav/badge style), not a
-     digital-readout aesthetic. */
-  --font-mono: var(--font-instrument), system-ui, sans-serif;
+  --color-ash: #64748b;
+  --color-smoke: #94a3b8;
+
+  --font-display: var(--font-montserrat), system-ui, sans-serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  /* Small letter-spaced labels (eyebrows, buttons, nav) read as UI chrome,
+     not body copy — the brief puts UI elements under Montserrat, not Inter. */
+  --font-mono: var(--font-montserrat), system-ui, sans-serif;
 
   --animate-waveform: waveform 1.4s ease-in-out infinite;
 }

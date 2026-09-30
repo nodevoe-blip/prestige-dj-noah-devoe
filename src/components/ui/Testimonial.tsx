@@ -30,7 +30,7 @@ export function Testimonial({
           Sample — replace with a real review
         </p>
       )}
-      <blockquote className={`font-accent text-xl italic leading-snug ${text}`}>
+      <blockquote className={`font-display text-xl font-medium leading-snug ${text}`}>
         &ldquo;{quote}&rdquo;
       </blockquote>
       <figcaption className={`mt-4 font-mono text-xs uppercase tracking-wider ${muted}`}>

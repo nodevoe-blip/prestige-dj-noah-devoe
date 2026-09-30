@@ -156,7 +156,7 @@ export default async function NoahDeVoePage() {
         </div>
 
         <blockquote className="mt-16 border-l-2 border-espresso-bright pl-6 sm:pl-8">
-          <p className="font-accent text-2xl italic leading-snug text-ink sm:text-3xl">
+          <p className="font-display text-2xl font-medium leading-snug text-ink sm:text-3xl">
             &ldquo;That &lsquo;take amazing care&rsquo; approach is exactly how I&rsquo;m going to
             approach your wedding. I&rsquo;m going to take amazing care of you, listen to your
             vision and vibe, give tasteful advice when asked, and make your wedding epic.

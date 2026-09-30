@@ -1,9 +1,21 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { primaryNav } from "@/lib/site-config";
+import { NDLockup } from "@/components/brand/NDMark";
 import { MobileMenu } from "./MobileMenu";
 
 export function Header() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <header className="sticky top-0 z-50 border-b border-ink-line bg-ink">
       <a
@@ -13,15 +25,8 @@ export function Header() {
         Skip to content
       </a>
       <div className="mx-auto flex h-16 max-w-[1400px] items-center justify-between px-5 sm:px-8">
-        <Link href="/" className="flex items-center" aria-label="Prestige Weddings & Events — home">
-          <Image
-            src="/images/brand/logo-white.png"
-            alt="Prestige Weddings & Events"
-            width={2640}
-            height={1397}
-            className="h-11 w-auto"
-            priority
-          />
+        <Link href="/" className="flex items-center" aria-label="Noah DeVoe — Wedding DJ + MC — home">
+          <NDLockup theme="dark" compact={scrolled} />
         </Link>
 
         <nav aria-label="Primary" className="hidden md:block">

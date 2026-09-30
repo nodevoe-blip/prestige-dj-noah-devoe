@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Jost, Playfair_Display, Instrument_Sans } from "next/font/google";
+import { Montserrat, Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -7,21 +7,14 @@ import { LocalBusinessSchema } from "@/components/schema/LocalBusinessSchema";
 import { PersonSchema } from "@/components/schema/PersonSchema";
 import { SITE_URL, noah } from "@/lib/site-config";
 
-const jost = Jost({
-  variable: "--font-jost",
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["500", "600", "700"],
 });
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin"],
-  weight: ["500", "600"],
-  style: ["italic", "normal"],
-});
-
-const instrument = Instrument_Sans({
-  variable: "--font-instrument",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
   weight: ["400", "500", "600"],
 });
@@ -40,10 +33,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html
-      lang="en"
-      className={`${jost.variable} ${playfair.variable} ${instrument.variable} h-full`}
-    >
+    <html lang="en" className={`${montserrat.variable} ${inter.variable} h-full`}>
       <body className="flex min-h-full flex-col bg-paper text-ink antialiased">
         <LocalBusinessSchema />
         {/* Sitewide, not just on /noah-devoe — Noah is the domain's primary entity */}
