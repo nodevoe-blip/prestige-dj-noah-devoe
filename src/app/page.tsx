@@ -70,11 +70,11 @@ export default function HomePage() {
             </div>
             <div className="relative aspect-[4/5] overflow-hidden rounded-sm border border-espresso-bright">
               <Image
-                src="/images/noah/noah-portrait.jpg"
-                alt="Noah DeVoe, Michigan wedding DJ and MC"
+                src="/images/noah/noah-candid-1.jpg"
+                alt="Noah DeVoe MCing a wedding reception, mid-hype-moment with the crowd"
                 fill
                 sizes="(min-width: 768px) 40vw, 90vw"
-                className="object-cover"
+                className="object-cover object-[70%_15%]"
                 priority
               />
             </div>
