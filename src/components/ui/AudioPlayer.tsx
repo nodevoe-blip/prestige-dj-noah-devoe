@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { Waveform } from "./Waveform";
 
 export type Track = {
@@ -11,20 +11,36 @@ export type Track = {
   seed: number;
 };
 
+/** Fired when a track starts, so every other player on the page pauses —
+ * without this, playing a second track leaves the first one running (and
+ * audible) with no visible reminder that it's still going. */
+const PLAY_EVENT = "audio-player:play";
+
 /**
  * Lazy — the <audio> element loads nothing until the listener presses play
  * (preload="none"), and never autoplays. Falls back to a clearly-labeled
  * "sample coming soon" state when no src is wired up yet.
  */
 export function AudioPlayer({ track }: { track: Track }) {
+  const id = useId();
   const ref = useRef<HTMLAudioElement | null>(null);
   const [playing, setPlaying] = useState(false);
+
+  // Pause this player whenever a different one starts.
+  useEffect(() => {
+    const onPlay = (e: Event) => {
+      if ((e as CustomEvent<string>).detail !== id) ref.current?.pause();
+    };
+    window.addEventListener(PLAY_EVENT, onPlay);
+    return () => window.removeEventListener(PLAY_EVENT, onPlay);
+  }, [id]);
 
   const toggle = () => {
     if (!ref.current) return;
     if (playing) {
       ref.current.pause();
     } else {
+      window.dispatchEvent(new CustomEvent(PLAY_EVENT, { detail: id }));
       void ref.current.play();
     }
   };

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useId, useState } from "react";
 import Image from "next/image";
 
 export type VideoClip = {
@@ -14,6 +14,11 @@ export type VideoClip = {
   poster?: string | null;
 };
 
+/** Fired when a player starts, so every other player on the page can stop
+ * itself — without this, playing a second clip leaves the first one running
+ * (and audible) off-screen with no visible way to stop it. */
+const PLAY_EVENT = "video-player:play";
+
 /**
  * Facade pattern: shows a poster + custom play button and loads nothing
  * (no Vimeo iframe, no <video> src) until clicked — matches the AudioPlayer's
@@ -21,11 +26,26 @@ export type VideoClip = {
  * fine since it's a direct result of that click, not a page-load autoplay.
  */
 export function VideoPlayer({ clip, tone = "espresso" }: { clip: VideoClip; tone?: "espresso" | "navy" }) {
+  const id = useId();
   const [playing, setPlaying] = useState(false);
   const accent = tone === "espresso" ? "border-espresso-bright" : "border-navy";
   const accentBg = tone === "espresso" ? "bg-espresso hover:bg-espresso-bright" : "bg-navy hover:bg-navy-bright";
 
   const hasSource = Boolean(clip.vimeoId || clip.src);
+
+  // Stop this player whenever a different one starts.
+  useEffect(() => {
+    const onPlay = (e: Event) => {
+      if ((e as CustomEvent<string>).detail !== id) setPlaying(false);
+    };
+    window.addEventListener(PLAY_EVENT, onPlay);
+    return () => window.removeEventListener(PLAY_EVENT, onPlay);
+  }, [id]);
+
+  const play = () => {
+    window.dispatchEvent(new CustomEvent(PLAY_EVENT, { detail: id }));
+    setPlaying(true);
+  };
 
   if (!hasSource) {
     return (
@@ -40,22 +60,34 @@ export function VideoPlayer({ clip, tone = "espresso" }: { clip: VideoClip; tone
     <div className={`overflow-hidden rounded-sm border ${accent} bg-ink-soft`}>
       <div className="relative aspect-video">
         {playing ? (
-          clip.vimeoId ? (
-            <iframe
-              src={`https://player.vimeo.com/video/${clip.vimeoId}?autoplay=1&title=0&byline=0&portrait=0`}
-              className="h-full w-full"
-              allow="autoplay; fullscreen; picture-in-picture"
-              allowFullScreen
-              title={clip.title}
-            />
-          ) : (
-            <video src={clip.src} controls autoPlay className="h-full w-full object-cover" />
-          )
+          <>
+            {clip.vimeoId ? (
+              <iframe
+                src={`https://player.vimeo.com/video/${clip.vimeoId}?autoplay=1&title=0&byline=0&portrait=0`}
+                className="h-full w-full"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowFullScreen
+                title={clip.title}
+              />
+            ) : (
+              <video src={clip.src} controls autoPlay className="h-full w-full object-cover" />
+            )}
+            <button
+              type="button"
+              aria-label={`Stop ${clip.title}`}
+              onClick={() => setPlaying(false)}
+              className="absolute right-2 top-2 flex h-7 w-7 items-center justify-center rounded-full bg-ink/80 text-paper transition-colors hover:bg-ink"
+            >
+              <svg width="12" height="12" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+                <path d="M1 1 13 13 M13 1 1 13" />
+              </svg>
+            </button>
+          </>
         ) : (
           <button
             type="button"
             aria-label={`Play ${clip.title}`}
-            onClick={() => setPlaying(true)}
+            onClick={play}
             className="group absolute inset-0 flex items-center justify-center bg-ink"
           >
             {clip.poster && (
