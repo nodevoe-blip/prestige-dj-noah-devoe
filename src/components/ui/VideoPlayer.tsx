@@ -60,7 +60,7 @@ export function VideoPlayer({ clip, tone = "espresso" }: { clip: VideoClip; tone
     <div className={`overflow-hidden rounded-sm border ${accent} bg-ink-soft`}>
       <div className="relative aspect-video">
         {playing ? (
-          <>
+          <div className="animate-fade-in h-full w-full">
             {clip.vimeoId ? (
               <iframe
                 src={`https://player.vimeo.com/video/${clip.vimeoId}?autoplay=1&title=0&byline=0&portrait=0`}
@@ -76,19 +76,19 @@ export function VideoPlayer({ clip, tone = "espresso" }: { clip: VideoClip; tone
               type="button"
               aria-label={`Stop ${clip.title}`}
               onClick={() => setPlaying(false)}
-              className="absolute right-2 top-2 flex h-7 w-7 items-center justify-center rounded-full bg-ink/80 text-paper transition-colors hover:bg-ink"
+              className="absolute right-2 top-2 flex h-7 w-7 items-center justify-center rounded-full bg-ink/80 text-paper [touch-action:manipulation] transition-[background-color,transform] duration-150 ease-press hover:bg-ink active:scale-90"
             >
               <svg width="12" height="12" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
                 <path d="M1 1 13 13 M13 1 1 13" />
               </svg>
             </button>
-          </>
+          </div>
         ) : (
           <button
             type="button"
             aria-label={`Play ${clip.title}`}
             onClick={play}
-            className="group absolute inset-0 flex items-center justify-center bg-ink"
+            className="group absolute inset-0 flex items-center justify-center bg-ink [touch-action:manipulation]"
           >
             {clip.poster && (
               <Image
@@ -96,11 +96,11 @@ export function VideoPlayer({ clip, tone = "espresso" }: { clip: VideoClip; tone
                 alt=""
                 fill
                 sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                className="object-cover opacity-80 transition-opacity group-hover:opacity-60"
+                className="object-cover opacity-80 transition-opacity duration-300 group-hover:opacity-60"
               />
             )}
             <span
-              className={`relative z-10 flex h-14 w-14 items-center justify-center rounded-full text-paper transition-colors hover:text-ink ${accentBg}`}
+              className={`relative z-10 flex h-14 w-14 items-center justify-center rounded-full text-paper transition-[background-color,color,transform] duration-150 ease-press hover:text-ink group-hover:scale-110 group-active:scale-95 ${accentBg}`}
             >
               <svg width="16" height="16" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true">
                 <path d="M0 0 14 7 0 14Z" />

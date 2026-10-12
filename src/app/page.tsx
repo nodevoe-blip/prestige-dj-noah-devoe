@@ -5,6 +5,7 @@ import { serviceAreas, services, team, stats } from "@/lib/site-config";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { CTAButton } from "@/components/ui/CTAButton";
 import { AccentRule } from "@/components/ui/AccentRule";
+import { Reveal } from "@/components/ui/Reveal";
 
 export const metadata = pageMetadata({
   title: "Noah DeVoe | Michigan Wedding DJ & MC | Prestige Weddings",
@@ -26,7 +27,7 @@ export default function HomePage() {
         />
         <div className="relative mx-auto max-w-[1400px] px-5 pb-16 pt-16 sm:px-8 sm:pt-24 md:pt-28">
           <div className="grid gap-12 md:grid-cols-[1.1fr_0.9fr] md:items-end">
-            <div>
+            <div className="animate-fade-up">
               <Eyebrow index={`${stats.yearsInBusiness} YEARS OF MICHIGAN WEDDINGS`} tone="espresso">
                 Michigan Wedding DJ &amp; MC
               </Eyebrow>
@@ -84,7 +85,7 @@ export default function HomePage() {
 
       {/* Trust strip — Noah's own number leads */}
       <section className="border-b border-paper-line bg-paper-soft">
-        <div className="mx-auto grid max-w-[1400px] grid-cols-2 gap-8 px-5 py-10 sm:px-8 md:grid-cols-4">
+        <Reveal className="mx-auto grid max-w-[1400px] grid-cols-2 gap-8 px-5 py-10 sm:px-8 md:grid-cols-4">
           {[
             { label: "Weddings DJ'd by Noah", value: stats.weddingsDjdByNoah },
             { label: "Years DJing Michigan weddings", value: stats.yearsInBusiness },
@@ -98,7 +99,7 @@ export default function HomePage() {
               </p>
             </div>
           ))}
-        </div>
+        </Reveal>
       </section>
 
       {/* Noah's own work */}
@@ -113,7 +114,7 @@ export default function HomePage() {
         <p className="mt-4 max-w-2xl text-ash">
           Unedited clips and real couples, on record.
         </p>
-        <div className="mt-10 grid gap-px overflow-hidden rounded-sm border border-paper-line bg-paper-line sm:grid-cols-3">
+        <Reveal className="mt-10 grid gap-px overflow-hidden rounded-sm border border-paper-line bg-paper-line sm:grid-cols-3">
           <Link href="/noah-devoe" className="group bg-paper p-6 transition-colors hover:bg-ink">
             <h3 className="font-display text-lg font-semibold text-ink group-hover:text-paper">
               My story
@@ -138,7 +139,7 @@ export default function HomePage() {
               Real couples, real venues I&rsquo;ve personally DJ&rsquo;d.
             </p>
           </Link>
-        </div>
+        </Reveal>
       </section>
 
       <div className="flex justify-center py-2">
@@ -164,7 +165,7 @@ export default function HomePage() {
             {team.length} wedding DJs, plus photography, videography, coordination, photo booth, and
             lighting — the company I co-own, for whenever you need more than just me.
           </p>
-          <div className="mt-10 grid gap-px overflow-hidden rounded-sm border border-paper-line bg-paper-line sm:grid-cols-2 md:grid-cols-3">
+          <Reveal className="mt-10 grid gap-px overflow-hidden rounded-sm border border-paper-line bg-paper-line sm:grid-cols-2 md:grid-cols-3">
             {services.map((s) => (
               <Link
                 key={s.slug}
@@ -177,7 +178,7 @@ export default function HomePage() {
                 <p className="mt-2 text-sm text-ash group-hover:text-smoke">{s.blurb}</p>
               </Link>
             ))}
-          </div>
+          </Reveal>
           <div className="mt-8 flex flex-wrap gap-4">
             <CTAButton href="/wedding-dj" variant="outline">
               Meet the full team

@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const base =
-  "inline-flex items-center gap-2 rounded-sm px-6 py-3 font-mono text-xs uppercase tracking-[0.14em] transition-colors";
+  "group inline-flex items-center gap-2 rounded-sm px-6 py-3 font-mono text-xs uppercase tracking-[0.14em] [touch-action:manipulation] transition-[background-color,color,border-color,transform] duration-150 ease-press active:scale-95";
 
 const variants = {
   // Fill is navy (works as a bg on either surface — ivory text clears AA on
@@ -27,7 +27,12 @@ export function CTAButton({
   return (
     <Link href={href} className={`${base} ${variants[variant]}`}>
       {children}
-      <span aria-hidden="true">&rarr;</span>
+      <span
+        aria-hidden="true"
+        className="transition-transform duration-150 ease-enter group-hover:translate-x-0.5"
+      >
+        &rarr;
+      </span>
     </Link>
   );
 }

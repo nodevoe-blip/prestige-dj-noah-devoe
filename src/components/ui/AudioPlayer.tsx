@@ -52,18 +52,24 @@ export function AudioPlayer({ track }: { track: Track }) {
         onClick={toggle}
         disabled={!track.src}
         aria-label={playing ? `Pause ${track.title}` : `Play ${track.title}`}
-        className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-espresso-bright bg-espresso text-paper transition-colors hover:bg-espresso-bright hover:text-ink disabled:cursor-not-allowed disabled:opacity-40"
+        className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-espresso-bright bg-espresso text-paper [touch-action:manipulation] transition-[background-color,color,transform] duration-150 ease-press hover:bg-espresso-bright hover:text-ink active:scale-90 disabled:cursor-not-allowed disabled:opacity-40 disabled:active:scale-100"
       >
-        {playing ? (
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true">
+          <g
+            className={`origin-center [transform-box:fill-box] transition-[opacity,transform] duration-200 ease-enter ${
+              playing ? "scale-100 opacity-100" : "scale-75 opacity-0"
+            }`}
+          >
             <rect x="1" width="4" height="14" />
             <rect x="9" width="4" height="14" />
-          </svg>
-        ) : (
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true">
-            <path d="M0 0 14 7 0 14Z" />
-          </svg>
-        )}
+          </g>
+          <path
+            d="M0 0 14 7 0 14Z"
+            className={`origin-center [transform-box:fill-box] transition-[opacity,transform] duration-200 ease-enter ${
+              playing ? "scale-75 opacity-0" : "scale-100 opacity-100"
+            }`}
+          />
+        </svg>
       </button>
 
       <div className="min-w-0 flex-1">

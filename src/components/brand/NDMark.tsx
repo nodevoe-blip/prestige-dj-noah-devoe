@@ -46,10 +46,10 @@ export function NDLockup({
 }) {
   if (compact) {
     // eslint-disable-next-line @next/next/no-img-element
-    return <img src={ICON[theme]} alt="Noah DeVoe" className={`h-8 w-auto ${className}`} />;
+    return <img src={ICON[theme]} alt="Noah DeVoe" className={`h-8 w-auto animate-fade-in ${className}`} />;
   }
   return (
-    <span className={`inline-flex items-center ${className}`}>
+    <span className={`inline-flex items-center animate-fade-in ${className}`}>
       {/* Full lockup from sm up; icon-only below that, same file swap pattern. */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src={ICON[theme]} alt="Noah DeVoe" className="h-8 w-auto sm:hidden" />
