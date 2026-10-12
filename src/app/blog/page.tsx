@@ -40,7 +40,7 @@ export default function BlogIndexPage() {
         <Breadcrumbs items={[{ label: "Blog", path: "/blog" }]} tone="ink" />
 
         <div className="mt-10 max-w-2xl">
-          <Eyebrow tone="navy">Coming soon</Eyebrow>
+          <Eyebrow tone="espresso">Coming soon</Eyebrow>
           <h1 className="mt-4 font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
             Blog
           </h1>
@@ -53,7 +53,7 @@ export default function BlogIndexPage() {
         <div className="mt-12 grid gap-5 sm:grid-cols-2">
           {contentPlan.map((c) => (
             <div key={c.category} className="rounded-sm border border-ink-line bg-ink-soft p-6">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-navy">{c.category}</p>
+              <p className="font-mono text-[11px] uppercase tracking-wider text-espresso-bright">{c.category}</p>
               <h2 className="mt-2 font-display text-lg font-semibold text-paper">{c.example}</h2>
               <p className="mt-2 text-sm text-smoke">{c.note}</p>
             </div>

@@ -64,7 +64,7 @@ export default function WeddingDjPage() {
 
           <div className="mt-10 grid gap-12 md:grid-cols-[1.1fr_0.9fr] md:items-end">
             <div>
-              <Eyebrow index={`TEAM OF ${team.length}`} tone="navy">
+              <Eyebrow index={`TEAM OF ${team.length}`} tone="espresso">
                 Michigan Wedding DJ Team
               </Eyebrow>
               <h1 className="mt-5 font-display text-5xl font-bold leading-[1.02] tracking-tight sm:text-6xl">
@@ -87,7 +87,7 @@ export default function WeddingDjPage() {
             <PhotoPlaceholder
               caption="The Prestige DJ team, group shot at a recent reception"
               aspect="aspect-[4/5]"
-              tone="navy"
+              tone="espresso"
             />
           </div>
         </div>
@@ -123,13 +123,13 @@ export default function WeddingDjPage() {
               Meet the DJs behind the booth
             </h2>
           </div>
-          <a href="/prestige/team" className="font-mono text-xs uppercase tracking-wider text-navy hover:text-navy-bright">
+          <a href="/prestige/team" className="font-mono text-xs uppercase tracking-wider text-navy hover:underline">
             Full team &rarr;
           </a>
         </div>
         <p className="mt-4 max-w-2xl text-ash">
           Founded by {founder.name}, with{" "}
-          <a href="/noah-devoe" className="text-espresso-bright underline decoration-dotted underline-offset-2">
+          <a href="/noah-devoe" className="text-navy underline decoration-dotted underline-offset-2">
             Noah DeVoe
           </a>{" "}
           co-owning the Detroit market and Brandon co-owning Grand Rapids — every DJ on the team
@@ -217,7 +217,7 @@ export default function WeddingDjPage() {
                 What couples say about booking the team
               </h2>
             </div>
-            <a href="/reviews" className="font-mono text-xs uppercase tracking-wider text-navy hover:text-navy-bright">
+            <a href="/reviews" className="font-mono text-xs uppercase tracking-wider text-navy hover:underline">
               All reviews &rarr;
             </a>
           </div>
@@ -283,12 +283,12 @@ export default function WeddingDjPage() {
                 Reach the team directly
               </p>
               <p className="mt-4 font-display text-2xl font-semibold">
-                <a href={`tel:${prestige.telephone}`} className="hover:text-navy">
+                <a href={`tel:${prestige.telephone}`} className="hover:text-navy-bright">
                   {prestige.telephone}
                 </a>
               </p>
               <p className="mt-1">
-                <a href={`mailto:${prestige.email}`} className="text-smoke hover:text-navy">
+                <a href={`mailto:${prestige.email}`} className="text-smoke hover:text-navy-bright">
                   {prestige.email}
                 </a>
               </p>

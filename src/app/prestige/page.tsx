@@ -21,7 +21,7 @@ export default function PrestigeAboutPage() {
 
           <div className="mt-10 grid gap-12 md:grid-cols-[1.1fr_0.9fr] md:items-end">
             <div>
-              <Eyebrow tone="navy">Our story</Eyebrow>
+              <Eyebrow tone="espresso">Our story</Eyebrow>
               <h1 className="mt-4 font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
                 From one DJ to a {team.length}-DJ Michigan wedding team
               </h1>

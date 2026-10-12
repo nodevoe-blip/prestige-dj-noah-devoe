@@ -112,7 +112,7 @@ export default async function VenuePage({ params }: { params: Promise<{ slug: st
       {knownFirsthand.length > 0 && (
         <section className="border-t border-paper-line bg-paper-soft">
           <div className="mx-auto max-w-[1400px] px-5 py-20 sm:px-8">
-            <Eyebrow tone="espresso">From actually working here</Eyebrow>
+            <Eyebrow tone="navy">From actually working here</Eyebrow>
             <h2 className="mt-3 max-w-2xl font-display text-3xl font-bold sm:text-4xl">
               Not my first time in this room
             </h2>
@@ -130,7 +130,7 @@ export default async function VenuePage({ params }: { params: Promise<{ slug: st
 
       {venue.photos && venue.photos.length > 0 && (
         <section className="mx-auto max-w-[1400px] px-5 py-20 sm:px-8">
-          <Eyebrow tone="espresso">Real moments from this venue</Eyebrow>
+          <Eyebrow tone="navy">Real moments from this venue</Eyebrow>
           <div className="mt-10 grid gap-4 sm:grid-cols-2 md:grid-cols-4">
             {venue.photos.map((slug) => (
               <div key={slug} className="relative aspect-[4/5] overflow-hidden rounded-sm border border-paper-line">
@@ -150,7 +150,7 @@ export default async function VenuePage({ params }: { params: Promise<{ slug: st
       {relatedWeddings.length > 0 && (
         <section className="border-t border-paper-line bg-paper-soft">
           <div className="mx-auto max-w-[1400px] px-5 py-20 sm:px-8">
-            <Eyebrow tone="espresso">A real couple, right here</Eyebrow>
+            <Eyebrow tone="navy">A real couple, right here</Eyebrow>
             <h2 className="mt-3 max-w-2xl font-display text-3xl font-bold sm:text-4xl">
               Weddings I&rsquo;ve DJ&rsquo;d at {venue.name}
             </h2>

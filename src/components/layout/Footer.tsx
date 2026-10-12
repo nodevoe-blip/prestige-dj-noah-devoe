@@ -31,7 +31,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h2 className="font-mono text-[11px] uppercase tracking-wider text-navy">Services</h2>
+            <h2 className="font-mono text-[11px] uppercase tracking-wider text-espresso-bright">Services</h2>
             <ul className="mt-4 space-y-2">
               {services.map((s) => (
                 <li key={s.slug}>
@@ -44,7 +44,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h2 className="font-mono text-[11px] uppercase tracking-wider text-navy">Service Areas</h2>
+            <h2 className="font-mono text-[11px] uppercase tracking-wider text-espresso-bright">Service Areas</h2>
             <ul className="mt-4 space-y-2">
               {serviceAreas.map((a) => (
                 <li key={a.slug}>

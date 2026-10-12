@@ -29,14 +29,15 @@ export function StubPage({
   ctaLabel: string;
   children?: React.ReactNode;
 }) {
-  const accentTone = layer === "noah" ? "espresso" : "navy";
   return (
     <section className="bg-ink text-paper">
       <div className="mx-auto max-w-[1400px] px-5 pb-20 pt-12 sm:px-8 sm:pt-16">
         <Breadcrumbs items={breadcrumbs} tone="ink" />
 
         <div className="mt-10 max-w-2xl">
-          <Eyebrow tone={accentTone}>{eyebrow}</Eyebrow>
+          {/* Always dark (bg-ink above): espresso resolves to the sky accent,
+              the only one that clears contrast on charcoal. */}
+          <Eyebrow tone="espresso">{eyebrow}</Eyebrow>
           <h1 className="mt-4 font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
             {title}
           </h1>

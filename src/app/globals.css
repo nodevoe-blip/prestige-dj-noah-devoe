@@ -1,43 +1,47 @@
 @import "tailwindcss";
 
 /*
-  Design system tokens — the Noah DeVoe ND/raptor brand system (2026-09-30
-  rebrand), replacing the earlier Prestige-matched palette. Token NAMES kept
-  from the prior system (ink/paper/navy/espresso/ash/smoke) so no component
-  needed touching — only the VALUES changed, remapped as follows:
-    ink/ink-soft/ink-line   -> charcoal  (#0F1114 family)
-    paper/paper-soft/-line  -> ivory     (#F8F5EF family)
-    navy + espresso         -> clay      (#D97746) — the brief's one core
-                                accent, now unified instead of two separate
-                                brand-layer colors. The base (non-bright)
-                                values are a deepened clay so text/buttons
-                                clear WCAG AA on both ivory and charcoal —
-                                pure #D97746 fails as small text on ivory
-                                (~3:1); the "bright" values are the true
-                                brand hex, for hover states, borders, and
-                                large-scale fills where that contrast math
-                                doesn't apply.
-    ash/smoke               -> slate     (#64748B family, per the brief)
-  --color-blue (#2563EB) is new — the brief's sparing secondary accent
-  (link/hover states, the reverse-mark ND variant), not used as chrome.
+  Design system tokens — v6 (2026-10-12): charcoal-led, Prestige navy accent.
+  Supersedes the v4 charcoal/clay pass. Token NAMES stay from the prior
+  system (ink/paper/navy/espresso/ash/smoke) — only the VALUES changed:
+    ink/ink-soft/ink-line   -> charcoal (#0F1114 family) — UNCHANGED from v4
+    paper/paper-soft/-line  -> ivory (#F6F4F1 family) — was #F8F5EF
+    navy + espresso         -> Prestige navy (#054371) — the light-mode
+                                accent (text/icons/buttons ON IVORY)
+    navy-bright + espresso-bright -> sky (#7CA4D5) — the dark-mode accent
+                                (text/icons ON CHARCOAL). This is NOT a
+                                lighter tint of navy, it's a different hue:
+                                navy fails contrast on charcoal (1.8:1) and
+                                must never be used there — sky is the only
+                                accent color safe as text/icons on a dark
+                                background. Every "-bright" usage in
+                                components MUST be on a dark (ink) surface;
+                                every non-bright usage MUST be on a light
+                                (paper) surface — audited file-by-file when
+                                this version shipped, not just value-swapped.
+    ash/smoke               -> muted-light / muted-dark (#4A6078 / #94A3B8)
+                                — ash already meant "muted text on light",
+                                smoke already meant "muted text on dark", so
+                                this direction was already correct pre-v6.
+  Retired: --color-clay, --color-blue, --color-slate, the old #F8F5EF ivory.
 */
 @theme {
   --color-ink: #0f1114;
   --color-ink-soft: #1a1d21;
   --color-ink-line: #2e3238;
 
-  --color-paper: #f8f5ef;
-  --color-paper-soft: #efece4;
-  --color-paper-line: #ddd8cd;
+  --color-paper: #f6f4f1;
+  --color-paper-soft: #ece8e3;
+  --color-paper-line: #dad3cb;
 
-  --color-navy: #a85a34;
-  --color-navy-bright: #d97746;
-  --color-espresso: #a85a34;
-  --color-espresso-bright: #d97746;
+  --color-navy: #054371;
+  --color-navy-bright: #7ca4d5;
+  --color-espresso: #054371;
+  --color-espresso-bright: #7ca4d5;
 
-  --color-blue: #2563eb;
+  --color-silver: #c9d6ed;
 
-  --color-ash: #64748b;
+  --color-ash: #4a6078;
   --color-smoke: #94a3b8;
 
   --font-display: var(--font-montserrat), system-ui, sans-serif;
@@ -81,14 +85,20 @@ body {
   color: var(--color-paper);
 }
 
-/* Visible keyboard focus everywhere, regardless of accent context */
+/* Visible keyboard focus everywhere. Default (light-surface) outline is
+   navy; inside a dark (bg-ink*) or navy surface it switches to the sky
+   variant, since navy itself fails contrast on charcoal (1.8:1). Matches
+   on the literal Tailwind utility classes (bg-ink, bg-ink-soft, bg-navy)
+   rather than a semantic wrapper class, since none exists in the markup. */
 :focus-visible {
   outline: 2px solid var(--color-navy);
   outline-offset: 3px;
   border-radius: 2px;
 }
 
-.ink :focus-visible,
-.on-ink :focus-visible {
+[class*="bg-ink"] :focus-visible,
+[class*="bg-ink"]:focus-visible,
+[class*="bg-navy"] :focus-visible,
+[class*="bg-navy"]:focus-visible {
   outline-color: var(--color-navy-bright);
 }

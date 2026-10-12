@@ -64,7 +64,7 @@ export default function ReviewsPage() {
         <Breadcrumbs items={[{ label: "Reviews", path: "/reviews" }]} tone="ink" />
 
         <div className="mt-10 max-w-2xl">
-          <Eyebrow tone="navy">Real couples, real weddings</Eyebrow>
+          <Eyebrow tone="espresso">Real couples, real weddings</Eyebrow>
           <h1 className="mt-4 font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
             Reviews
           </h1>
@@ -95,7 +95,7 @@ export default function ReviewsPage() {
             <a
               key={d.name}
               href={d.href}
-              className="rounded-sm border border-ink-line bg-ink-soft p-6 text-center transition-colors hover:border-navy"
+              className="rounded-sm border border-ink-line bg-ink-soft p-6 text-center transition-colors hover:border-navy-bright"
             >
               <p className="font-display text-lg font-semibold text-paper">{d.name}</p>
               <p className="mt-2 font-mono text-[11px] uppercase tracking-wider text-smoke">

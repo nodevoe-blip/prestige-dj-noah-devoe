@@ -36,7 +36,7 @@ export default function GrandRapidsPage() {
           />
 
           <div className="mt-10 max-w-2xl">
-            <Eyebrow tone="navy">West Michigan</Eyebrow>
+            <Eyebrow tone="espresso">West Michigan</Eyebrow>
             <h1 className="mt-4 font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
               Grand Rapids Wedding DJ
             </h1>

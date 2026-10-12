@@ -76,7 +76,7 @@ export default function WeddingsPage() {
           <div key={w.slug} className="mt-14">
             <Link
               href={`/noah-devoe/weddings/${w.slug}`}
-              className="inline-flex items-baseline gap-2 font-mono text-xs uppercase tracking-wider text-espresso-bright hover:text-espresso"
+              className="inline-flex items-baseline gap-2 font-mono text-xs uppercase tracking-wider text-espresso-bright hover:text-paper"
             >
               <span>{w.couple}</span>
               {w.venueName && <span className="text-smoke">— {w.venueName}</span>}

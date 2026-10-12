@@ -56,7 +56,7 @@ export default function MetroDetroitPage() {
           />
 
           <div className="mt-10 max-w-2xl">
-            <Eyebrow tone="navy">Southeast Michigan</Eyebrow>
+            <Eyebrow tone="espresso">Southeast Michigan</Eyebrow>
             <h1 className="mt-4 font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
               Metro Detroit Wedding DJ
             </h1>
@@ -139,7 +139,7 @@ export default function MetroDetroitPage() {
         <div className="mx-auto max-w-[1400px] px-5 py-20 sm:px-8">
           <div className="grid gap-10 md:grid-cols-2">
             <div>
-              <Eyebrow tone="navy">Next step</Eyebrow>
+              <Eyebrow tone="espresso">Next step</Eyebrow>
               <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl">
                 Planning a Metro Detroit wedding?
               </h2>

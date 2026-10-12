@@ -119,7 +119,7 @@ export default async function NoahDeVoePage() {
       <section className="mx-auto max-w-[1400px] px-5 py-20 sm:px-8">
         <div className="grid gap-12 md:grid-cols-[0.9fr_1.1fr]">
           <div>
-            <Eyebrow index="00:00" tone="espresso">
+            <Eyebrow index="00:00" tone="navy">
               The story
             </Eyebrow>
             <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl">
@@ -175,7 +175,7 @@ export default async function NoahDeVoePage() {
             <div>
               <div className="flex flex-wrap items-end justify-between gap-4">
                 <div>
-                  <Eyebrow index="00:01" tone="espresso">
+                  <Eyebrow index="00:01" tone="navy">
                     Actually hear it
                   </Eyebrow>
                   <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl">
@@ -194,7 +194,7 @@ export default async function NoahDeVoePage() {
               </div>
               <a
                 href="/noah-devoe/mixes"
-                className="mt-6 inline-block font-mono text-xs uppercase tracking-wider text-espresso-bright hover:text-espresso"
+                className="mt-6 inline-block font-mono text-xs uppercase tracking-wider text-navy hover:underline"
               >
                 All mixes &rarr;
               </a>
@@ -214,7 +214,7 @@ export default async function NoahDeVoePage() {
 
       {/* Video */}
       <section className="mx-auto max-w-[1400px] px-5 py-20 sm:px-8">
-        <Eyebrow index="00:01.5" tone="espresso">
+        <Eyebrow index="00:01.5" tone="navy">
           Watch it, too
         </Eyebrow>
         <h2 className="mt-3 max-w-2xl font-display text-3xl font-bold sm:text-4xl">
@@ -261,14 +261,14 @@ export default async function NoahDeVoePage() {
       <section className="mx-auto max-w-[1400px] px-5 py-20 sm:px-8">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
-            <Eyebrow index="00:02" tone="espresso">
+            <Eyebrow index="00:02" tone="navy">
               Weddings I&rsquo;ve personally DJ&rsquo;d
             </Eyebrow>
             <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl">A working portfolio</h2>
           </div>
           <a
             href="/noah-devoe/weddings"
-            className="font-mono text-xs uppercase tracking-wider text-espresso-bright hover:text-espresso"
+            className="font-mono text-xs uppercase tracking-wider text-navy hover:underline"
           >
             Full portfolio &rarr;
           </a>
@@ -298,7 +298,7 @@ export default async function NoahDeVoePage() {
       {/* Testimonials */}
       <section className="border-t border-paper-line bg-paper-soft">
         <div className="mx-auto max-w-[1400px] px-5 py-20 sm:px-8">
-          <Eyebrow index="00:03" tone="espresso">
+          <Eyebrow index="00:03" tone="navy">
             From couples I&rsquo;ve worked with
           </Eyebrow>
           <h2 className="mt-3 max-w-2xl font-display text-3xl font-bold sm:text-4xl">

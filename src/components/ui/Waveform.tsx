@@ -32,7 +32,7 @@ export function Waveform({
   className?: string;
 }) {
   const heights = heightsFor(seed, bars);
-  const color = tone === "navy" ? "bg-navy" : tone === "espresso" ? "bg-espresso" : "bg-paper";
+  const color = tone === "navy" ? "bg-navy" : tone === "espresso" ? "bg-espresso-bright" : "bg-paper";
 
   return (
     <div

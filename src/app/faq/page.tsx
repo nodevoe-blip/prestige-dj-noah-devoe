@@ -64,7 +64,7 @@ export default function FaqPage() {
           <Breadcrumbs items={[{ label: "FAQ", path: "/faq" }]} tone="ink" />
 
           <div className="mt-10 max-w-2xl">
-            <Eyebrow tone="navy">Questions couples actually ask</Eyebrow>
+            <Eyebrow tone="espresso">Questions couples actually ask</Eyebrow>
             <h1 className="mt-4 font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
               FAQ
             </h1>

@@ -41,7 +41,7 @@ export default function HomePage() {
                 The wedding <span className="font-bold">your people</span> can&rsquo;t stop talking
                 about.
               </p>
-              <AccentRule className="mt-5" />
+              <AccentRule className="mt-5" tone="espresso" />
               <p className="mt-6 max-w-lg text-lg text-smoke">
                 I&rsquo;ve personally DJ&rsquo;d {stats.weddingsDjdByNoah} Michigan weddings — ceremony
                 through last dance. I also co-own Prestige Weddings &amp; Events, so if my calendar
@@ -103,7 +103,7 @@ export default function HomePage() {
 
       {/* Noah's own work */}
       <section className="mx-auto max-w-[1400px] px-5 py-20 sm:px-8">
-        <Eyebrow index="01" tone="espresso">
+        <Eyebrow index="01" tone="navy">
           See &amp; hear it yourself
         </Eyebrow>
         <h2 className="mt-3 max-w-2xl font-display text-3xl font-bold sm:text-4xl">
@@ -143,7 +143,7 @@ export default function HomePage() {
 
       <div className="flex justify-center py-2">
         <img
-          src="/images/brand/raptor/raptor-icon-clay.svg"
+          src="/images/brand/raptor/raptor-icon-navy.svg"
           alt=""
           aria-hidden="true"
           className="h-6 w-auto opacity-80"

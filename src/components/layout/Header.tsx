@@ -37,8 +37,8 @@ export function Header() {
                   href={section.href}
                   className={`font-mono text-[11px] uppercase tracking-wider transition-colors ${
                     section.label === "Noah DeVoe"
-                      ? "text-espresso-bright hover:text-navy"
-                      : "text-paper/85 hover:text-navy"
+                      ? "text-espresso-bright hover:text-navy-bright"
+                      : "text-paper/85 hover:text-navy-bright"
                   }`}
                 >
                   {section.label}
@@ -63,7 +63,7 @@ export function Header() {
         <div className="flex items-center gap-4">
           <Link
             href="/wedding-dj#check-availability"
-            className="hidden rounded-sm bg-navy px-4 py-2 font-mono text-[11px] uppercase tracking-wider text-paper transition-colors hover:bg-navy-bright sm:inline-block"
+            className="hidden rounded-sm bg-navy px-4 py-2 font-mono text-[11px] uppercase tracking-wider text-paper transition-colors hover:bg-navy-bright hover:text-ink sm:inline-block"
           >
             Check Availability
           </Link>

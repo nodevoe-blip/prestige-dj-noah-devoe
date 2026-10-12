@@ -99,7 +99,9 @@ export function VideoPlayer({ clip, tone = "espresso" }: { clip: VideoClip; tone
                 className="object-cover opacity-80 transition-opacity group-hover:opacity-60"
               />
             )}
-            <span className={`relative z-10 flex h-14 w-14 items-center justify-center rounded-full text-paper ${accentBg}`}>
+            <span
+              className={`relative z-10 flex h-14 w-14 items-center justify-center rounded-full text-paper transition-colors hover:text-ink ${accentBg}`}
+            >
               <svg width="16" height="16" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true">
                 <path d="M0 0 14 7 0 14Z" />
               </svg>

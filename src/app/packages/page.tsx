@@ -36,7 +36,7 @@ export default function PackagesPage() {
         <Breadcrumbs items={[{ label: "Packages", path: "/packages" }]} tone="ink" />
 
         <div className="mt-10 max-w-2xl">
-          <Eyebrow tone="navy">Bundle &amp; save</Eyebrow>
+          <Eyebrow tone="espresso">Bundle &amp; save</Eyebrow>
           <h1 className="mt-4 font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
             Packages &amp; Bundles
           </h1>
@@ -44,7 +44,7 @@ export default function PackagesPage() {
             Every service below can be booked on its own — bundling two or more with Prestige
             means one shared timeline, one point of contact, and a lower combined rate than
             booking each vendor separately. DJ service alone starts at{" "}
-            <span className="text-navy">{stats.teamDjStartingPrice}</span>; bundles run higher
+            <span className="text-navy-bright">{stats.teamDjStartingPrice}</span>; bundles run higher
             depending on what you add.
           </p>
         </div>
@@ -76,7 +76,7 @@ export default function PackagesPage() {
               <a
                 key={s.slug}
                 href={s.path}
-                className="rounded-sm border border-ink-line px-4 py-2 font-mono text-xs uppercase tracking-wider text-smoke hover:border-navy hover:text-navy"
+                className="rounded-sm border border-ink-line px-4 py-2 font-mono text-xs uppercase tracking-wider text-smoke hover:border-navy-bright hover:text-navy-bright"
               >
                 {s.shortName}
               </a>

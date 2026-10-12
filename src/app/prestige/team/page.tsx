@@ -35,7 +35,7 @@ function TeamCard({ member }: { member: TeamMember }) {
       {isInternal && (
         <Link
           href={member.profileUrl!}
-          className="mt-2 inline-block font-mono text-[11px] uppercase tracking-wider text-espresso-bright hover:text-espresso"
+          className="mt-2 inline-block font-mono text-[11px] uppercase tracking-wider text-espresso-bright hover:text-paper"
         >
           Full profile &rarr;
         </Link>
@@ -57,7 +57,7 @@ export default function TeamPage() {
         />
 
         <div className="mt-10 max-w-2xl">
-          <Eyebrow tone="navy">The full bench — {team.length} DJs</Eyebrow>
+          <Eyebrow tone="espresso">The full bench — {team.length} DJs</Eyebrow>
           <h1 className="mt-4 font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
             Meet the team
           </h1>
@@ -73,7 +73,7 @@ export default function TeamPage() {
         </div>
 
         <div className="mt-16">
-          <Eyebrow tone="navy">Metro Detroit — {detroitTeam.length} DJs</Eyebrow>
+          <Eyebrow tone="espresso">Metro Detroit — {detroitTeam.length} DJs</Eyebrow>
           <div className="mt-8 grid gap-x-6 gap-y-10 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
             {detroitTeam.map((m) => (
               <TeamCard key={m.slug} member={m} />
@@ -82,7 +82,7 @@ export default function TeamPage() {
         </div>
 
         <div className="mt-20">
-          <Eyebrow tone="navy">Grand Rapids — {grTeam.length} DJs</Eyebrow>
+          <Eyebrow tone="espresso">Grand Rapids — {grTeam.length} DJs</Eyebrow>
           <div className="mt-8 grid gap-x-6 gap-y-10 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
             {grTeam.map((m) => (
               <TeamCard key={m.slug} member={m} />

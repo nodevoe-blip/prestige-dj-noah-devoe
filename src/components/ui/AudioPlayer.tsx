@@ -52,7 +52,7 @@ export function AudioPlayer({ track }: { track: Track }) {
         onClick={toggle}
         disabled={!track.src}
         aria-label={playing ? `Pause ${track.title}` : `Play ${track.title}`}
-        className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-espresso-bright bg-espresso text-paper transition-colors hover:bg-espresso-bright disabled:cursor-not-allowed disabled:opacity-40"
+        className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-espresso-bright bg-espresso text-paper transition-colors hover:bg-espresso-bright hover:text-ink disabled:cursor-not-allowed disabled:opacity-40"
       >
         {playing ? (
           <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true">

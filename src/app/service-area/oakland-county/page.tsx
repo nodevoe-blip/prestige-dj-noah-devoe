@@ -57,7 +57,7 @@ export default function OaklandCountyPage() {
 
           <div className="mt-10 grid gap-12 md:grid-cols-[1.1fr_0.9fr] md:items-end">
             <div>
-              <Eyebrow index="HOME TURF" tone="navy">
+              <Eyebrow index="HOME TURF" tone="espresso">
                 Metro Detroit / Northern Woodward Corridor
               </Eyebrow>
               <h1 className="mt-5 font-display text-5xl font-bold leading-[1.02] tracking-tight sm:text-6xl">
@@ -80,7 +80,7 @@ export default function OaklandCountyPage() {
             <PhotoPlaceholder
               caption="Reception dance floor, Oakland County estate venue"
               aspect="aspect-[4/5]"
-              tone="navy"
+              tone="espresso"
             />
           </div>
         </div>
@@ -232,7 +232,7 @@ export default function OaklandCountyPage() {
         <div className="mx-auto max-w-[1400px] px-5 py-20 sm:px-8">
           <div className="grid gap-10 md:grid-cols-2">
             <div>
-              <Eyebrow index="05" tone="navy">
+              <Eyebrow index="05" tone="espresso">
                 Next step
               </Eyebrow>
               <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl">
@@ -256,12 +256,12 @@ export default function OaklandCountyPage() {
                 Reach the team directly
               </p>
               <p className="mt-4 font-display text-2xl font-semibold">
-                <a href={`tel:${prestige.telephone}`} className="hover:text-navy">
+                <a href={`tel:${prestige.telephone}`} className="hover:text-navy-bright">
                   {prestige.telephone}
                 </a>
               </p>
               <p className="mt-1">
-                <a href={`mailto:${prestige.email}`} className="text-smoke hover:text-navy">
+                <a href={`mailto:${prestige.email}`} className="text-smoke hover:text-navy-bright">
                   {prestige.email}
                 </a>
               </p>

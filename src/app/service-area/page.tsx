@@ -17,7 +17,7 @@ export default function ServiceAreaIndexPage() {
         <Breadcrumbs items={[{ label: "Service Areas", path: "/service-area" }]} tone="ink" />
 
         <div className="mt-10 max-w-2xl">
-          <Eyebrow tone="navy">Where we work</Eyebrow>
+          <Eyebrow tone="espresso">Where we work</Eyebrow>
           <h1 className="mt-4 font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
             Service Areas
           </h1>
@@ -32,9 +32,9 @@ export default function ServiceAreaIndexPage() {
             <a
               key={a.slug}
               href={`/service-area/${a.slug}`}
-              className="rounded-sm border border-ink-line bg-ink-soft p-6 transition-colors hover:border-navy"
+              className="rounded-sm border border-ink-line bg-ink-soft p-6 transition-colors hover:border-navy-bright"
             >
-              <p className="font-mono text-[11px] uppercase tracking-wider text-navy">{a.region}</p>
+              <p className="font-mono text-[11px] uppercase tracking-wider text-espresso-bright">{a.region}</p>
               <h2 className="mt-1 font-display text-xl font-semibold text-paper">{a.name}</h2>
               <p className="mt-2 text-sm text-smoke">{a.blurb}</p>
               {!a.live && (

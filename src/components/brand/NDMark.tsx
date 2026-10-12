@@ -6,8 +6,8 @@
  */
 
 const ICON = {
-  light: "/brand/nd/nd-icon-fullcolor.svg", // charcoal + clay, for light/ivory backgrounds
-  dark: "/brand/nd/nd-icon-fullcolor-reverse.svg", // ivory + clay, for dark/charcoal backgrounds
+  light: "/brand/nd/nd-icon.svg", // charcoal + navy, for light/ivory backgrounds
+  dark: "/brand/nd/nd-icon-reverse.svg", // ivory + navy, for dark/charcoal backgrounds
 } as const;
 
 const LOCKUP = {

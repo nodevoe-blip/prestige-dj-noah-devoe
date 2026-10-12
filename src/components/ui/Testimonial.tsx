@@ -26,7 +26,11 @@ export function Testimonial({
   return (
     <figure className={`rounded-sm border ${border} p-6`}>
       {placeholder && (
-        <p className="mb-3 font-mono text-[10px] uppercase tracking-wider text-espresso-bright">
+        <p
+          className={`mb-3 font-mono text-[10px] uppercase tracking-wider ${
+            tone === "onPaper" ? "text-navy" : "text-espresso-bright"
+          }`}
+        >
           Sample — replace with a real review
         </p>
       )}
