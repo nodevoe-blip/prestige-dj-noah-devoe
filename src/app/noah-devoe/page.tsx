@@ -221,7 +221,8 @@ export default async function NoahDeVoePage() {
           MC &amp; DJ work on video
         </h2>
         <p className="mt-4 max-w-2xl text-ash">
-          Real clips, not a demo reel edited to hide the boring parts.
+          Highlight reels, grand entrances, and formal dances from real Michigan weddings I&rsquo;ve
+          DJ&rsquo;d.
         </p>
 
         <div className="mt-10 grid gap-5 sm:grid-cols-2">
