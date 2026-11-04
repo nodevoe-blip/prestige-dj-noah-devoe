@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!venue) return {};
   return pageMetadata({
     title: `${venue.name} Wedding DJ — Noah DeVoe`,
-    description: `${venue.name} in ${venue.city}, Michigan — a Michigan wedding DJ's guide, from Noah DeVoe of Prestige Weddings & Events.`,
+    description: `${venue.name} in ${venue.city} — a Michigan wedding DJ's guide, from Noah DeVoe of Prestige Weddings & Events.`,
     path: `/venues/${venue.slug}`,
   });
 }
@@ -88,6 +88,18 @@ export default async function VenuePage({ params }: { params: Promise<{ slug: st
                 Check my availability
               </CTAButton>
             </div>
+            {venue.website && (
+              <p className="mt-4">
+                <a
+                  href={venue.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-mono text-xs uppercase tracking-wider text-espresso-bright underline decoration-dotted underline-offset-2 hover:text-paper"
+                >
+                  Visit the venue&rsquo;s website &#8599;
+                </a>
+              </p>
+            )}
           </div>
         </div>
       </section>

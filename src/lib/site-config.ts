@@ -226,6 +226,10 @@ export type Venue = {
   /** service-area slug this venue belongs to, for cross-linking */
   regionSlug: string;
   blurb: string;
+  /** The venue's own site — couples checking availability/pricing/photos
+   * there is a feature, not a leak; we're not trying to be their only
+   * source on a venue we didn't build. */
+  website?: string;
 
   // Researched public facts — venue history/character/capacity, sourced from
   // public listings and the venue's own material. NOT Noah's personal
@@ -515,6 +519,16 @@ export const venues: Venue[] = [
     about: "The main venue space holds up to 200 guests indoors, on a property spanning private farm fields and hardwood forest. Two get-ready suites are available for the wedding party, and the venue books only one event per weekend.",
     weddingsWorked: "6 weddings DJ'd here since 2023",
     photos: ["cushing-field-house-01"],
+  },
+  {
+    slug: "the-northfork-estate",
+    name: "The Northfork Estate",
+    city: "Eaton Rapids, MI",
+    regionSlug: "grand-rapids",
+    blurb: "A 50-acre former horse farm turned event estate, with a 9,000 sq. ft. Grand Hall and a wrought-iron entrance past a life-size bronze horse sculpture.",
+    website: "https://www.thenorthforkestate.com",
+    about: "The property began as a horse farm; owner Marta Brown and her late husband were the first couple married here, in 2015. The grounds are landscaped with private ponds and patios, and guests enter through an ornate wrought-iron gate past a life-size bronze horse sculpture by Arizona sculptor J. Anne Butler. Wedding season runs May through October.",
+    spaces: "The Grand Hall is 9,000 sq. ft. and holds up to 300 guests, styled anywhere from rustic to ballroom. The venue also includes a separate bridal suite, bar, and dining area, plus several indoor and outdoor ceremony locations across the property.",
   },
 ];
 

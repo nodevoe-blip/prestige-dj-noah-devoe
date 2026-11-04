@@ -7,7 +7,7 @@ import { venues, serviceAreas } from "@/lib/site-config";
 export const metadata = pageMetadata({
   title: "Michigan Wedding Venue Guide — Noah DeVoe",
   description:
-    "Real, firsthand notes on Michigan wedding venues Noah DeVoe has personally DJ'd — ceremony and reception setup, load-in, audio, and logistics.",
+    "Michigan wedding venue notes from Noah DeVoe — firsthand ceremony, reception, load-in, and audio details from venues he's personally DJ'd, plus researched profiles for venues on his radar.",
   path: "/venues",
   // Flip this off once at least a few venues below have real content —
   // an empty guide isn't worth indexing yet.
@@ -26,9 +26,9 @@ export default function VenuesIndexPage() {
             Michigan Wedding Venue Guide
           </h1>
           <p className="mt-5 text-lg text-smoke">
-            Real notes from weddings I&rsquo;ve actually DJ&rsquo;d — ceremony and reception
-            setup, load-in, audio quirks, dance floor observations. Not a directory of venues I&rsquo;ve
-            never seen.
+            Mostly real notes from weddings I&rsquo;ve actually DJ&rsquo;d — ceremony and reception
+            setup, load-in, audio quirks, dance floor observations. A few venues I haven&rsquo;t
+            played yet are here too, clearly marked as researched, not experienced.
           </p>
         </div>
 
