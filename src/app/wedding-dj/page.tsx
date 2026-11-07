@@ -42,7 +42,7 @@ const faqs = [
   {
     question: "Do you provide ceremony sound, not just reception music?",
     answer:
-      "Yes — every Prestige wedding DJ package includes ceremony and cocktail-hour sound, not just the reception dance floor.",
+      "Yes — ceremony and cocktail-hour sound, including wireless mics for vows, can be added to any Prestige wedding DJ package. It's not included by default, so let us know during booking and we'll quote it alongside your reception coverage.",
   },
 ];
 
@@ -162,16 +162,16 @@ export default function WeddingDjPage() {
             What&rsquo;s included
           </Eyebrow>
           <h2 className="mt-3 max-w-2xl font-display text-3xl font-bold sm:text-4xl">
-            Every package covers the whole day, not just the dance floor
+            Built around your whole day, not just the dance floor
           </h2>
           <div className="mt-10 grid gap-px overflow-hidden rounded-sm border border-paper-line bg-paper-line sm:grid-cols-2 md:grid-cols-3">
             {[
-              ["Ceremony sound", "Wireless mics for vows, processional & recessional music cued live."],
-              ["Cocktail hour", "Background music sets the tone while your photos happen."],
               ["MC-led reception", "Introductions, toasts, timeline cues — run by a real MC, not a laptop."],
               ["Michigan-tested gear", "Backup systems for outdoor tents, barns & unpredictable weather."],
               ["Planning tools", "A shared timeline & music questionnaire before the wedding day."],
-              ["Add-ons available", "Uplighting, monograms, cold-spark effects & photo booth bundles."],
+              ["Ceremony sound", "Wireless mics for vows, processional & recessional music — add it to any package."],
+              ["Cocktail hour", "Background music while your photos happen — add it to any package."],
+              ["More add-ons", "Uplighting, monograms, cold-spark effects & photo booth bundles."],
             ].map(([title, body]) => (
               <div key={title} className="bg-paper p-6">
                 <h3 className="font-display text-lg font-semibold text-ink">{title}</h3>

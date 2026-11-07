@@ -36,7 +36,7 @@ const faqs = [
   {
     question: "Do you provide ceremony sound, not just reception music?",
     answer:
-      "Yes — every Prestige wedding DJ package includes ceremony and cocktail-hour sound, not just the reception dance floor, including wireless mics for vows.",
+      "Yes — ceremony and cocktail-hour sound, including wireless mics for vows, can be added to any Prestige wedding DJ package. It's not included in every package by default, so let us know during booking and we'll quote it alongside your reception coverage.",
   },
   {
     question: "What happens if it rains at an outdoor Michigan wedding?",
