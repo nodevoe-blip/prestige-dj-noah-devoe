@@ -8,6 +8,62 @@ import { CTAButton } from "@/components/ui/CTAButton";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { Testimonial } from "@/components/ui/Testimonial";
 import { prestige, serviceAreas, team, founder, stats } from "@/lib/site-config";
+import { PackageTiers, AddOnGrid, type PackageTier, type AddOn } from "@/components/ui/PackageTiers";
+
+const djTiers: PackageTier[] = [
+  {
+    name: "Silver",
+    items: [
+      "Reception coverage, up to 6 hours",
+      "Pro sound system & wireless mic for speeches/toasts",
+      "DJ-led emceeing for smooth event flow",
+      "Custom playlist tools & planning portal",
+      "Unlimited song pool + custom playlists",
+      "Free setup (2 hours prior) & tear-down",
+      "Final planning meeting with your DJ",
+      "Dance-floor lighting",
+    ],
+  },
+  {
+    name: "Platinum",
+    popular: true,
+    items: [
+      "Everything in Silver",
+      "12 wireless uplights for accent lighting",
+      "Music-synced light show once the dance floor opens",
+    ],
+  },
+  {
+    name: "Royal",
+    items: [
+      "Everything in Platinum",
+      "50 foam light sticks & custom song edits",
+      "Ceremony coverage included — sound system, a lapel + handheld mic, seating music starting 30 minutes prior",
+      "4-hour open-air photo booth with a professional attendant",
+    ],
+  },
+];
+
+const djAddOns: AddOn[] = [
+  {
+    name: "Ceremony coverage",
+    detail: "A professional sound system with wireless mics for vows — included in Royal, addable to Silver or Platinum.",
+  },
+  {
+    name: "Cocktail hour speaker",
+    detail: "An additional speaker so the music reaches a separate cocktail-hour room or patio.",
+  },
+  { name: "Extra hour", detail: "Extend your DJ & MC coverage beyond the package hours." },
+  {
+    name: "Accent lighting",
+    detail: "Uplights set to a static color during dinner, then synced to the music once the dance floor opens.",
+  },
+  { name: "Photo/video projector", detail: "Show photos or a video during dinner or toasts." },
+  {
+    name: "Live saxophonist",
+    detail: "A live sax player performs alongside your DJ during cocktail hour, dinner, open dancing, or a combination of moments.",
+  },
+];
 
 const teamPreview = [
   team.find((m) => m.slug === "noah")!,
@@ -182,9 +238,29 @@ export default function WeddingDjPage() {
         </div>
       </section>
 
+      {/* Packages */}
+      <section className="border-t border-paper-line">
+        <div className="mx-auto max-w-[1400px] px-5 py-20 sm:px-8">
+          <Eyebrow index="03" tone="navy">
+            Pick your coverage
+          </Eyebrow>
+          <h2 className="mt-3 max-w-2xl font-display text-3xl font-bold sm:text-4xl">
+            Three DJ &amp; MC packages, the same trained team
+          </h2>
+          <p className="mt-4 max-w-2xl text-ash">
+            Every package below starts with reception coverage, a pro sound system, wireless mics
+            for toasts, full MC-led emceeing, and our planning portal. Exact pricing depends on your
+            date, hours, and add-ons — tell us your date and venue for a quote.
+          </p>
+          <PackageTiers tiers={djTiers} />
+          <h3 className="mt-14 font-display text-xl font-semibold text-ink">Add to any package</h3>
+          <AddOnGrid addOns={djAddOns} />
+        </div>
+      </section>
+
       {/* Service areas */}
       <section className="mx-auto max-w-[1400px] px-5 py-20 sm:px-8">
-        <Eyebrow index="03" tone="navy">
+        <Eyebrow index="04" tone="navy">
           Where the team travels
         </Eyebrow>
         <h2 className="mt-3 max-w-2xl font-display text-3xl font-bold sm:text-4xl">
@@ -210,7 +286,7 @@ export default function WeddingDjPage() {
         <div className="mx-auto max-w-[1400px] px-5 py-20 sm:px-8">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
-              <Eyebrow index="04" tone="navy">
+              <Eyebrow index="05" tone="navy">
                 What couples say
               </Eyebrow>
               <h2 className="mt-3 max-w-2xl font-display text-3xl font-bold sm:text-4xl">
@@ -243,7 +319,7 @@ export default function WeddingDjPage() {
 
       {/* FAQ */}
       <section className="mx-auto max-w-[1400px] px-5 py-20 sm:px-8">
-        <Eyebrow index="05" tone="navy">
+        <Eyebrow index="06" tone="navy">
           Questions couples actually ask
         </Eyebrow>
         <h2 className="mt-3 max-w-2xl font-display text-3xl font-bold sm:text-4xl">FAQ</h2>
@@ -267,7 +343,7 @@ export default function WeddingDjPage() {
         <div className="mx-auto max-w-[1400px] px-5 py-20 sm:px-8">
           <div className="grid gap-10 md:grid-cols-2">
             <div>
-              <Eyebrow index="06" tone="navy">
+              <Eyebrow index="07" tone="navy">
                 Get in touch
               </Eyebrow>
               <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl">
