@@ -43,7 +43,12 @@ const reviews = [
   {
     quote:
       "From the moment I decided to hire them for DJ, coordinator, and videography services, they made wedding planning as seamless and easy as possible. My wedding would not have been the fairytale it was without Prestige!",
-    attribution: "Abby & Alexander — The Whiskey Factory",
+    attribution: "Ashley & Steve — The Whiskey Factory",
+  },
+  {
+    quote:
+      "We got married at Fenton Winery & Brewery, with Noah DeVoe being our DJ. He did such an amazing job keeping the dance floor jam packed, playing different varieties of music but most importantly having great energy! He made the planning process so easy from start to finish, with an online profile but also by being available 24/7 if any questions had arose. Noah made sure our favorite songs played all night and would play any song that we asked him to and really made sure we were happy. He was professional all the way around and made sure our day was everything it was supposed to be!",
+    attribution: "Zoe H. — Fenton Winery & Brewery, The Knot, 9/30/2025",
   },
   {
     quote:

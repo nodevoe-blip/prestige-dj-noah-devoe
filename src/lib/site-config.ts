@@ -272,7 +272,11 @@ export const venues: Venue[] = [
     website: "https://packardprovinggrounds.org/weddings/",
     about: "Built in 1928 for the Packard Motor Car Company and designed by Albert Kahn, the property is listed on the National Register of Historic Places. Ceremonies are typically held in the Lodge Garage or along the tree-lined boulevard under its iron gate.",
     spaces: "The Repair Garage seats up to roughly 296 for a reception. The Lodge Garage seats about 200 theater-style for an indoor ceremony. A courtyard between the two garages is commonly used for cocktail hour.",
-    weddingsWorked: "2 weddings DJ'd here since 2023",
+    weddingsWorked: "2 weddings DJ'd here",
+    djPlacement: "I set up on the wall next to the courtyard, centered on the dance floor in the Repair Garage.",
+    audioNotes: "There's some natural echo in the space, but it's manageable.",
+    loadIn: "Easy — I can park close by, and it's a short carry with no stairs.",
+    noiseRestrictions: "Packard has a noise curfew, so weddings here typically wrap by 11pm.",
     photos: ["packard-proving-grounds-01"],
   },
   {
@@ -284,7 +288,13 @@ export const venues: Venue[] = [
     website: "https://www.oaklandcountymi.gov/community/oakland-county-parks/parks-trails/addison-oaks",
     about: "Addison Oaks is an Oakland County Parks property spanning roughly 750–1,000 acres, centered on the English Tudor-style Buhl Estate manor house.",
     spaces: "The banquet room holds up to roughly 500 for cocktails and reception and opens onto an outdoor deck. A separate garden room suits smaller gatherings, and there's a dedicated outdoor wedding garden for ceremonies.",
-    weddingsWorked: "3 weddings DJ'd here since 2023",
+    weddingsWorked: "4 weddings DJ'd here",
+    djPlacement: "My main setup is inside on the mini stage near the dance floor.",
+    receptionSetup: "For cocktail hour, I'll run a satellite speaker out on the deck so the music carries outside too.",
+    ceremonySetup: "For ceremonies in the courtyard, I bring a separate sound system just for that space.",
+    audioNotes: "With larger groups, a satellite speaker at the back of the main room helps — nice to have, not required.",
+    loadIn: "Tricky but manageable — it's down a long ramp with a couple of tight turns.",
+    noiseRestrictions: "No noise issues here that I've run into.",
     photos: ["addison-oaks-01"],
   },
   {
@@ -296,6 +306,10 @@ export const venues: Venue[] = [
     website: "https://www.forbesdetroit.com/gem-theatre.php",
     about: "Reported capacity varies by configuration and source, generally cited from 150 up to 400+. Ceremonies can be held on the proscenium stage; the reception space includes a lower-level dining room and a landscaped outdoor patio.",
     publicParkingNotes: "The venue has its own attached parking deck.",
+    weddingsWorked: "10+ weddings DJ'd here",
+    djPlacement: "I set up either on the stage or at floor level, depending on how the room's laid out for your wedding.",
+    loadIn: "Gear comes in through the attached parking deck — an easy, direct load-in.",
+    audioNotes: "No real echo issues, even with all the hard surfaces and the balcony.",
   },
   {
     slug: "the-whiskey-factory",
@@ -306,7 +320,9 @@ export const venues: Venue[] = [
     website: "https://www.whiskeyfactorydetroit.com",
     about: "The historic event floor is roughly 5,000–7,000 sq. ft. with freight-elevator access, holding about 200 seated or 250 standing.",
     publicParkingNotes: "Street parking near the venue is limited; Eastern Market's lots across the street are commonly used as overflow parking.",
-    weddingsWorked: "1 wedding DJ'd here since 2023",
+    weddingsWorked: "1 wedding DJ'd here",
+    loadIn: "Gear goes up a flight of stairs, then the freight elevator takes it the rest of the way to the second floor.",
+    audioNotes: "Despite the barrel-lined walls, there's very little echo. It's a long room, though, so I'll sometimes add a back-fill speaker to even out the coverage.",
     photos: ["the-whiskey-factory-01"],
   },
   {
@@ -318,7 +334,10 @@ export const venues: Venue[] = [
     website: "https://thevaleroyalbarn.com",
     about: "The venue offers exclusive Friday–Sunday use, a 2,200 sq. ft. dining room with a chandelier and indoor bar, and four separate ceremony sites: a covered bridge, a riverside dock, a garden courtyard, and the woodlands. Capacity runs roughly 150–160 including vendors, with golf carts available to move around the grounds.",
     publishedPolicies: "Per the venue's own published guidelines, music must end by 11:30pm and the event must be over by midnight.",
-    weddingsWorked: "1 wedding DJ'd here since 2023",
+    weddingsWorked: "3 weddings DJ'd here",
+    ceremonySetup: "Of Vale Royal's four ceremony sites, I've personally worked the riverside dock, the garden courtyard, and the woodlands — not yet the covered bridge.",
+    djPlacement: "Setup depends on the barn's layout that day — either across from the big barn door facing the dance floor, or tucked in a corner if the dance floor sits near the door.",
+    audioNotes: "No real issues here.",
     photos: ["vale-royal-barn-01"],
   },
   {
@@ -329,7 +348,9 @@ export const venues: Venue[] = [
     blurb: "A Belgian-glass, three-greenhouse conservatory — roughly 23,000 sq. ft. — with wedding season running September through May.",
     website: "https://planterraevents.com",
     about: "Capacity runs up to about 200 for a reception, with some ceremony configurations seating up to 100. Prestige's own photo galleries include shots captioned “DJ Noah | Planterra,” confirming he's personally DJ'd here.",
-    weddingsWorked: "2 weddings DJ'd here since 2023",
+    weddingsWorked: "2 weddings DJ'd here",
+    djPlacement: "I set up on the side wall, centered on the dance floor.",
+    audioNotes: "Even in an all-glass room, echo is minimal. I'll usually add a satellite speaker near the head table so the main speakers don't have to work so hard before dancing starts.",
     photos: ["planterra-conservatory-01"],
   },
   {
@@ -340,7 +361,10 @@ export const venues: Venue[] = [
     blurb: "A historic late-1800s building in downtown Brighton, with an event space spanning two upper floors connected by wrought-iron stairs.",
     website: "https://brewerybecker.com",
     about: "Hickory wood floors and tall arched windows define the event space. The venue requires guests to be 21+.",
-    weddingsWorked: "1 wedding DJ'd here since 2023",
+    weddingsWorked: "1 wedding DJ'd here",
+    djPlacement: "I set up on the upper level, in the loft.",
+    loadIn: "Gear goes up via elevator — nobody's hauling speakers up that wrought-iron staircase. Since the space itself is compact, I bring a smaller sound system with a smaller footprint to match.",
+    audioNotes: "Sound carries fine between floors — no real issues there.",
     photos: ["brewery-becker-01"],
   },
   {
@@ -352,7 +376,9 @@ export const venues: Venue[] = [
     website: "https://www.fentonbrewery.com",
     about: "The reception area seats up to 280 and features a dance floor, an indoor waterfall, and a bar built from oak barrels and repurposed pallet wood. Ceremonies can be held indoors or outdoors among an acre of gardens. A separate in-brewery taproom hosts smaller events like rehearsal dinners, up to about 30 guests.",
     spaces: "The venue is booked exclusively for the day, with a private bridal suite, groom's fitting rooms, and an outdoor patio with a brick fireplace.",
-    weddingsWorked: "7 weddings DJ'd here since 2023",
+    weddingsWorked: "7 weddings DJ'd here — more than almost any other venue on this list",
+    djPlacement: "Depending on the room, I set up either on the wall at the dance floor or in a corner just off it.",
+    audioNotes: "No audio issues here — it's a straightforward room to run sound in.",
     photos: ["fenton-winery-brewery-01"],
   },
   {
@@ -364,7 +390,7 @@ export const venues: Venue[] = [
     website: "https://www.creeksideacresbarn.com",
     about: "The Great Room spans roughly 3,150 sq. ft. with 25-foot ceilings and includes a designated DJ area, dance floor, full bar, and ceremony space, all in one room. The barn is heated and cooled for year-round use.",
     spaces: "The Great Room seats up to 200 guests. A 70-foot covered porch runs the length of the barn for cocktail hour or sunset photos.",
-    weddingsWorked: "9 weddings DJ'd here since 2023",
+    weddingsWorked: "9 weddings DJ'd here",
     photos: ["creekside-acres-01"],
   },
   {
@@ -376,7 +402,7 @@ export const venues: Venue[] = [
     website: "https://www.meadowbrookhall.org",
     about: "Built in the late 1920s as the Matilda Dodge Wilson estate, Meadow Brook Hall can host up to 300 guests. Ceremonies are held in one of two outdoor gardens or the indoor ballroom, which seats 100 facing the fireplace or 150 facing its stained-glass windows.",
     spaces: "The climate-controlled Garden Tent (available April–October) holds up to 400 standing or around 300 seated. Indoor receptions in the Christopher Wren Dining Room seat 100.",
-    weddingsWorked: "5 weddings DJ'd here since 2023",
+    weddingsWorked: "5 weddings DJ'd here",
     photos: ["meadow-brook-hall-01"],
   },
   {
@@ -388,7 +414,7 @@ export const venues: Venue[] = [
     website: "https://www.warmemorial.org",
     about: "The Crystal Ballroom in the venue's Fred M. Alger Center seats up to 250, or up to 450 combined with the adjoining Community Room. The historic Alger House offers three connected rooms for an intimate reception of around 70.",
     spaces: "Outdoor ceremonies on the back lawn hold up to 500 seated; an indoor ceremony in the Community Room holds up to 300.",
-    weddingsWorked: "4 weddings DJ'd here since 2023",
+    weddingsWorked: "4 weddings DJ'd here",
     photos: ["grosse-pointe-war-memorial-01"],
   },
   {
@@ -399,7 +425,7 @@ export const venues: Venue[] = [
     blurb: "A certified wildlife-habitat barn on 25 acres in Livingston County, with multiple outdoor ceremony sites and a treehouse honeymoon suite.",
     website: "https://www.tandalenaturebarn.com",
     about: "The venue holds up to 220 guests across its barn, patio, and grounds. It's a certified wildlife habitat with several distinct outdoor ceremony locations spread across the property.",
-    weddingsWorked: "4 weddings DJ'd here since 2023",
+    weddingsWorked: "4 weddings DJ'd here",
     photos: ["tandale-nature-barn-01"],
   },
   {
@@ -410,7 +436,7 @@ export const venues: Venue[] = [
     blurb: "A resort with several ballrooms, from the intimate Provincial Room to the 1,500-guest Monarch Ballroom that opened in 2025.",
     website: "https://www.saintjohnsresort.com",
     about: "Event spaces range widely: the Monarch Ballroom holds up to 1,500, the Garden Pavilion up to 500, the glass-ceilinged Atrium up to 300, and the Mosaic and Provincial Ballrooms 300–320 each.",
-    weddingsWorked: "4 weddings DJ'd here since 2023",
+    weddingsWorked: "4 weddings DJ'd here",
     photos: ["saint-johns-resort-01"],
   },
   {
@@ -421,7 +447,7 @@ export const venues: Venue[] = [
     blurb: "A golf-club banquet center with a divisible Lakeview Ballroom and a terrace overlooking the course.",
     website: "https://www.cherrycreekgolf.com",
     about: "The Lakeview Ballroom splits into two 100-guest rooms or opens into one 230-guest space. The Terrace and Conservatory area seats up to 165, and the full clubhouse can handle up to 700 for a seated meal.",
-    weddingsWorked: "4 weddings DJ'd here since 2023",
+    weddingsWorked: "4 weddings DJ'd here",
     photos: ["cherry-creek-golf-club-01"],
   },
   {
@@ -431,7 +457,7 @@ export const venues: Venue[] = [
     regionSlug: "oakland-county",
     blurb: "Two wedding venues on one 850-acre Clarkston estate — the intimate Mansion and the larger Carriage House with its own outdoor pavilion.",
     about: "The Mansion holds up to 150 guests. The Carriage House is the larger of the two, holding up to 280, with a covered outdoor pavilion for ceremonies, cocktail hour, or outdoor dancing.",
-    weddingsWorked: "4 weddings DJ'd here since 2023",
+    weddingsWorked: "4 weddings DJ'd here",
     photos: ["pine-knob-mansion-carriage-house-01"],
   },
   {
@@ -442,7 +468,7 @@ export const venues: Venue[] = [
     blurb: "A 350-acre golf course estate anchored by the Station — a glass-walled event hall styled after a 19th-century European train station.",
     website: "https://www.shepherdshollow.com",
     about: "The Station is a 6,000 sq. ft. event hall that holds up to 325 guests, with glass walls overlooking a lake and pine forest. The clubhouse also has a wraparound veranda over the golf course.",
-    weddingsWorked: "3 weddings DJ'd here since 2023",
+    weddingsWorked: "3 weddings DJ'd here",
     photos: ["shepherds-hollow-golf-club-01"],
   },
   {
@@ -453,7 +479,7 @@ export const venues: Venue[] = [
     blurb: "A downtown Rochester hotel with a Grand Ballroom, a Belgian-glass conservatory, and an outdoor Park Pavilion.",
     website: "https://royalparkhotelmi.com",
     about: "The Royal Grand Ballroom spans roughly 10,440 sq. ft. and can seat up to 700 for dinner or hold up to 1,000 for a reception, with Murano crystal chandeliers and an Italian marble gallery. Smaller weddings can use the Belgian Glass Conservatory or the outdoor Park Pavilion instead.",
-    weddingsWorked: "2 weddings DJ'd here since 2023",
+    weddingsWorked: "2 weddings DJ'd here",
     photos: ["royal-park-hotel-01"],
   },
   {
@@ -464,7 +490,7 @@ export const venues: Venue[] = [
     blurb: "A Detroit River waterfront venue since 1958, with floor-to-ceiling windows over the marina and the city skyline.",
     website: "https://www.roostertail.com",
     about: "Three event spaces scale from the 15–90 guest Club Room to the 100–250 guest Marine Room to the 125–800 guest Palm River Room. Two outdoor ceremony spaces sit along the water, with private entrances to patios and balconies.",
-    weddingsWorked: "1 wedding DJ'd here since 2023",
+    weddingsWorked: "1 wedding DJ'd here",
     photos: ["roostertail-01"],
   },
   {
@@ -475,7 +501,7 @@ export const venues: Venue[] = [
     blurb: "A 1927 Georgian-style landmark in Detroit's Entertainment District, with a gold-leaf Grand Ballroom and a smaller Petite Ballroom.",
     website: "https://www.forbesdetroit.com/colony-club.php",
     about: "The Grand Ballroom on the third floor holds up to 350 guests, with crystal chandeliers and Louis XVI-style décor evoking Versailles. The fourth-floor Petite Ballroom suits smaller weddings of 100–120 guests.",
-    weddingsWorked: "3 weddings DJ'd here since 2023",
+    weddingsWorked: "3 weddings DJ'd here",
     photos: ["colony-club-01"],
   },
   {
@@ -486,7 +512,7 @@ export const venues: Venue[] = [
     blurb: "A boutique hotel in Midtown Detroit with a white-tile ballroom, a marble fireplace, and several smaller event rooms.",
     website: "https://www.shinolahotel.com",
     about: "Bixby Hall, the largest space, seats up to 170 for dinner with dancing. The Birdy Room holds up to 70 seated or 150 standing. Overall the hotel can host anywhere from 10 to 350 guests across its spaces.",
-    weddingsWorked: "3 weddings DJ'd here since 2023",
+    weddingsWorked: "3 weddings DJ'd here",
     photos: ["shinola-hotel-01"],
   },
   {
@@ -497,7 +523,7 @@ export const venues: Venue[] = [
     blurb: "A 1921 former bank in downtown Pontiac, with Art Deco detailing and a bank vault that's become a favorite photo spot.",
     website: "https://treasurymi.com",
     about: "The Main Floor holds up to 280 guests without a dance floor; the Mezzanine Level holds 175–250 depending on ceremony placement. The building features a coffered gold-leaf ceiling, marble elements, and Palladian windows, and gives couples exclusive use of the whole venue.",
-    weddingsWorked: "3 weddings DJ'd here since 2023",
+    weddingsWorked: "3 weddings DJ'd here",
     photos: ["the-treasury-01"],
   },
   {
@@ -508,7 +534,7 @@ export const venues: Venue[] = [
     blurb: "A massive Detroit landmark with three ballrooms, a chapel, and over 1,000 rooms across the building.",
     website: "https://themasonic.com/weddings",
     about: "The Crystal Ballroom holds up to 350 for a reception with a dance floor, the Fountain Ballroom up to 550, and the Chapel up to 400. The Crystal Ballroom alone spans over 10,500 sq. ft. of Italian-decor event space.",
-    weddingsWorked: "3 weddings DJ'd here since 2023",
+    weddingsWorked: "3 weddings DJ'd here",
     photos: ["masonic-temple-detroit-01"],
   },
   {
@@ -519,7 +545,7 @@ export const venues: Venue[] = [
     blurb: "An Italian-catering banquet center in Clinton Township, with a full-service bar and large windows overlooking green space.",
     website: "https://www.themiragebanquets.com",
     about: "The venue accommodates parties from 50 up to 1,000 seated (1,200 standing) in its largest room, with multiple smaller event spaces available for more intimate weddings.",
-    weddingsWorked: "3 weddings DJ'd here since 2023",
+    weddingsWorked: "3 weddings DJ'd here",
     photos: ["mirage-01"],
   },
   {
@@ -530,7 +556,7 @@ export const venues: Venue[] = [
     blurb: "A restored 1920s Detroit skyscraper, with ceremonies in the Linden Room and receptions in the sky-lit Conservatory Ballroom.",
     website: "https://booktowerdetroit.com/events/",
     about: "The Conservatory Ballroom on the 13th floor holds up to 175 seated or 275 for a strolling reception, under a glass skylight with city views. The Linden Room, used for ceremonies, seats up to 140.",
-    weddingsWorked: "3 weddings DJ'd here since 2023",
+    weddingsWorked: "3 weddings DJ'd here",
     photos: ["the-book-tower-detroit-01"],
   },
   {
@@ -541,7 +567,7 @@ export const venues: Venue[] = [
     blurb: "A rustic 30-acre venue in Holly with reclaimed barn wood walls, string lights, and Edison-bulb chandeliers, hosting one wedding per weekend.",
     website: "https://www.cushingfieldhouse.com",
     about: "The main venue space holds up to 200 guests indoors, on a property spanning private farm fields and hardwood forest. Two get-ready suites are available for the wedding party, and the venue books only one event per weekend.",
-    weddingsWorked: "6 weddings DJ'd here since 2023",
+    weddingsWorked: "6 weddings DJ'd here",
     photos: ["cushing-field-house-01"],
   },
   {
@@ -634,14 +660,24 @@ export const realWeddings: RealWedding[] = [
   {
     slug: "casey-michael",
     couple: "Casey & Michael",
+    venueName: "Lafayette Grande",
     photos: ["casey-michael-01", "casey-michael-02", "casey-michael-03", "casey-michael-04", "casey-michael-05"],
   },
   {
-    slug: "the-beckers",
-    couple: "The Beckers",
+    // Was wrongly labeled "The Beckers" — confusing the venue's name (Brewery
+    // Becker) for the couple's. Confirmed surname is Muirhead; first names
+    // still unconfirmed, so slug stays surname-based for now. Rename to a
+    // first-name slug once Noah confirms them.
+    slug: "the-muirheads",
+    couple: "The Muirheads",
     venueName: "Brewery Becker",
     venueSlug: "brewery-becker",
     regionSlug: "metro-detroit",
+    date: "11/4/2023",
+    guestCount: "75–100 guests",
+    musicStyle: "A nice mix of throwbacks, dance anthems, and sing-alongs.",
+    notableMoments: "A guest requested \"A-O-K,\" which isn't usually an open-dancing pick — the whole group ended up singing along.",
+    danceFloorNotes: "Packed.",
     photos: ["becker-danceasaur-brewery"],
   },
   {
@@ -650,6 +686,8 @@ export const realWeddings: RealWedding[] = [
     venueName: "Fenton Winery & Brewery",
     venueSlug: "fenton-winery-brewery",
     regionSlug: "metro-detroit",
+    date: "7/5/2024",
+    guestCount: "95 guests",
     testimonial: {
       quote:
         "DJ Noah was without a doubt the standout vendor. His mixing and DJ skills shined hard, even mixing between English and Brazilian turned out so good. He was great at reading the vibe of the room and just kept the energy up and moving the whole time. We even had a storm roll through and knock out the power for a few minutes and he kept it alive while things got set up again.",
@@ -662,6 +700,11 @@ export const realWeddings: RealWedding[] = [
     venueName: "Addison Oaks",
     venueSlug: "addison-oaks",
     regionSlug: "oakland-county",
+    date: "7/9/2022",
+    guestCount: "150–200 guests",
+    musicStyle: "Eclectic — wedding classics and 2000s pop early in the night, upbeat party anthems building through the evening, and nothing but bangers after 10pm.",
+    notableMoments: "The best man couldn't make it, so we set up a projector and screen and played his recorded speech for the room.",
+    danceFloorNotes: "Packed all night.",
     testimonial: {
       quote:
         "He's an awesome MC, all the events of the day went so smoothly and the dancing part of the evening was perfect!! He chose all the right songs, read the crowd so well and created the perfect balance of a fun dance floor without feeling like a club, exactly what we wanted.",
@@ -681,15 +724,22 @@ export const realWeddings: RealWedding[] = [
     },
   },
   {
-    slug: "abby-alexander",
-    couple: "Abby & Alexander",
+    // Was wrongly labeled "Abby & Alexander" — this is actually the
+    // Hodges/Stevens wedding, Ashley & Steve. Slug renamed to match.
+    slug: "ashley-steve",
+    couple: "Ashley & Steve",
     venueName: "The Whiskey Factory",
     venueSlug: "the-whiskey-factory",
     regionSlug: "metro-detroit",
+    date: "2/2/2024",
+    guestCount: "100–150 guests",
+    musicStyle: "Throwbacks.",
+    notableMoments: "The cold sparks for the grand entrance were a huge hit.",
+    danceFloorNotes: "A steady, solid crowd all night.",
     testimonial: {
       quote:
         "From the moment I decided to hire them for DJ, coordinator, and videography services, they made wedding planning as seamless and easy as possible. My wedding would not have been the fairytale it was without Prestige!",
-      attribution: "Abby & Alexander",
+      attribution: "Ashley & Steve",
     },
   },
   {
@@ -698,6 +748,11 @@ export const realWeddings: RealWedding[] = [
     venueName: "Vale Royal Barn",
     venueSlug: "vale-royal-barn",
     regionSlug: "metro-detroit",
+    date: "10/9/2021",
+    guestCount: "100–150 guests",
+    musicStyle: "2000s pop, classic rock, country, and throwback hip-hop.",
+    notableMoments: "Prestige handled both the DJ and day-of coordination for this one, with Kristie running the coordination side.",
+    danceFloorNotes: "So much fun — packed all night.",
     testimonial: {
       quote:
         "We hired Prestige for both DJ services and Day of Coordination. This was by far one of the best decisions made during the planning process. The dance floor was not empty once during the reception!",

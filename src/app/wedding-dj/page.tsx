@@ -306,7 +306,7 @@ export default function WeddingDjPage() {
             <Testimonial
               placeholder={false}
               quote="From the moment I decided to hire them for DJ, coordinator, and videography services, they made wedding planning as seamless and easy as possible. My wedding would not have been the fairytale it was without Prestige!"
-              attribution="Abby & Alexander — The Whiskey Factory"
+              attribution="Ashley & Steve — The Whiskey Factory"
             />
             <Testimonial
               placeholder={false}
