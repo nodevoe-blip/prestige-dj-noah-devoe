@@ -664,12 +664,10 @@ export const realWeddings: RealWedding[] = [
     photos: ["casey-michael-01", "casey-michael-02", "casey-michael-03", "casey-michael-04", "casey-michael-05"],
   },
   {
-    // Was wrongly labeled "The Beckers" — confusing the venue's name (Brewery
-    // Becker) for the couple's. Confirmed surname is Muirhead; first names
-    // still unconfirmed, so slug stays surname-based for now. Rename to a
-    // first-name slug once Noah confirms them.
-    slug: "the-muirheads",
-    couple: "The Muirheads",
+    // Was wrongly labeled "The Beckers" — confusing the venue's name
+    // (Brewery Becker) for the couple's. Corrected to the actual couple.
+    slug: "jessica-michael",
+    couple: "Jessica & Michael",
     venueName: "Brewery Becker",
     venueSlug: "brewery-becker",
     regionSlug: "metro-detroit",
@@ -758,6 +756,38 @@ export const realWeddings: RealWedding[] = [
         "We hired Prestige for both DJ services and Day of Coordination. This was by far one of the best decisions made during the planning process. The dance floor was not empty once during the reception!",
       attribution: "Shannon & Brandyn",
     },
+  },
+  {
+    slug: "phile-natalie",
+    couple: "Phile & Natalie",
+    venueName: "Packard Proving Grounds",
+    venueSlug: "packard-proving-grounds",
+    regionSlug: "metro-detroit",
+    date: "5/5/2023",
+  },
+  {
+    slug: "samantha-nikolas",
+    couple: "Samantha & Nikolas",
+    venueName: "Packard Proving Grounds",
+    venueSlug: "packard-proving-grounds",
+    regionSlug: "metro-detroit",
+    date: "8/22/2026",
+  },
+  {
+    slug: "katlin-jarett",
+    couple: "Katlin & Jarett",
+    venueName: "Planterra Conservatory",
+    venueSlug: "planterra-conservatory",
+    regionSlug: "oakland-county",
+    date: "10/20/2024",
+  },
+  {
+    slug: "kathe-thyrus",
+    couple: "Kathe & Thyrus",
+    venueName: "Planterra Conservatory",
+    venueSlug: "planterra-conservatory",
+    regionSlug: "oakland-county",
+    date: "5/23/2026",
   },
 ];
 

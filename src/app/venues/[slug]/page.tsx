@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { pageMetadata } from "@/lib/metadata";
 import { ServiceSchema } from "@/components/schema/ServiceSchema";
@@ -175,7 +176,18 @@ export default async function VenuePage({ params }: { params: Promise<{ slug: st
                     quote={w.testimonial.quote}
                     attribution={w.testimonial.attribution}
                   />
-                ) : null,
+                ) : (
+                  <Link
+                    key={w.slug}
+                    href={`/noah-devoe/weddings/${w.slug}`}
+                    className="rounded-sm border border-paper-line p-6 transition-colors hover:border-espresso-bright"
+                  >
+                    <p className="font-display text-lg font-semibold text-ink">{w.couple}</p>
+                    {w.date && (
+                      <p className="mt-1 font-mono text-xs uppercase tracking-wider text-ash">{w.date}</p>
+                    )}
+                  </Link>
+                ),
               )}
             </div>
             <div className="mt-8">

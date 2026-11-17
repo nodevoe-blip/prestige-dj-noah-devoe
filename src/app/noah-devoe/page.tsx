@@ -42,7 +42,7 @@ const formalDances: { title: string; detail: string; vimeoId: string }[] = [
 ];
 
 const weddingPhotos = [
-  { src: "/images/portfolio/becker-danceasaur-brewery.jpg", caption: "The Muirheads — Danceasaur, Brewery Becker" },
+  { src: "/images/portfolio/becker-danceasaur-brewery.jpg", caption: "Jessica & Michael — Danceasaur, Brewery Becker" },
   { src: "/images/portfolio/casey-michael-01.jpg", caption: "Casey & Michael" },
   { src: "/images/portfolio/reception-01.jpg", caption: "Packed dance floor" },
   { src: "/images/portfolio/wedding-06.jpg", caption: "Reception" },

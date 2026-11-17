@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat, Inter } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -29,6 +30,9 @@ export const metadata: Metadata = {
   // to set its own metadata.
   title: "Noah DeVoe | Michigan Wedding DJ & MC | Prestige Weddings",
   description: noah.bio,
+  verification: {
+    google: "iO2znqQPvh4wTe-XEOIIAQHw7qmq_g6DP68MFs2st8g",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -44,6 +48,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </main>
         <Footer />
       </body>
+      <GoogleAnalytics gaId="G-65P2Y8JQ72" />
     </html>
   );
 }
