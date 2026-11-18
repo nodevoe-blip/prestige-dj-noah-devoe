@@ -28,7 +28,7 @@ export default function VenuesIndexPage() {
           <p className="mt-5 text-lg text-smoke">
             Mostly real notes from weddings I&rsquo;ve actually DJ&rsquo;d — ceremony and reception
             setup, load-in, audio quirks, dance floor observations. A few venues I haven&rsquo;t
-            played yet are here too, clearly marked as researched, not experienced.
+            played yet are here too, based on what&rsquo;s publicly known about the space.
           </p>
         </div>
 

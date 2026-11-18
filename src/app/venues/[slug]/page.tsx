@@ -107,7 +107,6 @@ export default async function VenuePage({ params }: { params: Promise<{ slug: st
 
       {knownAbout.length > 0 && (
         <section className="mx-auto max-w-[1400px] px-5 py-20 sm:px-8">
-          <Eyebrow tone="navy">Researched, not experienced</Eyebrow>
           <h2 className="mt-3 max-w-2xl font-display text-3xl font-bold sm:text-4xl">
             What&rsquo;s publicly known about this venue
           </h2>
